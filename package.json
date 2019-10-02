@@ -1,16 +1,16 @@
 {
    "name": "ashow",
-   "author": "Artur Rocha, Daniel Aquino, Guilherme Oliveira, Matheus Felipe",
+   "author": "Ashow",
    "contributors": [
       {
          "name": "Arhur Rocha Amaral",
-         "email": "",
-         "url": ""
+         "email": "arthur.amaral.1100245@sga.pucminas.br",
+         "url": "https://github.com/ArthurRAmaral"
       },
       {
          "name": "Daniel Aquino Silva",
          "email": "",
-         "url": ""
+         "url": "https://github.com/Picuricu"
       },
       {
          "name": "Guilherme Oliveira Antônio",
@@ -19,8 +19,8 @@
       },
       {
          "name": "Matheus Felipe Ferreira Martins",
-         "email": "",
-         "url": ""
+         "email": "matheus.martins.1215641@sga.pucminass.br",
+         "url": "https://github.com/MatheusFFM"
       }
    ],
    "version": "1.0.0",
