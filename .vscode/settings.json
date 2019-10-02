@@ -1,0 +1,34 @@
+{
+   //PRETTIER
+   "editor.defaultFormatter": "esbenp.prettier-vscode",
+   "prettier.singleQuote": true,
+   "editor.formatOnSave": true,
+   "prettier.eslintIntegration": true,
+   "prettier.stylelintIntegration": true,
+   "prettier.trailingComma": "all",
+   //LIVE SASSS
+   "liveSassCompile.settings.generateMap": false,
+   "liveSassCompile.settings.formats": [
+      // This is Default.
+      {
+         "format": "expanded",
+         "extensionName": ".css",
+         "savePath": "/assets/css"
+      }
+   ],
+   //EDITOR CONFIG
+   "window.zoomLevel": 0,
+   //STYLELINT
+   "extends": "stylelint-config-standard",
+   "rules": {
+      "at-rule-no-unknown": [
+         true,
+         {
+            "ignoreAtRules": ["extends", "ignores"]
+         }
+      ]
+   },
+   "indentation": "tab",
+   "number-leading-zero": null,
+   "unit-whitelist": ["em", "rem", "s"]
+}

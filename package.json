@@ -1,0 +1,48 @@
+{
+   "name": "ashow",
+   "author": "Artur Rocha, Daniel Aquino, Guilherme Oliveira, Matheus Felipe",
+   "contributors": [
+      {
+         "name": "Arhur Rocha Amaral",
+         "email": "",
+         "url": ""
+      },
+      {
+         "name": "Daniel Aquino Silva",
+         "email": "",
+         "url": ""
+      },
+      {
+         "name": "Guilherme Oliveira Antônio",
+         "email": "gantonio@sga.pucminas.br",
+         "url": "https://github.com/guilhermegoa"
+      },
+      {
+         "name": "Matheus Felipe Ferreira Martins",
+         "email": "",
+         "url": ""
+      }
+   ],
+   "version": "1.0.0",
+   "private": true,
+   "description": "Trabalho_Interdisciplinar 2º periodo",
+   "main": "index.html",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/guilhermegoa/ASHOW---TIS-II-.git"
+   },
+   "keywords": [
+      "ashow"
+   ],
+   "homepage": "https://github.com/guilhermegoa/ASHOW---TIS-II-#readme",
+   "devDependencies": {
+      "eslint": "^6.5.1",
+      "eslint-config-airbnb-base": "^14.0.0",
+      "eslint-plugin-import": "^2.18.2",
+      "prettier": "^1.18.2",
+      "stylelint-config-standard": "^19.0.0"
+   }
+}
