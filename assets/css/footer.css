@@ -1,0 +1,46 @@
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #300f46;
+  background-image: -webkit-gradient(linear, left top, right top, from(#c54200), color-stop(#300f46), to(#6d2c96));
+  background-image: linear-gradient(to right, #c54200, #300f46, #6d2c96);
+  color: #fff;
+}
+
+#contact a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+#contact a:hover {
+  color: #6d2c96;
+}
+
+#social-media a {
+  margin: 0 10px 0 10px;
+  color: #fff;
+}
+
+#social-media a :hover {
+  color: #6d2c96;
+}

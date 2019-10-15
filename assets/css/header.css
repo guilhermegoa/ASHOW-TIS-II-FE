@@ -8,21 +8,20 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #300f46;
-  background-image: -webkit-gradient(linear, left top, right top, from(#300f46), color-stop(#6d2c96), to(#c54200));
-  background-image: linear-gradient(to right, #300f46, #6d2c96, #c54200);
+  background-image: -webkit-gradient(linear, left top, right top, from(#6d2c96), color-stop(#300f46), to(#c54200));
+  background-image: linear-gradient(to right, #6d2c96, #300f46, #c54200);
 }
 
 header #logo img {
@@ -165,4 +164,10 @@ header .circle {
 
 header #notification span p {
   margin: -5px 0 0 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #search input {
+    display: none;
+  }
 }
