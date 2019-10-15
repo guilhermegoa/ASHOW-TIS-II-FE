@@ -1,0 +1,89 @@
+$color-purple: #300f46;
+$color-purple-logo: #6d2c96;
+$color-white: #fff;
+$color-orange1: #e36627;
+$color-orange2: #c54200;
+$color-grey: #38383f;
+$color-black: #000;
+$margin: 20px;
+
+body {
+  margin: 0%;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-purple;
+  background-image:
+    linear-gradient(
+      to right,
+      $color-purple,
+      $color-purple-logo,
+      $color-orange2
+    );
+
+  #logo img {
+    width: 250px;
+    height: 50px;
+    margin: 0 $margin 0 0;
+  }
+
+  #user-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  #search {
+    padding: 0 ($margin * 2) 0 0;
+    height: 40px;
+  }
+
+  #search input {
+    padding-left: 10px;
+    border: 1px solid;
+    border-radius: 10px 0 0 10px;
+    color: $color-grey;
+    height: 40px;
+    width: 523px;
+    float: left;
+  }
+
+  #search button {
+    border: 0 solid;
+    border-radius: 0 10px 10px 0;
+    color: $color-white;
+    height: 44px;
+    width: 45px;
+    float: left;
+    background-color: $color-purple;
+  }
+
+  #search button :hover {
+    background-color: $color-orange2;
+    border-radius: 0 10px 10px 0;
+    border: 0;
+    height: 38px;
+    width: 45px;
+    margin-left: -9px;
+    padding-top: 6px;
+  }
+
+  #user-menu i {
+    color: $color-purple;
+    margin-right: $margin/4;
+    font-size: 25px;
+  }
+
+  #user-menu h3 {
+    font-size: 25px;
+    margin-right: $margin * 2;
+  }
+
+  #user-menu nav {
+    display: none;
+  }
+}
