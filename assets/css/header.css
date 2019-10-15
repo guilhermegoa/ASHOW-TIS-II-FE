@@ -14,6 +14,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #300f46;
   background-image: -webkit-gradient(linear, left top, right top, from(#300f46), color-stop(#6d2c96), to(#c54200));
   background-image: linear-gradient(to right, #300f46, #6d2c96, #c54200);
@@ -57,29 +63,106 @@ header #search button {
   width: 45px;
   float: left;
   background-color: #300f46;
+  margin: 25 0 20 0;
 }
 
 header #search button :hover {
-  background-color: #c54200;
+  background-color: #6d2c96;
   border-radius: 0 10px 10px 0;
   border: 0;
   height: 38px;
-  width: 45px;
+  width: 46px;
   margin-left: -9px;
   padding-top: 6px;
 }
 
-header #user-menu i {
-  color: #300f46;
+header .dropbtn {
+  position: relative;
+  display: inline-block;
+  background-color: #300f46;
+  border-radius: 20px 20px 0 0;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+header .dropbtn:hover .rotate {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+header .dropbtn i {
+  color: #fff;
   margin-right: 5px;
-  font-size: 25px;
+  margin-left: 5px;
+  font-size: 15px;
 }
 
-header #user-menu h3 {
-  font-size: 25px;
-  margin-right: 40px;
-}
-
-header #user-menu nav {
+header .dropdown-content {
+  margin: 200px 0 20px 0;
   display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+header .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+header .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+header #user-menu:hover .dropdown-content {
+  display: block;
+}
+
+header #user-menu:hover .dropbtn {
+  background-color: #6d2c96;
+}
+
+header #user-menu:hover .dropbtn .rotate {
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+header #notification {
+  margin-left: 60px;
+  font-size: 15px;
+  display: block;
+}
+
+header #notification a {
+  color: #300f46;
+}
+
+header #notification a:hover {
+  color: #6d2c96;
+}
+
+header .circle {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0.75rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  background: #c54200;
+  margin: -30px 0 0 0;
+}
+
+header #notification span p {
+  margin: -5px 0 0 5px;
 }
