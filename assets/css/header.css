@@ -165,9 +165,3 @@ header .circle {
 header #notification span p {
   margin: -5px 0 0 5px;
 }
-
-@media only screen and (max-width: 1200px) {
-  #search input {
-    display: none;
-  }
-}
