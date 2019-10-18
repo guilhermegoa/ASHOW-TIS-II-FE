@@ -16,6 +16,14 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
+@media screen and (max-width: 900px) {
+  .container {
+    height: 200vh;
+    grid-template-columns: 2fr;
+    grid-template-rows: repeat(2 2fr);
+  }
+}
+
 /* CADASTRO GERAL */
 
 .musico {
