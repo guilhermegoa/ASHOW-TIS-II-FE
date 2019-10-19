@@ -15,9 +15,13 @@
    <body>
       <div class="container" class="branco">
          <div class="musico">
-            <h1 class="title">Sou Musico!</h1>
-            <button class="cadastrador">Cadastrar como Músico</button>
-            <form action="">
+            <div>
+               <h1 class="title">Sou Musico!</h1>
+               <button id="btn-musico" class="cadastrador">
+                  Cadastrar como Músico
+               </button>
+            </div>
+            <form action="" id="form-contratante">
                <input type="text" />
                <input type="text" />
                <input type="text" />
@@ -26,9 +30,13 @@
             </form>
          </div>
          <div class="contratante">
-            <h1 class="title">Quero Contratar!</h1>
-            <button class="cadastrador">Cadastrar como Contratante</button>
-            <form action="">
+            <div>
+               <h1 class="title">Quero Contratar!</h1>
+               <button id="btn-contratante" class="cadastrador">
+                  Cadastrar como Contratante
+               </button>
+            </div>
+            <form action="" id="form-musico">
                <input type="text" />
                <input type="text" />
                <input type="text" />
@@ -38,4 +46,5 @@
          </div>
       </div>
    </body>
+   <script src="../assets/js/cadastro-slide.js"></script>
 </html>
