@@ -46,18 +46,23 @@ form {
   display: flex;
   flex-direction: column;
   align-content: center;
+  transition: ease-in 200ms;
 
   input {
     margin: 20px 30px 0 30px;
   }
 }
 
-.form-musico {
+.form-active {
   transform: translateX(0%);
 }
 
-.form-contratante {
-  transform: translateX(0%);
+.musico-active {
+  filter: grayscale(0%);
+}
+
+.contratante-active {
+  filter: grayscale(0%);
 }
 
 .musico:hover {

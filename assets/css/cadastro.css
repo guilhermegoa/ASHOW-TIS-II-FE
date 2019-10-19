@@ -73,20 +73,27 @@ form {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-transition: ease-in 200ms;
+  transition: ease-in 200ms;
 }
 
 form input {
   margin: 20px 30px 0 30px;
 }
 
-.form-musico {
+.form-active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
 
-.form-contratante {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+.musico-active {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.contratante-active {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 .musico:hover {
