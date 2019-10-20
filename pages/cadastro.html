@@ -4,6 +4,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
       <link
          rel="stylesheet"
          type="text/css"
@@ -17,31 +18,59 @@
          <div class="musico" id="musico">
             <div>
                <h1 class="title">Sou Musico!</h1>
-               <button id="btn-musico" class="cadastrador">
+               <button id="btn-musico" class="cadastrador" onclick="descer()">
                   Cadastrar como Músico
                </button>
             </div>
-            <form action="" id="form-contratante">
-               <input type="text" />
-               <input type="text" />
-               <input type="text" />
-               <input type="text" />
-               <input type="text" />
+            <form action="" id="form-contratante" class="form-user">
+               <img src="/assets/img/ashowLogoTextWhite.png" alt="" />
+               <div class="input-field">
+                  <input type="text" />
+                  <label for="">Nome</label>
+               </div>
+               <div class="input-field">
+                  <input type="password" />
+                  <label for="">Senha</label>
+               </div>
+               <div class="input-field">
+                  <input type="email" />
+                  <label for="">Email</label>
+               </div>
+               <input type="submit" value="Cadastrar" />
             </form>
          </div>
          <div class="contratante" id="contratante">
             <div>
                <h1 class="title">Quero Contratar!</h1>
-               <button id="btn-contratante" class="cadastrador">
-                  Cadastrar como Contratante
-               </button>
+               <a href="#">
+                  <button id="btn-contratante" class="cadastrador">
+                     Cadastrar como Contratante
+                  </button>
+               </a>
             </div>
-            <form action="" id="form-musico">
-               <input type="text" />
-               <input type="text" />
-               <input type="text" />
-               <input type="text" />
-               <input type="text" />
+            <form action="" id="form-musico" class="form-user">
+               <img src="/assets/img/ashowLogoTextWhite.png" alt="" />
+               <div class="input-field">
+                  <input type="text" />
+                  <label for="">Nome</label>
+               </div>
+               <div class="input-field">
+                  <input type="password" />
+                  <label for="">Senha</label>
+               </div>
+               <div class="input-field">
+                  <input type="email" />
+                  <label for="">Email</label>
+               </div>
+               <div class="input-field">
+                  <input type="text" />
+                  <label for="">Estilo Musical</label>
+               </div>
+               <div class="input-field">
+                  <input type="text" placeholder="Ex: Banda, Solo, Dj..." />
+                  <label for="">Tipo de Músico</label>
+               </div>
+               <input type="submit" value="Cadastrar" />
             </form>
          </div>
       </div>

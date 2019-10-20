@@ -22,3 +22,8 @@ const slidecontratante = () => {
 
 slidemusico();
 slidecontratante();
+
+function descer() {
+   var heightPage = document.body.scrollHeight;
+   window.scrollTo(0, heightPage);
+}

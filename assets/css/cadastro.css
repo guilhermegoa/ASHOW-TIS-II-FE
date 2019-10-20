@@ -12,10 +12,12 @@
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  scroll-behavior: smooth;
 }
 
 /* CADASTRO GERAL */
 .musico {
+  height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -28,15 +30,16 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background: url(/assets/img/bg-musico.jpeg);
-  background-size: cover;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  background-size: cover;
   -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
   overflow: hidden;
 }
 
 .contratante {
+  height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -109,16 +112,18 @@ form input {
 .title {
   position: relative;
   top: 70px;
-  color: white;
-  font-size: 3rem;
-  text-shadow: 0.2em 0.5em 0.1em #e36627, -0.3em 0.1em 0.1em #300f46, 0.4em -0.3em 0.1em aliceblue;
+  color: #e36627;
+  font-size: 3.3rem;
+  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 3px 0 black, 0 4px 0 black, 0 5px 0 black;
   -webkit-filter: none;
           filter: none;
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
 }
 
 .cadastrador {
   position: relative;
-  top: 400px;
+  top: 450px;
   width: 70%;
   height: 10%;
   background: transparent;
@@ -127,20 +132,171 @@ form input {
   cursor: pointer;
   color: #e36627;
   font-size: 1.3em;
+  font-weight: bold;
   -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
   padding: 30px;
 }
 
 .cadastrador:hover {
-  color: white;
-  background-color: #e36627;
+  color: #300f46;
+  background-color: white;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    color: #e36627;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #e36627;
+  }
+}
+
+@keyframes animate {
+  0% {
+    color: #e36627;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #e36627;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .container {
-    height: 200vh;
     -ms-grid-columns: 2fr;
         grid-template-columns: 2fr;
   }
+  .cadastrador {
+    top: 370px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 2.5em;
+  }
+  .musico {
+    -webkit-filter: none;
+            filter: none;
+  }
+  .contratante {
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .form-user {
+    position: relative;
+    bottom: 3px;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-moz-placeholder {
+  color: #fff;
+}
+
+::-moz-placeholder {
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+}
+
+.form-user {
+  -webkit-filter: none;
+          filter: none;
+  height: 100%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#300f46), to(#e36627));
+  background-image: linear-gradient(to right, #300f46, #e36627);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-user img {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.form-user input[type='submit'] {
+  text-align: center;
+  width: 50%;
+  height: 50px;
+  background: white;
+  color: #300f46;
+  background-size: 160%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.input-field {
+  position: relative;
+}
+
+.form-user input[type='submit']:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.input-field input {
+  position: relative;
+  right: 20px;
+  width: 100%;
+  padding: 6px 0;
+  font-size: 13px;
+  background: transparent;
+  color: #fafafa;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+.input-field label {
+  font-weight: bold;
+  position: absolute;
+  top: -6px;
+  left: 5px;
+  font-size: 18px;
+  color: white;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.input-field input:focus ~ label {
+  color: #e36627;
 }
