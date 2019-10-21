@@ -5,8 +5,23 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: sunday;
+  src: url("../fonts/SUNDAY  Personal use.ttf");
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url("../fonts/big_noodle_titling.ttf");
+}
+
+@font-face {
+  font-family: muscic;
+  src: url("/assets/fonts/AlphaMusicMan.ttf");
+}
+
 body {
-  font-family: 'Cabin', sans-serif;
+  font-family: ' Big Noodle Titling', sans-serif;
   /* overflow: hidden; */
   background-color: #300f46;
 }

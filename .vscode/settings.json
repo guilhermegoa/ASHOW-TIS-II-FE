@@ -16,6 +16,11 @@
          "savePath": "/assets/css"
       }
    ],
+   "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**",
+      "**/_*.scss"
+   ],
    //EDITOR CONFIG
    "window.zoomLevel": 0,
    //STYLELINT

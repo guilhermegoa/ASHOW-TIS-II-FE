@@ -1,3 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: sunday;
+  src: url("../fonts/SUNDAY  Personal use.ttf");
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url("../fonts/big_noodle_titling.ttf");
+}
+
+@font-face {
+  font-family: muscic;
+  src: url("/assets/fonts/AlphaMusicMan.ttf");
+}
+
 body {
   margin: 0%;
 }
@@ -76,6 +98,7 @@ header #search button :hover {
 }
 
 header .dropbtn {
+  font-family: ' Big Noodle Titling', sans-serif;
   position: relative;
   display: inline-block;
   background-color: #300f46;
@@ -112,6 +135,7 @@ header .dropdown-content {
 }
 
 header .dropdown-content a {
+  font-family: ' Big Noodle Titling', sans-serif;
   color: black;
   padding: 12px 16px;
   text-decoration: none;

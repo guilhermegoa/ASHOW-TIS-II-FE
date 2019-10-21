@@ -1,0 +1,24 @@
+//CONFIGURAÇÃO BASICA PARA TODAS PAGINAS
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//USADA PARA TITULOS E DAR EVIDENCIA
+@font-face {
+  font-family: sunday;
+  src: url('../fonts/SUNDAY\ \ Personal\ use.ttf');
+}
+
+//USADA PRA TEXTOS DE NO SITE
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url('../fonts/big_noodle_titling.ttf');
+}
+
+//USADA PARA TITULOS
+@font-face {
+  font-family: muscic;
+  src: url('/assets/fonts/AlphaMusicMan.ttf');
+}

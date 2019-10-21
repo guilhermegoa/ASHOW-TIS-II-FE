@@ -1,3 +1,5 @@
+@import 'important.scss';
+
 $color-purple: #300f46;
 $color-purple-logo: #6d2c96;
 $color-white: #fff;
@@ -7,6 +9,7 @@ $color-grey: #38383f;
 $color-black: #000;
 
 footer {
+  font-family: ' Big Noodle Titling', sans-serif;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
