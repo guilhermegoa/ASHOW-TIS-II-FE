@@ -46,10 +46,11 @@ const slidecontratante = () => {
    });
 };
 
-slidemusico();
-slidecontratante();
-
-function descer() {
+const descer = () => {
    var heightPage = document.body.scrollHeight;
    window.scrollTo(0, heightPage);
-}
+};
+
+slidemusico();
+slidecontratante();
+descer();
