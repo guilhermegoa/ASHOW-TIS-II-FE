@@ -5,6 +5,25 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: sunday;
+  src: url("../fonts/SUNDAY  Personal use.ttf");
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url("../fonts/big_noodle_titling.ttf");
+}
+
+@font-face {
+  font-family: muscic;
+  src: url("/assets/fonts/AlphaMusicMan.ttf");
+}
+
+body {
+  font-family: ' Big Noodle Titling', sans-serif;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -113,6 +132,7 @@ form input {
 }
 
 .title {
+  font-family: 'sundday', sans-serif;
   position: relative;
   top: 70px;
   color: #e36627;
