@@ -1,0 +1,246 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  scroll-behavior: smooth;
+}
+
+/* CADASTRO GERAL */
+
+.musico {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background: url(/assets/img/bg-musico.jpeg);
+  filter: grayscale(100%);
+  background-size: cover;
+  transition: ease-in 0.5s;
+  overflow: hidden;
+}
+
+.contratante {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background: url(/assets/img/bg-contratanteCadastro.jpg);
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: ease-in 0.5s;
+  overflow: hidden;
+}
+
+form {
+  transform: translateY(100%);
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  transition: ease-in 200ms;
+
+  input {
+    margin: 20px 30px 0 30px;
+  }
+}
+
+.form-active {
+  transform: translateX(0%);
+}
+
+.musico-active {
+  filter: grayscale(0%);
+}
+
+.contratante-active {
+  filter: grayscale(0%);
+}
+
+.off {
+  display: none;
+}
+
+.musico:hover {
+  filter: none;
+}
+
+.contratante:hover {
+  filter: none;
+}
+
+.title {
+  position: relative;
+  top: 70px;
+  color: #e36627;
+  font-size: 3.3rem;
+  text-shadow:
+    0 1px 0 rgb(0, 0, 0),
+    0 2px 0 rgb(0, 0, 0),
+    0 3px 0 rgb(0, 0, 0),
+    0 4px 0 rgb(0, 0, 0),
+    0 5px 0 rgb(0, 0, 0);
+  filter: none;
+  animation: animate 4s linear infinite;
+}
+
+.cadastrador {
+  position: relative;
+  top: 450px;
+  width: 70%;
+  height: 10%;
+  background: transparent;
+  border-radius: 40px;
+  border: solid 5px purple;
+  cursor: pointer;
+  color: #e36627;
+  font-size: 1.3em;
+  font-weight: bold;
+  transition: ease-in 0.5s;
+  padding: 30px;
+}
+
+.cadastrador:hover {
+  color: rgb(48, 15, 70);
+  background-color: white;
+}
+
+@keyframes animate {
+  0% {
+    color: #e36627;
+  }
+
+  50% {
+    color: #fff;
+  }
+
+  100% {
+    color: #e36627;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: 2fr;
+  }
+
+  .cadastrador {
+    top: 370px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  .musico {
+    filter: none;
+  }
+
+  .contratante {
+    filter: none;
+  }
+}
+
+@media screen and(max-width: 1000px) {
+  .form-user {
+    position: relative;
+    bottom: 3px;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-moz-placeholder {
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+}
+
+.form-user {
+  filter: none;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, rgb(48, 15, 70), #e36627);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.form-user img {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.form-user input[type='submit'] {
+  text-align: center;
+  width: 50%;
+  height: 50px;
+  background: white;
+  color: rgb(48, 15, 70);
+  background-size: 160%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.input-field {
+  position: relative;
+}
+
+.form-user input[type='submit']:hover {
+  transform: scale(1.1);
+}
+
+.input-field input {
+  position: relative;
+  right: 20px;
+  width: 100%;
+  padding: 6px 0;
+  font-size: 13px;
+  background: transparent;
+  color: rgb(250, 250, 250);
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.input-field label {
+  font-weight: bold;
+  position: absolute;
+  top: -6px;
+  left: 5px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-field input:focus ~ label {
+  color: #e36627;
+}
