@@ -15,6 +15,9 @@ const cadastroEventoInit = () => {
    const cadastrarEventoBtn = document.getElementById('cadastrarEventoBtn');
 
    cadastrarEventoBtn.addEventListener('click', () => {
-      formEvent.ver;
+      var x = name.value;
+      console.log('oi');
    });
 };
+
+cadastroEventoInit();
