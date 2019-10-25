@@ -130,7 +130,7 @@
          })
 
          btnCadastrar.click(function () {
-            if (!form[0].checkValidity()) {
+            if (form[0].checkValidity()) {
                var dadosCadastro = {
                   "name": name.val(),
                   "eventType": eventType.val(),
@@ -144,13 +144,13 @@
                   "complement": complement.val(),
                   "peopleQnt": peopleQnt.val(),
                   "artistValue": artistValue.val()
-               }
+               };
 
 
                console.log(dadosCadastro)
-            }
+            };
          });
-      }
+      };
 
       InitCadastroEvento();
    </script>
