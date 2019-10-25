@@ -10,7 +10,7 @@
    <link rel="stylesheet" type="text/css" href="../assets/css/footer.css" />
    <link rel="shortcut icon" href="/assets/img/Logo.png" />
    <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
-   <script src="../assets/js/CadastroEvento.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <header>
@@ -43,7 +43,7 @@
 </header>
 
 <body>
-   <form action="" id="formEvent">
+   <form action="#" id="formEvent">
       <div class="input-field">
          <label for="">De um nome para o evento:</label>
          <input type="text" id="name" required />
@@ -59,7 +59,7 @@
       <label for="">Endereço:</label>
       <div class="input-field">
          <label for="">CEP:</label>
-         <input type="number" id="CEP" required />
+         <input type="text" id="CEP" required />
       </div>
       <div class="input-field">
          <label for="">Rua/Av.:</label>
@@ -67,7 +67,7 @@
       </div>
       <div class="input-field">
          <label for="">Número:</label>
-         <input type="number" id="number" required />
+         <input type="text" id="number" required />
       </div>
       <div class="input-field">
          <label for="">Bairro:</label>
@@ -87,7 +87,7 @@
       </div>
       <div class="input-field">
          <label for="">Quantidade de pessoas esperadas:</label>
-         <input type="peopleQnt" required />
+         <input type="text" id="peopleQnt" required />
       </div>
       <div class="input-field">
          <label for="">Valor medio por artista:</label>
@@ -95,6 +95,49 @@
       </div>
       <input type="submit" value="Cadastrar" id="cadastrarEventoBtn" />
    </form>
+   <script src="">const cadastroEventoInit = () => {
+         var dadosCadastro = {
+            "form": $('#formEvent'),
+            "name": $("#name"),
+            "eventType": $("#eventType"),
+            "date": $("#date"),
+            "CEP": $("#CEP"),
+            "street": $("#street"),
+            "number": $("#number"),
+            "district": $("#district"),
+            "city": $("#city"),
+            "state": $("#state"),
+            "complement": $("#complement"),
+            "peopleQnt": $("#peopleQnt"),
+            "artistValue": $("#artistValue"),
+            "cadastrarEventoBtn": $("cadastrarEventoBtn")
+         }
+
+
+         cadastrarEventoBtn.addEventListener('click', () => {
+            if (dadosCadastro.form[0].checkValidity()) {
+               dadosCadastro = {
+                  "name": dadosCadastro.name.val(),
+                  "eventType": dadosCadastro.eventType.val(),
+                  "date": dadosCadastro.date.val(),
+                  "CEP": dadosCadastro.CEP.val(),
+                  "street": dadosCadastro.street.val(),
+                  "number": dadosCadastro.number.val(),
+                  "district": dadosCadastro.district.val(),
+                  "city": dadosCadastro.city.val(),
+                  "state": dadosCadastro.state.val(),
+                  "complement": dadosCadastro.complement.val(),
+                  "peopleQnt": dadosCadastro.peopleQnt.val(),
+                  "artistValue": dadosCadastro.artistValue.val()
+               }
+
+               var request = new XMLHttpRequest();//Enviar para o back dadosCadastro gerado a cima, dentro do if
+            }
+         });
+      };
+
+      cadastroEventoInit();
+   </script>
 </body>
 
 <footer>
