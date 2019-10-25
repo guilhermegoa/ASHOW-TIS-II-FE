@@ -93,50 +93,66 @@
          <label for="">Valor medio por artista:</label>
          <input type="text" id="artistValue" />
       </div>
-      <input type="submit" value="Cadastrar" id="cadastrarEventoBtn" />
+      <input type="submit" value="Cadastrar" id="cadastrarEventoBtn">
    </form>
-   <script src="">const cadastroEventoInit = () => {
-         var dadosCadastro = {
-            "form": $('#formEvent'),
-            "name": $("#name"),
-            "eventType": $("#eventType"),
-            "date": $("#date"),
-            "CEP": $("#CEP"),
-            "street": $("#street"),
-            "number": $("#number"),
-            "district": $("#district"),
-            "city": $("#city"),
-            "state": $("#state"),
-            "complement": $("#complement"),
-            "peopleQnt": $("#peopleQnt"),
-            "artistValue": $("#artistValue"),
-            "cadastrarEventoBtn": $("cadastrarEventoBtn")
-         }
+   <script>
+      const InitCadastroEvento = () => {
+         const form = $('#formEvent');
+         const name = $("#name");
+         const eventType = $("#eventType");
+         const date = $("#date");
+         const CEP = $("#CEP");
+         const street = $("#street");
+         const number = $("#number");
+         const district = $("#district");
+         const city = $("#city");
+         const state = $("#state");
+         const complement = $("#complement");
+         const peopleQnt = $("#peopleQnt");
+         const artistValue = $("#artistValue");
+         const btnCadastrar = $("#cadastrarEventoBtn");
 
+         CEP.change(() => {
+            street.val("");
+            district.val("");
+            city.val("");
+            state.val("");
+            $.getJSON("https://viacep.com.br/ws/" + CEP.val() + "/json/", function (dados) {
 
-         cadastrarEventoBtn.addEventListener('click', () => {
-            if (dadosCadastro.form[0].checkValidity()) {
-               dadosCadastro = {
-                  "name": dadosCadastro.name.val(),
-                  "eventType": dadosCadastro.eventType.val(),
-                  "date": dadosCadastro.date.val(),
-                  "CEP": dadosCadastro.CEP.val(),
-                  "street": dadosCadastro.street.val(),
-                  "number": dadosCadastro.number.val(),
-                  "district": dadosCadastro.district.val(),
-                  "city": dadosCadastro.city.val(),
-                  "state": dadosCadastro.state.val(),
-                  "complement": dadosCadastro.complement.val(),
-                  "peopleQnt": dadosCadastro.peopleQnt.val(),
-                  "artistValue": dadosCadastro.artistValue.val()
+               if (!("erro" in dados)) {
+                  //Atualiza os campos com os valores da consulta.
+                  street.val(dados.logradouro);
+                  district.val(dados.bairro);
+                  city.val(dados.localidade);
+                  state.val(dados.uf);
+               }
+            });
+         })
+
+         btnCadastrar.click(function () {
+            if (!form[0].checkValidity()) {
+               var dadosCadastro = {
+                  "name": name.val(),
+                  "eventType": eventType.val(),
+                  "date": date.val(),
+                  "CEP": CEP.val(),
+                  "street": street.val(),
+                  "number": number.val(),
+                  "district": district.val(),
+                  "city": city.val(),
+                  "state": state.val(),
+                  "complement": complement.val(),
+                  "peopleQnt": peopleQnt.val(),
+                  "artistValue": artistValue.val()
                }
 
-               var request = new XMLHttpRequest();//Enviar para o back dadosCadastro gerado a cima, dentro do if
+
+               console.log(dadosCadastro)
             }
          });
-      };
+      }
 
-      cadastroEventoInit();
+      InitCadastroEvento();
    </script>
 </body>
 
