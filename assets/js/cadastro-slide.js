@@ -88,8 +88,19 @@ const init = () => {
    });
 
    submitMusico.click(() => {
-      //if (formMusico[0].checkValidity()) {
-         var dadosCadastro = {
+      // //if (formMusico[0].checkValidity()) {
+      //    var dadosCadastro = new FormData()
+      //    dadosCadastro.append("ID", null)
+      //    dadosCadastro.append("email", "camila@email.com")
+      //    dadosCadastro.append("mediaAvaliacao", 0.0)
+      //    dadosCadastro.append("nome", "camila")
+      //    dadosCadastro.append("estilo", "cold-play")
+      //    dadosCadastro.append("nomeArtistico", "ca")
+      //    dadosCadastro.append("numeroEventos", 0)
+      //    dadosCadastro.append("tipoArtista", "SDJ")
+      //    dadosCadastro.append("valorPadrao", 0.0)
+      var dadosCadastro = [
+         {
             "ID": null,
             "email": "camila@email.com",
             "mediaAvaliacao": 0.0,
@@ -99,34 +110,37 @@ const init = () => {
             "numeroEventos": 0,
             "tipoArtista": "SDJ",
             "valorPadrao": 0.0
-        };
+        }
+      ];
 
          console.log(dadosCadastro);
 
          function reqListener() {
-            console.log(this.responseText);
+            console.log(JSON.parse(this.responseText));
          }
 
-         //  var oReq = new XMLHttpRequest();
-         //  oReq.onload = reqListener;
-         //  oReq.open("get", "http://localhost:8080/ashow/artista/all", true);
-         //  oReq.send();
+           //var oReq = new XMLHttpRequest();
+           //oReq.onload = reqListener;
+           //oReq.open("get", "http://localhost:8080/ashow/artista/all", true);
+           //oReq.send();
 
          var http = new XMLHttpRequest();
+         http.onload = () => {
+            console.log(this.responseText);
+         }
          var url = 'http://localhost:8080/ashow/artista/add';
-         var params1 = dadosCadastro;
          http.open('POST', url, true);
 
          //Send the proper header information along with the request
-         http.setRequestHeader('Content-type', 'application/json');
+         // http.setRequestHeader('Content-type', 'application/json');
 
-         http.onreadystatechange = function() {
+         http.onreadystatechange = () => {
             //Call a function when the state changes.
-            if (http.readyState == 4 && http.status == 200) {
+            if (http.readyState == 4 && http.status == 202) {
                alert(http.responseText);
             }
          };
-         http.send(params1);
+         http.send(dadosCadastro);
       //}
    });
 };
