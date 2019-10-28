@@ -72,7 +72,7 @@ const init = () => {
          var http = new XMLHttpRequest();
          var url = 'http://localhost:8080/ashow/contratante/add';
          var params1 = dadosCadastro;
-         http.open('POST', url, true);
+         http.open("POST", url, true);
 
          //Send the proper header information along with the request
          http.setRequestHeader('Content-type', 'application/json');
@@ -88,14 +88,18 @@ const init = () => {
    });
 
    submitMusico.click(() => {
-      if (formMusico[0].checkValidity()) {
+      //if (formMusico[0].checkValidity()) {
          var dadosCadastro = {
-            nome: nomeMusico.val(),
-            senha: senhaMusico.val(),
-            email: emailMusico.val(),
-            estilo: estiloMusico.val(),
-            tipo: tipoMusico.val(),
-         };
+            "ID": null,
+            "email": "camila@email.com",
+            "mediaAvaliacao": 0.0,
+            "nome": "camila",
+            "estilo": "cold-play",
+            "nomeArtistico": "ca",
+            "numeroEventos": 0,
+            "tipoArtista": "SDJ",
+            "valorPadrao": 0.0
+        };
 
          console.log(dadosCadastro);
 
@@ -109,7 +113,7 @@ const init = () => {
          //  oReq.send();
 
          var http = new XMLHttpRequest();
-         var url = 'http://localhost:8080/ashow/contratante/add';
+         var url = 'http://localhost:8080/ashow/artista/add';
          var params1 = dadosCadastro;
          http.open('POST', url, true);
 
@@ -123,7 +127,7 @@ const init = () => {
             }
          };
          http.send(params1);
-      }
+      //}
    });
 };
 
