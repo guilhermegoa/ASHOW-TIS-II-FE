@@ -12,6 +12,7 @@
       />
       <title>AShow - Cadastre-se</title>
       <link rel="shortcut icon" href="../assets/img/Logo.png" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    </head>
    <body>
       <div class="container" class="branco">
@@ -25,18 +26,22 @@
             <form action="" id="form-contratante" class="form-user">
                <img src="/assets/img/ashowLogoTextWhite.png" alt="" />
                <div class="input-field">
-                  <input type="Name" />
+                  <input type="Name" id="nomeContratante" required />
                   <label for="">Nome</label>
                </div>
                <div class="input-field">
-                  <input type="password" />
-                  <label for="">Senha</label>
+                  <input type="password" id="senhaContratante" required />
+                  <label for="" minlength="3">Senha</label>
                </div>
                <div class="input-field">
-                  <input type="email" />
+                  <input type="email" id="emailContratante" required />
                   <label for="">Email</label>
                </div>
-               <input type="submit" value="Cadastrar" />
+               <input
+                  type="submit"
+                  value="Cadastrar"
+                  id="cadastrarContratante"
+               />
             </form>
          </div>
          <div class="contratante" id="contratante">
@@ -51,26 +56,36 @@
             <form action="" id="form-musico" class="form-user">
                <img src="/assets/img/ashowLogoTextWhite.png" alt="" />
                <div class="input-field">
-                  <input type="text" />
+                  <input type="text" id="nomeMusico" required />
                   <label for="">Nome</label>
                </div>
                <div class="input-field">
-                  <input type="password" />
+                  <input
+                     type="password"
+                     minlength="3"
+                     id="senhaMusico"
+                     required
+                  />
                   <label for="">Senha</label>
                </div>
                <div class="input-field">
-                  <input type="email" />
+                  <input type="email" id="emailMusico" required />
                   <label for="">Email</label>
                </div>
                <div class="input-field">
-                  <input type="text" />
+                  <input type="text" id="estiloMusico" required />
                   <label for="">Estilo Musical</label>
                </div>
                <div class="input-field">
-                  <input type="text" placeholder="Ex: Banda, Solo, Dj..." />
+                  <input
+                     required
+                     type="text"
+                     placeholder="Ex: Banda, Solo, Dj..."
+                     id="tipoMusico"
+                  />
                   <label for="">Tipo de Músico</label>
                </div>
-               <input type="submit" value="Cadastrar" />
+               <input type="submit" value="Cadastrar" id="submitMusico" />
             </form>
          </div>
       </div>
