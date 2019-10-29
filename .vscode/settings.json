@@ -7,7 +7,7 @@
    "prettier.stylelintIntegration": true,
    "prettier.trailingComma": "all",
    //LIVE SASSS
-   "liveSassCompile.settings.generateMap": false,
+   "liveSassCompile.settings.generateMap": true,
    "liveSassCompile.settings.formats": [
       // This is Default.
       {

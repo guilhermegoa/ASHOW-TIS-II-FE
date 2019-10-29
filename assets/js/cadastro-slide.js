@@ -57,106 +57,71 @@ const init = () => {
             senha: senhaContratante.val(),
             email: emailContratante.val(),
          };
-
          console.log(dadosCadastro);
-
-         function reqListener() {
-            console.log(this.responseText);
-         }
-
-         //  var oReq = new XMLHttpRequest();
-         //  oReq.onload = reqListener;
-         //  oReq.open("get", "http://localhost:8080/ashow/artista/all", true);
-         //  oReq.send();
 
          var http = new XMLHttpRequest();
          var url = 'http://localhost:8080/ashow/contratante/add';
-         var params1 = dadosCadastro;
+         var params = dadosCadastro;
+
          http.open('POST', url, true);
-
-         //Send the proper header information along with the request
          http.setRequestHeader('Content-type', 'application/json');
-
          http.onreadystatechange = function() {
-            //Call a function when the state changes.
             if (http.readyState == 4 && http.status == 200) {
                alert(http.responseText);
             }
          };
-         http.send(params1);
+         http.send(params);
       }
    });
 
    submitMusico.click(() => {
-      //    if (formMusico[0].checkValidity()) {
-      //    var dadosCadastro = new FormData()
-      //    dadosCadastro.append("ID", null)
-      //    dadosCadastro.append("email", "camila@email.com")
-      //    dadosCadastro.append("mediaAvaliacao", 0.0)
-      //    dadosCadastro.append("nome", "camila")
-      //    dadosCadastro.append("estilo", "cold-play")
-      //    dadosCadastro.append("nomeArtistico", "ca")
-      //    dadosCadastro.append("numeroEventos", 0)
-      //    dadosCadastro.append("tipoArtista", "SDJ")
-      //    dadosCadastro.append("valorPadrao", 0.0)
+      if (formMusico[0].checkValidity()) {
+         var dadosCadastroBase = {
+            ID: null,
+            email: emailMusico.val(),
+            mediaAvaliacao: 0.0,
+            nome: nomeMusico.val(),
+            estilo: estiloMusico.val(),
+            nomeArtistico: nomeMusico.val(),
+            numeroEventos: 0,
+            tipoArtista: tipoMusico.val(),
+            valorPadrao: 0.0,
+            popularidade: '',
+            contatoPublico: emailMusico.val(),
+            descricao: '',
+            senha: senhaMusico.val(),
+            endereco: '',
+            eventos: null,
+            avaliacoes: null,
+         };
 
-      var dadosCadastro = {
-         ID: null,
-         email: 'camila@email.com',
-         mediaAvaliacao: 0.0,
-         nome: 'camila',
-         estilo: 'cold-play',
-         nomeArtistico: 'ca',
-         numeroEventos: 0,
-         tipoArtista: 'SDJ',
-         valorPadrao: 0.0,
-         popularidade: 'cabuloso',
-         contatoPublico: 'curintia',
-         descricao: 'blabla',
-         senha: 'null',
-         endereco: 'null',
-         eventos: null,
-         avaliacoes: null,
-      };
-      console.log(dadosCadastro);
+         var dadosCadastro = {
+            type: 'artista',
+            email: emailMusico.val(),
+            mediaAvaliacao: 0.0,
+            nome: nomeMusico.val(),
+            estilo: estiloMusico.val(),
+            nomeArtistico: nomeMusico.val(),
+            numeroEventos: 0,
+            tipoArtista: tipoMusico.val(),
+            valorPadrao: 0.0,
+         };
 
-      function reqListener() {
-         console.log(JSON.parse(this.responseText));
+         console.log(dadosCadastro);
+
+         var http = new XMLHttpRequest();
+         var url = 'http://localhost:8080/ashow/artista/add';
+         var params = dadosCadastro;
+
+         http.open('POST', url, true);
+         http.setRequestHeader('Content-type', 'application/json');
+         http.onreadystatechange = () => {
+            if (http.readyState == 4 && http.status == 200) {
+               console.log(http.responseText);
+            }
+         };
+         http.send(JSON.stringify(params));
       }
-
-      var oReq = new XMLHttpRequest();
-      oReq.onload = reqListener;
-      oReq.open('get', 'http://localhost:8080/ashow/artista/all', true);
-      oReq.send();
-
-      var http = new XMLHttpRequest();
-      http.onload = () => {
-         console.log(this.responseText);
-      };
-      var url = 'http://localhost:8080/ashow/artista/add';
-      http.open('POST', url, true);
-
-      //Send the proper header information along with the request
-      http.setRequestHeader('Content-type', 'application/json');
-
-      http.onreadystatechange = () => {
-         //Call a function when the state changes.
-         if (http.readyState == 4 && http.status == 202) {
-            alert(http.responseText);
-         }
-      };
-      http.send(dadosCadastro);
-
-      // $.ajax({
-      //    type: 'POST',
-      //    url: url,
-      //    data: JSON.stringify(dadosCadastro),
-      //    success: function() {
-      //       console.log('a');
-      //    },
-      //    dataType: 'json',
-      //    contentTYpe: 'application/json',
-      // });
    });
 };
 
