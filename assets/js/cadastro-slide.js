@@ -72,7 +72,7 @@ const init = () => {
          var http = new XMLHttpRequest();
          var url = 'http://localhost:8080/ashow/contratante/add';
          var params1 = dadosCadastro;
-         http.open("POST", url, true);
+         http.open('POST', url, true);
 
          //Send the proper header information along with the request
          http.setRequestHeader('Content-type', 'application/json');
@@ -88,7 +88,7 @@ const init = () => {
    });
 
    submitMusico.click(() => {
-      // //if (formMusico[0].checkValidity()) {
+      //    if (formMusico[0].checkValidity()) {
       //    var dadosCadastro = new FormData()
       //    dadosCadastro.append("ID", null)
       //    dadosCadastro.append("email", "camila@email.com")
@@ -99,49 +99,64 @@ const init = () => {
       //    dadosCadastro.append("numeroEventos", 0)
       //    dadosCadastro.append("tipoArtista", "SDJ")
       //    dadosCadastro.append("valorPadrao", 0.0)
-      var dadosCadastro = [
-         {
-            "ID": null,
-            "email": "camila@email.com",
-            "mediaAvaliacao": 0.0,
-            "nome": "camila",
-            "estilo": "cold-play",
-            "nomeArtistico": "ca",
-            "numeroEventos": 0,
-            "tipoArtista": "SDJ",
-            "valorPadrao": 0.0
-        }
-      ];
 
-         console.log(dadosCadastro);
+      var dadosCadastro = {
+         ID: null,
+         email: 'camila@email.com',
+         mediaAvaliacao: 0.0,
+         nome: 'camila',
+         estilo: 'cold-play',
+         nomeArtistico: 'ca',
+         numeroEventos: 0,
+         tipoArtista: 'SDJ',
+         valorPadrao: 0.0,
+         popularidade: 'cabuloso',
+         contatoPublico: 'curintia',
+         descricao: 'blabla',
+         senha: 'null',
+         endereco: 'null',
+         eventos: null,
+         avaliacoes: null,
+      };
+      console.log(dadosCadastro);
 
-         function reqListener() {
-            console.log(JSON.parse(this.responseText));
+      function reqListener() {
+         console.log(JSON.parse(this.responseText));
+      }
+
+      var oReq = new XMLHttpRequest();
+      oReq.onload = reqListener;
+      oReq.open('get', 'http://localhost:8080/ashow/artista/all', true);
+      oReq.send();
+
+      var http = new XMLHttpRequest();
+      http.onload = () => {
+         console.log(this.responseText);
+      };
+      var url = 'http://localhost:8080/ashow/artista/add';
+      http.open('POST', url, true);
+
+      //Send the proper header information along with the request
+      http.setRequestHeader('Content-type', 'application/json');
+
+      http.onreadystatechange = () => {
+         //Call a function when the state changes.
+         if (http.readyState == 4 && http.status == 202) {
+            alert(http.responseText);
          }
+      };
+      http.send(dadosCadastro);
 
-           //var oReq = new XMLHttpRequest();
-           //oReq.onload = reqListener;
-           //oReq.open("get", "http://localhost:8080/ashow/artista/all", true);
-           //oReq.send();
-
-         var http = new XMLHttpRequest();
-         http.onload = () => {
-            console.log(this.responseText);
-         }
-         var url = 'http://localhost:8080/ashow/artista/add';
-         http.open('POST', url, true);
-
-         //Send the proper header information along with the request
-         // http.setRequestHeader('Content-type', 'application/json');
-
-         http.onreadystatechange = () => {
-            //Call a function when the state changes.
-            if (http.readyState == 4 && http.status == 202) {
-               alert(http.responseText);
-            }
-         };
-         http.send(dadosCadastro);
-      //}
+      // $.ajax({
+      //    type: 'POST',
+      //    url: url,
+      //    data: JSON.stringify(dadosCadastro),
+      //    success: function() {
+      //       console.log('a');
+      //    },
+      //    dataType: 'json',
+      //    contentTYpe: 'application/json',
+      // });
    });
 };
 
