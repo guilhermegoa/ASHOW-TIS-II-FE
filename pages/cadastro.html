@@ -1,94 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../assets/css/cadastro.css"
-      />
-      <title>AShow - Cadastre-se</title>
-      <link rel="shortcut icon" href="../assets/img/Logo.png" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   </head>
-   <body>
-      <div class="container" class="branco">
-         <div class="musico" id="musico">
-            <div id="div-musico">
-               <h1 class="title">Sou Musico!</h1>
-               <button id="btn-musico" class="cadastrador" onclick="descer()">
-                  Cadastrar como Músico
-               </button>
-            </div>
-            <form action="" id="form-contratante" class="form-user">
-               <img src="/assets/img/ashowLogoTextWhite.png" alt="" />
-               <div class="input-field">
-                  <input type="Name" id="nomeContratante" required />
-                  <label for="">Nome</label>
-               </div>
-               <div class="input-field">
-                  <input type="password" id="senhaContratante" required />
-                  <label for="" minlength="3">Senha</label>
-               </div>
-               <div class="input-field">
-                  <input type="email" id="emailContratante" required />
-                  <label for="">Email</label>
-               </div>
-               <input
-                  type="submit"
-                  value="Cadastrar"
-                  id="cadastrarContratante"
-               />
-            </form>
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
+   <link rel="stylesheet" type="text/css" href="../assets/css/cadastro.css" />
+   <title>AShow - Cadastre-se</title>
+   <link rel="shortcut icon" href="../assets/img/Logo.png" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+   <div class="container" class="branco">
+      <div class="musico" id="musico">
+         <div id="div-musico">
+            <h1 class="title">Sou Musico!</h1>
+            <button id="btn-musico" class="cadastrador" onclick="descer()">
+               Cadastrar como Músico
+            </button>
          </div>
-         <div class="contratante" id="contratante">
-            <div id="div-contratante">
-               <h1 class="title">Quero Contratar!</h1>
-               <a href="#">
-                  <button id="btn-contratante" class="cadastrador">
-                     Cadastrar como Contratante
-                  </button>
-               </a>
+         <form action="" id="form-contratante" class="form-user">
+            <img src="/assets/img/ashowLogoTextWhite.png" alt="" />
+            <div class="input-field">
+               <input type="Name" id="nomeContratante" required />
+               <label for="">Nome</label>
             </div>
-            <form action="" id="form-musico" class="form-user">
-               <img src="/assets/img/ashowLogoTextWhite.png" alt="" />
-               <div class="input-field">
-                  <input type="text" id="nomeMusico" required />
-                  <label for="">Nome</label>
-               </div>
-               <div class="input-field">
-                  <input
-                     type="password"
-                     minlength="3"
-                     id="senhaMusico"
-                     required
-                  />
-                  <label for="">Senha</label>
-               </div>
-               <div class="input-field">
-                  <input type="email" id="emailMusico" required />
-                  <label for="">Email</label>
-               </div>
-               <div class="input-field">
-                  <input type="text" id="estiloMusico" required />
-                  <label for="">Estilo Musical</label>
-               </div>
-               <div class="input-field">
-                  <input
-                     required
-                     type="text"
-                     placeholder="Ex: Banda, Solo, Dj..."
-                     id="tipoMusico"
-                  />
-                  <label for="">Tipo de Músico</label>
-               </div>
-               <input type="submit" value="Cadastrar" id="submitMusico" />
-            </form>
-         </div>
+            <div class="input-field">
+               <input type="password" id="senhaContratante" required />
+               <label for="" minlength="3">Senha</label>
+            </div>
+            <div class="input-field">
+               <input type="email" id="emailContratante" required />
+               <label for="">Email</label>
+            </div>
+            <input type="submit" value="Cadastrar" id="cadastrarContratante" />
+         </form>
       </div>
-   </body>
-   <script src="../assets/js/cadastro-slide.js"></script>
+      <div class="contratante" id="contratante">
+         <div id="div-contratante">
+            <h1 class="title">Quero Contratar!</h1>
+            <a href="#">
+               <button id="btn-contratante" class="cadastrador">
+                  Cadastrar como Contratante
+               </button>
+            </a>
+         </div>
+         <form action="#" id="form-musico" class="form-user">
+            <img src="/assets/img/ashowLogoTextWhite.png" alt="" />
+            <div class="input-field">
+               <input type="text" id="nomeMusico" required />
+               <label for="">Nome</label>
+            </div>
+            <div class="input-field">
+               <input type="password" minlength="3" id="senhaMusico" required />
+               <label for="">Senha</label>
+            </div>
+            <div class="input-field">
+               <input type="email" id="emailMusico" required />
+               <label for="">Email</label>
+            </div>
+            <div class="input-field">
+               <input type="text" id="estiloMusico" required />
+               <label for="">Estilo Musical</label>
+            </div>
+            <div class="input-field">
+               <input required type="text" placeholder="Ex: Banda, Solo, Dj..." id="tipoMusico" />
+               <label for="">Tipo de Músico</label>
+            </div>
+            <input type="submit" value="Cadastrar" id="submitMusico" />
+         </form>
+      </div>
+   </div>
+</body>
+<script src="../assets/js/cadastro-slide.js"></script>
+
 </html>

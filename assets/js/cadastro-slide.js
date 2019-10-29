@@ -53,24 +53,24 @@ const init = () => {
    cadastrarContratante.click(() => {
       if (formContratante[0].checkValidity()) {
          var dadosCadastro = {
-            nome: nomeContratante.val(),
-            senha: senhaContratante.val(),
-            email: emailContratante.val(),
+            "type": "contratante",
+            "email": emailContratante.val(),
+            "mediaAvaliacao": 0.0,
+            "nome": nomeContratante.val(),
+            "senha": senhaContratante.val(),
          };
-         console.log(dadosCadastro);
 
          var http = new XMLHttpRequest();
          var url = 'http://localhost:8080/ashow/contratante/add';
-         var params = dadosCadastro;
 
          http.open('POST', url, true);
          http.setRequestHeader('Content-type', 'application/json');
-         http.onreadystatechange = function() {
+         http.onreadystatechange = function () {
             if (http.readyState == 4 && http.status == 200) {
-               alert(http.responseText);
+               console.log(http.responseText);
             }
          };
-         http.send(params);
+         http.send(JSON.stringify(dadosCadastro));
       }
    });
 
@@ -100,6 +100,7 @@ const init = () => {
             email: emailMusico.val(),
             mediaAvaliacao: 0.0,
             nome: nomeMusico.val(),
+            senha: senhaMusico.val(),
             estilo: estiloMusico.val(),
             nomeArtistico: nomeMusico.val(),
             numeroEventos: 0,
