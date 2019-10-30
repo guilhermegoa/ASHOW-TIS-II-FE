@@ -55,7 +55,6 @@ const init = () => {
          var dadosCadastro = {
             "type": "contratante",
             "email": emailContratante.val(),
-            "mediaAvaliacao": 0.0,
             "nome": nomeContratante.val(),
             "senha": senhaContratante.val(),
          };
@@ -68,6 +67,9 @@ const init = () => {
          http.onreadystatechange = function () {
             if (http.readyState == 4 && http.status == 200) {
                console.log(http.responseText);
+               if (http.responseText == "true") {
+                  window.location.href = '../../index.html';
+               }
             }
          };
          http.send(JSON.stringify(dadosCadastro));
@@ -98,14 +100,11 @@ const init = () => {
          var dadosCadastro = {
             type: 'artista',
             email: emailMusico.val(),
-            mediaAvaliacao: 0.0,
             nome: nomeMusico.val(),
             senha: senhaMusico.val(),
             estilo: estiloMusico.val(),
             nomeArtistico: nomeMusico.val(),
-            numeroEventos: 0,
             tipoArtista: tipoMusico.val(),
-            valorPadrao: 0.0,
          };
 
          console.log(dadosCadastro);
@@ -118,7 +117,9 @@ const init = () => {
          http.setRequestHeader('Content-type', 'application/json');
          http.onreadystatechange = () => {
             if (http.readyState == 4 && http.status == 200) {
-               console.log(http.responseText);
+               if (http.responseText == "true") {
+                  window.location.href = '../../index.html';
+               }
             }
          };
          http.send(JSON.stringify(params));
