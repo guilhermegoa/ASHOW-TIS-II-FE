@@ -53,76 +53,76 @@ const init = () => {
    cadastrarContratante.click(() => {
       if (formContratante[0].checkValidity()) {
          var dadosCadastro = {
-            nome: nomeContratante.val(),
-            senha: senhaContratante.val(),
-            email: emailContratante.val(),
+            "type": "contratante",
+            "email": emailContratante.val(),
+            "nome": nomeContratante.val(),
+            "senha": senhaContratante.val(),
          };
-
-         console.log(dadosCadastro);
-
-         function reqListener() {
-            console.log(this.responseText);
-         }
-
-         //  var oReq = new XMLHttpRequest();
-         //  oReq.onload = reqListener;
-         //  oReq.open("get", "http://localhost:8080/ashow/artista/all", true);
-         //  oReq.send();
 
          var http = new XMLHttpRequest();
          var url = 'http://localhost:8080/ashow/contratante/add';
-         var params1 = dadosCadastro;
+
          http.open('POST', url, true);
-
-         //Send the proper header information along with the request
          http.setRequestHeader('Content-type', 'application/json');
-
-         http.onreadystatechange = function() {
-            //Call a function when the state changes.
+         http.onreadystatechange = function () {
             if (http.readyState == 4 && http.status == 200) {
-               alert(http.responseText);
+               console.log(http.responseText);
+               if (http.responseText == "true") {
+                  window.location.href = '../../index.html';
+               }
             }
          };
-         http.send(params1);
+         http.send(JSON.stringify(dadosCadastro));
       }
    });
 
    submitMusico.click(() => {
       if (formMusico[0].checkValidity()) {
+         var dadosCadastroBase = {
+            ID: null,
+            email: emailMusico.val(),
+            mediaAvaliacao: 0.0,
+            nome: nomeMusico.val(),
+            estilo: estiloMusico.val(),
+            nomeArtistico: nomeMusico.val(),
+            numeroEventos: 0,
+            tipoArtista: tipoMusico.val(),
+            valorPadrao: 0.0,
+            popularidade: '',
+            contatoPublico: emailMusico.val(),
+            descricao: '',
+            senha: senhaMusico.val(),
+            endereco: '',
+            eventos: null,
+            avaliacoes: null,
+         };
+
          var dadosCadastro = {
+            type: 'artista',
+            email: emailMusico.val(),
             nome: nomeMusico.val(),
             senha: senhaMusico.val(),
-            email: emailMusico.val(),
             estilo: estiloMusico.val(),
-            tipo: tipoMusico.val(),
+            nomeArtistico: nomeMusico.val(),
+            tipoArtista: tipoMusico.val(),
          };
 
          console.log(dadosCadastro);
 
-         function reqListener() {
-            console.log(this.responseText);
-         }
-
-         //  var oReq = new XMLHttpRequest();
-         //  oReq.onload = reqListener;
-         //  oReq.open("get", "http://localhost:8080/ashow/artista/all", true);
-         //  oReq.send();
-
          var http = new XMLHttpRequest();
-         var url = 'http://localhost:8080/ashow/contratante/add';
-         var params1 = dadosCadastro;
+         var url = 'http://localhost:8080/ashow/artista/add';
+         var params = dadosCadastro;
+
          http.open('POST', url, true);
-
-         //Send the proper header information along with the request
          http.setRequestHeader('Content-type', 'application/json');
-
-         http.onreadystatechange = function() {
-            //Call a function when the state changes.
+         http.onreadystatechange = () => {
             if (http.readyState == 4 && http.status == 200) {
-               alert(http.responseText);
+               if (http.responseText == "true") {
+                  window.location.href = '../../index.html';
+               }
             }
          };
-         http.send(params1);
+         http.send(JSON.stringify(params));
       }
    });
 };

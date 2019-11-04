@@ -1,13 +1,13 @@
 {
    //PRETTIER
    "editor.defaultFormatter": "esbenp.prettier-vscode",
-   "prettier.singleQuote": false,
-   "editor.formatOnSave": false,
-   "prettier.eslintIntegration": false,
-   "prettier.stylelintIntegration": false,
+   "prettier.singleQuote": true,
+   "editor.formatOnSave": true,
+   "prettier.eslintIntegration": true,
+   "prettier.stylelintIntegration": true,
    "prettier.trailingComma": "all",
    //LIVE SASSS
-   "liveSassCompile.settings.generateMap": false,
+   "liveSassCompile.settings.generateMap": true,
    "liveSassCompile.settings.formats": [
       // This is Default.
       {
@@ -27,13 +27,20 @@
    "extends": "stylelint-config-standard",
    "rules": {
       "at-rule-no-unknown": [
-         false,
+         true,
          {
-            "ignoreAtRules": ["extends", "ignores"]
+            "ignoreAtRules": [
+               "extends",
+               "ignores"
+            ]
          }
       ]
    },
    "indentation": "tab",
    "number-leading-zero": null,
-   "unit-whitelist": ["em", "rem", "s"]
+   "unit-whitelist": [
+      "em",
+      "rem",
+      "s"
+   ]
 }

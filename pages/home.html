@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Ashow</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" type="text/css" href="../assets/css/header.css" />
+      <link rel="stylesheet" type="text/css" href="../assets/css/footer.css" />
+      <link rel="shortcut icon" href="/assets/img/Logo.png" />
+      <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+
+   <header>
+      <section id="logo">
+         <a href="#"
+            ><img src="/assets/img/ashowLogoTextWhite.png" alt="logo"
+         /></a>
+      </section>
+      <section id="search">
+         <input type="text" placeholder="Buscar..." />
+         <button type="submit">
+            <i class="fas fa-search fa-2x"></i>
+         </button>
+      </section>
+      <section id="user-menu">
+         <button class="dropbtn">
+            <i class="fas fa-user fa-2x"></i> Usuario
+            <i class="fa fa-chevron-up rotate"></i>
+         </button>
+         <nav class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+         </nav>
+      </section>
+      <section id="notification">
+         <a href="#">
+            <i class="fas fa-bell fa-2x"><div class="circle"></div></i
+         ></a>
+      </section>
+   </header>
+
+   <body>
+      <div style="color: green;">
+         <H1>contratante</H1>
+         <div id="showTestContratantes"></div>
+      </div>
+      <div style="color: red;">
+         <h1>Artista</h1>
+         <div id="showTestArtistas"></div>
+      </div>
+
+      <script>
+         const contratantes = document.getElementById('showTestContratantes');
+         const artistas = $('#showTestArtistas');
+
+         var http = new XMLHttpRequest();
+         var url = 'http://localhost:8080/ashow/contratante/all';
+
+         http.open('GET', url, true);
+         http.setRequestHeader('Content-type', 'application/json');
+         http.onreadystatechange = function() {
+            if (http.readyState == 4 && http.status == 200) {
+               contratantes.innerHTML = this.responseText;
+            }
+         };
+
+         http.send();
+
+         var httpA = new XMLHttpRequest();
+         var urlA = 'http://localhost:8080/ashow/artista/all';
+
+         httpA.open('GET', url, true);
+         httpA.setRequestHeader('Content-type', 'application/json');
+         httpA.onreadystatechange = function() {
+            if (http.readyState == 4 && http.status == 200) {
+               artistas.innerHTML = this.responseText;
+            }
+         };
+
+         httpA.send();
+      </script>
+   </body>
+
+   <footer>
+      <section id="contact">
+         <p>Contato:</p>
+         <a href="#">Numero: (XX) XXXXX-XXXXX</a>
+         <a href="#">Emal: XXXXXXXX@XXXXX.com.br</a>
+      </section>
+      <section id="social-media">
+         <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+         <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+         <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+         <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+         <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </section>
+      <section id="copyRight">Copyright 2019 (c) ASHOW</section>
+   </footer>
+</html>
