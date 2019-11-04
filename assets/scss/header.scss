@@ -27,7 +27,7 @@ header {
       to right,
       $color-purple-logo,
       $color-purple,
-      $color-orange2
+      $color-purple-logo
     );
 
   #logo img {
@@ -60,7 +60,7 @@ header {
     border: 0 solid;
     border-radius: 0 10px 10px 0;
     color: $color-white;
-    height: 44px;
+    height: 40px;
     width: 45px;
     float: left;
     background-color: $color-purple;
@@ -73,7 +73,7 @@ header {
     border: 0;
     height: 38px;
     width: 46px;
-    margin-left: -9px;
+    //  margin-left: -9px;
     padding-top: 6px;
   }
 
@@ -145,11 +145,11 @@ header {
     display: block;
 
     a {
-      color: $color-purple;
+      color: $color-white;
     }
 
     a:hover {
-      color: $color-purple-logo;
+      color: $color-purple;
     }
   }
 

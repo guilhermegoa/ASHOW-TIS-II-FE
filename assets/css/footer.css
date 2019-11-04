@@ -37,8 +37,8 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   background-color: #300f46;
-  background-image: -webkit-gradient(linear, left top, right top, from(#c54200), color-stop(#300f46), to(#6d2c96));
-  background-image: linear-gradient(to right, #c54200, #300f46, #6d2c96);
+  background-image: -webkit-gradient(linear, left top, right top, from(#6d2c96), color-stop(#300f46), to(#6d2c96));
+  background-image: linear-gradient(to right, #6d2c96, #300f46, #6d2c96);
   color: #fff;
 }
 
@@ -56,7 +56,7 @@ footer {
 }
 
 #contact a:hover {
-  color: #6d2c96;
+  color: #300f46;
 }
 
 #social-media a {
@@ -65,7 +65,7 @@ footer {
 }
 
 #social-media a :hover {
-  color: #6d2c96;
+  color: #300f46;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -79,3 +79,4 @@ footer {
     margin: 30px 0 0 0;
   }
 }
+/*# sourceMappingURL=footer.css.map */
