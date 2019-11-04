@@ -19,7 +19,7 @@ footer {
   background-image:
     linear-gradient(
       to right,
-      $color-orange2,
+      $color-purple-logo,
       $color-purple,
       $color-purple-logo
     );
@@ -35,7 +35,7 @@ footer {
 }
 
 #contact a:hover {
-  color: $color-purple-logo;
+  color: $color-purple;
 }
 
 #social-media a {
@@ -44,7 +44,7 @@ footer {
 }
 
 #social-media a :hover {
-  color: $color-purple-logo;
+  color: $color-purple;
 }
 
 @media only screen and (max-width: 1200px) {

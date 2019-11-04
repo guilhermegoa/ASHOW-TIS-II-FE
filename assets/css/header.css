@@ -42,8 +42,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: #300f46;
-  background-image: -webkit-gradient(linear, left top, right top, from(#6d2c96), color-stop(#300f46), to(#c54200));
-  background-image: linear-gradient(to right, #6d2c96, #300f46, #c54200);
+  background-image: -webkit-gradient(linear, left top, right top, from(#6d2c96), color-stop(#300f46), to(#6d2c96));
+  background-image: linear-gradient(to right, #6d2c96, #300f46, #6d2c96);
 }
 
 header #logo img {
@@ -80,7 +80,7 @@ header #search button {
   border: 0 solid;
   border-radius: 0 10px 10px 0;
   color: #fff;
-  height: 44px;
+  height: 40px;
   width: 45px;
   float: left;
   background-color: #300f46;
@@ -93,7 +93,6 @@ header #search button :hover {
   border: 0;
   height: 38px;
   width: 46px;
-  margin-left: -9px;
   padding-top: 6px;
 }
 
@@ -167,11 +166,11 @@ header #notification {
 }
 
 header #notification a {
-  color: #300f46;
+  color: #fff;
 }
 
 header #notification a:hover {
-  color: #6d2c96;
+  color: #300f46;
 }
 
 header .circle {
@@ -189,3 +188,4 @@ header .circle {
 header #notification span p {
   margin: -5px 0 0 5px;
 }
+/*# sourceMappingURL=header.css.map */

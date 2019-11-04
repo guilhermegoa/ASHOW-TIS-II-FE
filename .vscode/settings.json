@@ -7,7 +7,7 @@
    "prettier.stylelintIntegration": true,
    "prettier.trailingComma": "all",
    //LIVE SASSS
-   "liveSassCompile.settings.generateMap": true,
+   "liveSassCompile.settings.generateMap": false,
    "liveSassCompile.settings.formats": [
       // This is Default.
       {
@@ -29,18 +29,11 @@
       "at-rule-no-unknown": [
          true,
          {
-            "ignoreAtRules": [
-               "extends",
-               "ignores"
-            ]
+            "ignoreAtRules": ["extends", "ignores"]
          }
       ]
    },
    "indentation": "tab",
    "number-leading-zero": null,
-   "unit-whitelist": [
-      "em",
-      "rem",
-      "s"
-   ]
+   "unit-whitelist": ["em", "rem", "s"]
 }
