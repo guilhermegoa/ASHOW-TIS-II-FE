@@ -1,107 +1,117 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <title>Ashow</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="stylesheet" type="text/css" href="../assets/css/header.css" />
-      <link rel="stylesheet" type="text/css" href="../assets/css/footer.css" />
-      <link rel="shortcut icon" href="/assets/img/Logo.png" />
-      <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
-   </head>
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>Ashow</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" type="text/css" href="../assets/css/header.css" />
+   <link rel="stylesheet" type="text/css" href="../assets/css/footer.css" />
+   <link rel="shortcut icon" href="/assets/img/Logo.png" />
+   <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
+</head>
+
+<body>
+   <!-- HEADER -->
+   <header>
+      <section id="logo">
+         <a href="#"><img src="/assets/img/ashowLogoTextWhite.png" alt="logo" /></a>
+      </section>
+      <section id="search">
+         <input type="text" placeholder="Buscar..." />
+         <button type="submit">
+            <i class="fas fa-search fa-2x"></i>
+         </button>
+      </section>
+      <section id="user-menu">
+         <button class="dropbtn">
+            <i class="fas fa-user fa-2x"></i> Usuario
+            <i class="fa fa-chevron-up rotate"></i>
+         </button>
+         <nav class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+         </nav>
+      </section>
+      <section id="notification">
+         <a href="#">
+            <i class="fas fa-bell fa-2x">
+               <div class="circle"></div>
+            </i></a>
+      </section>
+   </header>
+   <!-- FIM HEADER -->
+
+   <!-- FORM -->
 
    <body>
-      <!-- HEADER -->
-      <header>
-         <section id="logo">
-            <a href="#"
-               ><img src="/assets/img/ashowLogoTextWhite.png" alt="logo"
-            /></a>
-         </section>
-         <section id="search">
-            <input type="text" placeholder="Buscar..." />
-            <button type="submit">
-               <i class="fas fa-search fa-2x"></i>
-            </button>
-         </section>
-         <section id="user-menu">
-            <button class="dropbtn">
-               <i class="fas fa-user fa-2x"></i> Usuario
-               <i class="fa fa-chevron-up rotate"></i>
-            </button>
-            <nav class="dropdown-content">
-               <a href="#">Link 1</a>
-               <a href="#">Link 2</a>
-               <a href="#">Link 3</a>
-            </nav>
-         </section>
-         <section id="notification">
-            <a href="#">
-               <i class="fas fa-bell fa-2x"> <div class="circle"></div> </i
-            ></a>
-         </section>
-      </header>
-      <!-- FIM HEADER -->
-
-      <!-- FORM -->
-      <body>
-            <form action="#" id="formEvent">
-               <div class="input-field">
-                  <label for="">De um nome para o evento:</label>
-                  <input type="text" id="name" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Tipo do evento:</label>
-                  <input type="text" id="eventType" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Data:</label>
-                  <input type="date" id="date" required />
-               </div>
-               <label for="">Endereço:</label>
-               <div class="input-field">
-                  <label for="">CEP:</label>
-                  <input type="text" id="CEP" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Rua/Av.:</label>
-                  <input type="text" id="street" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Número:</label>
-                  <input type="text" id="number" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Bairro:</label>
-                  <input type="text" id="district" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Cidade:</label>
-                  <input type="text" id="city" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Estado:</label>
-                  <input type="text" id="state" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Complemento:</label>
-                  <input type="text" id="complement" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Quantidade de pessoas esperadas:</label>
-                  <input type="text" id="peopleQnt" required />
-               </div>
-               <div class="input-field">
-                  <label for="">Valor medio por artista:</label>
-                  <input type="text" id="artistValue" />
-               </div>
-               <input type="submit" value="Cadastrar" id="cadastrarEventoBtn">
-            </form>
+      <form action="#" id="formEvent">
+         <div class="input-field">
+            <label for="">De um nome para o evento:</label>
+            <input type="text" id="name" required />
+         </div>
+         <div class="input-field">
+            <label for="">Tipo do evento:</label>
+            <input type="text" id="eventType" required />
+         </div>
+         <div class="input-field">
+            <label for="">Data:</label>
+            <input type="date" id="date" required />
+         </div>
+         <div class="input-field">
+            <label for="">Horario:</label>
+            <input type="time" id="hours" required />
+         </div>
+         <label for="">Endereço:</label>
+         <div class="input-field">
+            <label for="">CEP:</label>
+            <input type="text" id="CEP" required />
+         </div>
+         <div class="input-field">
+            <label for="">Rua/Av.:</label>
+            <input type="text" id="street" required />
+         </div>
+         <div class="input-field">
+            <label for="">Número:</label>
+            <input type="text" id="number" required />
+         </div>
+         <div class="input-field">
+            <label for="">Bairro:</label>
+            <input type="text" id="district" required />
+         </div>
+         <div class="input-field">
+            <label for="">Cidade:</label>
+            <input type="text" id="city" required />
+         </div>
+         <div class="input-field">
+            <label for="">Estado:</label>
+            <input type="text" id="state" required />
+         </div>
+         <div class="input-field">
+            <label for="">Complemento:</label>
+            <input type="text" id="complement" required />
+         </div>
+         <div class="input-field">
+            <label for="">Quantidade de pessoas esperadas:</label>
+            <input type="text" id="peopleQnt" required />
+         </div>
+         <div class="input-field">
+            <label for="">Quantidade de artista que deseja:</label>
+            <input type="number" id="artistQnt" />
+         </div>
+         <div class="input-field">
+            <label for="">Valor medio por artista:</label>
+            <input type="text" id="artistValue" />
+         </div>
+         <input type="submit" value="Cadastrar" id="cadastrarEventoBtn">
+      </form>
       <!-- FIM FOOTER -->
 
       <!-- SCRIPTS -->
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
       <script src="../assets/js/RequisicoesEvento.js"></script>
    </body>
+
 </html>

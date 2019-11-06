@@ -3,6 +3,7 @@ const AddEvento = () => {
    const name = $('#name');
    const eventType = $('#eventType');
    const date = $('#date');
+   const hours = $('#hours');
    const CEP = $('#CEP');
    const street = $('#street');
    const number = $('#number');
@@ -12,11 +13,12 @@ const AddEvento = () => {
    const complement = $('#complement');
    const peopleQnt = $('#peopleQnt');
    const artistValue = $('#artistValue');
+   const artistQnt = $('#artistQnt');
    const btnCadastrar = $('#cadastrarEventoBtn');
 
    CEP.change(() => {
       if (CEP.val().length >= 8) {
-         $.getJSON('https://viacep.com.br/ws/' + CEP.val() + '/json/', function(
+         $.getJSON('https://viacep.com.br/ws/' + CEP.val() + '/json/', function (
             dados,
          ) {
             street.prop('disabled', false);
@@ -53,42 +55,58 @@ const AddEvento = () => {
    btnCadastrar.click(() => {
       if (form[0].checkValidity()) {
          var dadosCadastro = {
-            name: name.val(),
-            eventType: eventType.val(),
-            date: date.val(),
-            CEP: CEP.val(),
-            street: street.val(),
-            number: number.val(),
-            district: district.val(),
-            city: city.val(),
-            state: state.val(),
-            complement: complement.val(),
-            peopleQnt: peopleQnt.val(),
-            artistValue: artistValue.val(),
-         };
-
-         console.log(dadosCadastro);
-
-         $.ajax({
-            url: 'http://localhost/json/teste.php',
-            type: 'POST',
-            data: dadosCadastro,
-            dataType: 'json',
-            beforeSend: function() {
-               alert('carregando...');
+            capacidadeEsperada: peopleQnt.val(),
+            data: date.val() + "T" + hours.val(),
+            endereco: {
+               bairro: district.val(),
+               cep: CEP.val(),
+               cidade: city.val(),
+               complemento: complement.val(),
+               numero: number.val(),
+               rua: street.val(),
+               uf: state.val()
             },
-         })
-            .done(function() {
-               alert('Enviado');
-            })
-            .fail(function() {
-               alert('error');
-            })
-            .always(function() {
-               alert('complete');
-            });
+            estilo: eventType.val(),
+            nome: name.val(),
+            open: true,
+            quantidadeArtistas: artistQnt.val(),
+            valor: artistValue.val()
+         }
+
+         var http = new XMLHttpRequest();
+         var url = 'http://localhost:8080/ashow/evento/add';
+
+         http.open('POST', url, true);
+         http.setRequestHeader('Content-type', 'application/json');
+         http.onreadystatechange = function () {
+            if (http.readyState == 4 && http.status == 200) {
+               console.log(http.responseText);
+               if (http.responseText == 'true') {
+                  alert("Evento cadastrado");
+               } else {
+                  alert("Erro ao cadastrar o evento")
+               }
+            }
+         };
+         http.send(JSON.stringify(dadosCadastro));
       }
    });
 };
+
+
+
+const getAll = () => {
+   var http = new XMLHttpRequest();
+   var url = 'http://localhost:8080/ashow/evento/all';
+
+   http.open('GET', url, true);
+   http.setRequestHeader('Content-type', 'application/json');
+   http.onreadystatechange = function () {
+      if (http.readyState == 4 && http.status == 200) {
+         console.log(JSON.parse(http.responseText));
+      }
+   };
+   http.send(JSON.stringify());
+}
 
 AddEvento();
