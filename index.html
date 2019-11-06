@@ -1,85 +1,92 @@
 <!DOCTYPE html>
 <html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Ashow</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="/assets/css/tela-inicial.css"
+      />
+      <link rel="shortcut icon" href="/assets/img/Logo.png" />
+      <script src="./assets/js/index.js"></script>
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.js"
+         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+         crossorigin="anonymous"
+      ></script>
+   </head>
 
-<head>
-   <meta charset="utf-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <title>Ashow</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link rel="stylesheet" type="text/css" href="/assets/css/tela-inicial.css" />
-   <link rel="shortcut icon" href="/assets/img/Logo.png" />
-   <script src="./assets/js/index.js"></script>
-   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"></script>
-</head>
+   <body>
+      <!-- Container que reserva toda a aplicação -->
+      <div class="container">
+         <!-- Container que reserva o conteúdo: Apresentação -->
 
-<body>
-   <!-- Container que reserva toda a aplicação -->
-   <div class="container">
-      <!-- Container que reserva o conteúdo: Apresentação -->
-
-      <div class="container-content">
-         <!-- Apresentação -->
-         <div class="content">
-            <article>
-               A <span>Ashow</span> pretende aprimorar o mercado musical,
-               juntando quem curte uma festa com música ao vivo com o próprio
-               músico, sendo esse de qualquer estilo ou renome; a plataforma
-               ajuda a realizar seus eventos com <span>segurança</span>,
-               <span>praticidade</span> e <span>qualidade</span> de música.
-            </article>
+         <div class="container-content">
+            <!-- Apresentação -->
+            <div class="content">
+               <article>
+                  A <span>Ashow</span> pretende aprimorar o mercado musical,
+                  juntando quem curte uma festa com música ao vivo com o próprio
+                  músico, sendo esse de qualquer estilo ou renome; a plataforma
+                  ajuda a realizar seus eventos com <span>segurança</span>,
+                  <span>praticidade</span> e <span>qualidade</span> de música.
+               </article>
+            </div>
          </div>
+
+         <div class="container-login">
+            <img
+               class="logo-text"
+               src="/assets/img/ashowLogoText -img.png"
+               alt=""
+            />
+            <form action="#">
+               <div class="input-field">
+                  <input type="text" name="" required id="emailLog" />
+                  <label for="">Usuário</label>
+               </div>
+               <div class="input-field">
+                  <input type="password" name="" id="senhaLog" required />
+                  <label for="">Senha</label>
+               </div>
+               <input type="submit" class="insert" id="tryLog" value="Login" />
+            </form>
+            <a href="./pages/cadastro.html"
+               ><button class="cadastrar">Cadastrar</button></a
+            >
+         </div>
+         <script>
+            const emailLog = $('#emailLog');
+            const senhaLog = $('#senhaLog');
+            const tryLog = $('#tryLog');
+
+            tryLog.click(() => {
+               var dadosTry = senhaLog.val();
+
+               var http = new XMLHttpRequest();
+               var url =
+                  'http://localhost:8080/ashow/artista/' + emailLog.val();
+               var resposta;
+
+               http.open('POST', url, true);
+               http.setRequestHeader('Content-type', 'text/plain');
+               http.onreadystatechange = function() {
+                  if (http.readyState == 4 && http.status == 200) {
+                     resposta = http.responseText;
+                     window.location.href =
+                        './asset/pages/home.html' + emailLog.val();
+                  }
+               };
+               http.send(dadosTry);
+            });
+         </script>
       </div>
 
-      <div class="container-login">
-         <img class="logo-text" src="/assets/img/ashowLogoText -img.png" alt="" />
-         <form action="#">
-            <div class="input-field">
-               <input type="text" name="" required id="emailLog" />
-               <label for="">Usuário</label>
-            </div>
-            <div class="input-field">
-               <input type="password" name="" id="senhaLog" required />
-               <label for="">Senha</label>
-            </div>
-            <input type="submit" class="insert" id="tryLog" value="Login" />
-         </form>
-         <button class="cadastrar" onclick="cadastrar()">Cadastrar</button>
-      </div>
-      <script>
-         const emailLog = $("#emailLog");
-         const senhaLog = $("#senhaLog");
-         const tryLog = $("#tryLog");
-
-         tryLog.click(() => {
-            var dadosTry = senhaLog.val();
-
-            var http = new XMLHttpRequest;
-            var url = 'http://localhost:8080/ashow/artista/' + emailLog.val();
-            var resposta
-
-            http.open('POST', url, true);
-            http.setRequestHeader('Content-type', 'text/plain');
-            http.onreadystatechange = function () {
-               if (http.readyState == 4 && http.status == 200) {
-                  resposta = http.responseText;
-                  window.location.href = './asset/pages/home.html' + emailLog.val();
-               }
-            };
-            http.send(dadosTry);
-         })
-      </script>
-   </div>
-
-   <section>
-      <div class="wave"></div>
-   </section>
-
-   <script>
-      function cadastrar() {
-         window.location.href = 'pages/cadastro.html';
-      }
-   </script>
-</body>
-
+      <section>
+         <div class="wave"></div>
+      </section>
+   </body>
 </html>

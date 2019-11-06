@@ -4,12 +4,21 @@ const slidemusico = () => {
    const tela_musico = document.getElementById('musico');
    const tela_contratante = document.getElementById('contratante');
    const aux = document.getElementById('div-contratante');
+   var troca = new Boolean(true);
 
    btn_musico.addEventListener('click', () => {
       form_musico.classList.toggle('form-active');
       tela_musico.classList.toggle('musico-active');
       tela_contratante.classList.toggle('contratante-active');
       aux.classList.toggle('off');
+
+      if (troca) {
+         btn_musico.textContent = `Clique para cancelar`;
+         troca = false;
+      } else {
+         btn_musico.textContent = `Cadastrar como Músico`;
+         troca = true;
+      }
    });
 };
 
@@ -19,22 +28,26 @@ const slidecontratante = () => {
    const tela_contratante = document.getElementById('contratante');
    const tela_musico = document.getElementById('musico');
    const aux = document.getElementById('div-musico');
+   var troca = new Boolean(true);
 
    btn_contratante.addEventListener('click', () => {
       form_contratante.classList.toggle('form-active');
       tela_contratante.classList.toggle('contratante-active');
       tela_musico.classList.toggle('musico-active');
       aux.classList.toggle('off');
+
+      if (troca) {
+         btn_contratante.textContent = `Clique para cancelar`;
+         troca = false;
+      } else {
+         btn_contratante.textContent = `Cadastrar como Contratante`;
+         troca = true;
+      }
    });
 };
 
 slidemusico();
 slidecontratante();
-
-function descer() {
-   var heightPage = document.body.scrollHeight;
-   window.scrollTo(0, heightPage);
-}
 
 const init = () => {
    const formContratante = $('#form-contratante');
@@ -53,10 +66,10 @@ const init = () => {
    cadastrarContratante.click(() => {
       if (formContratante[0].checkValidity()) {
          var dadosCadastro = {
-            "type": "contratante",
-            "email": emailContratante.val(),
-            "nome": nomeContratante.val(),
-            "senha": senhaContratante.val(),
+            type: 'contratante',
+            email: emailContratante.val(),
+            nome: nomeContratante.val(),
+            senha: senhaContratante.val(),
          };
 
          var http = new XMLHttpRequest();
@@ -64,10 +77,10 @@ const init = () => {
 
          http.open('POST', url, true);
          http.setRequestHeader('Content-type', 'application/json');
-         http.onreadystatechange = function () {
+         http.onreadystatechange = function() {
             if (http.readyState == 4 && http.status == 200) {
                console.log(http.responseText);
-               if (http.responseText == "true") {
+               if (http.responseText == 'true') {
                   window.location.href = '../../index.html';
                }
             }
@@ -117,7 +130,7 @@ const init = () => {
          http.setRequestHeader('Content-type', 'application/json');
          http.onreadystatechange = () => {
             if (http.readyState == 4 && http.status == 200) {
-               if (http.responseText == "true") {
+               if (http.responseText == 'true') {
                   window.location.href = '../../index.html';
                }
             }

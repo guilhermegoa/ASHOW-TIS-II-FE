@@ -85,14 +85,14 @@ form {
   top: 70px;
   color: #e36627;
   font-size: 3.3rem;
-  text-shadow:
-    0 1px 0 rgb(0, 0, 0),
-    0 2px 0 rgb(0, 0, 0),
-    0 3px 0 rgb(0, 0, 0),
-    0 4px 0 rgb(0, 0, 0),
-    0 5px 0 rgb(0, 0, 0);
+  //   text-shadow:
+  //     0 1px 0 rgb(0, 0, 0),
+  //     0 2px 0 rgb(0, 0, 0),
+  //     0 3px 0 rgb(0, 0, 0),
+  //     0 4px 0 rgb(0, 0, 0),
+  //     0 5px 0 rgb(0, 0, 0);
   filter: none;
-  animation: animate 4s linear infinite;
+  //   animation: animate 4s linear infinite;
 }
 
 .cadastrador {
@@ -116,19 +116,19 @@ form {
   background-color: white;
 }
 
-@keyframes animate {
-  0% {
-    color: #e36627;
-  }
+// @keyframes animate {
+//   0% {
+//     color: #e36627;
+//   }
 
-  50% {
-    color: #fff;
-  }
+//   50% {
+//     color: #fff;
+//   }
 
-  100% {
-    color: #e36627;
-  }
-}
+//   100% {
+//     color: #e36627;
+//   }
+// }
 
 @media screen and (max-width: 900px) {
   .container {
@@ -157,7 +157,6 @@ form {
 @media screen and(max-width: 1000px) {
   .form-user {
     position: relative;
-    bottom: 3px;
   }
 }
 
