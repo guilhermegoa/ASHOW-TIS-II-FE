@@ -14,6 +14,25 @@ body {
 
 /* CADASTRO GERAL */
 
+.back-inicial {
+  position: fixed;
+  z-index: 2;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+}
+
+.back-inicial img {
+  position: relative;
+  height: 100px;
+  width: 100px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
 .musico {
   height: 100vh;
   justify-content: center;

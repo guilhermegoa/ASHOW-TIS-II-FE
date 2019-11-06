@@ -12,11 +12,7 @@
       />
       <link rel="shortcut icon" href="/assets/img/Logo.png" />
       <script src="./assets/js/index.js"></script>
-      <script
-         src="https://code.jquery.com/jquery-3.4.1.js"
-         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-         crossorigin="anonymous"
-      ></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
    </head>
 
    <body>
@@ -58,31 +54,6 @@
                ><button class="cadastrar">Cadastrar</button></a
             >
          </div>
-         <script>
-            const emailLog = $('#emailLog');
-            const senhaLog = $('#senhaLog');
-            const tryLog = $('#tryLog');
-
-            tryLog.click(() => {
-               var dadosTry = senhaLog.val();
-
-               var http = new XMLHttpRequest();
-               var url =
-                  'http://localhost:8080/ashow/artista/' + emailLog.val();
-               var resposta;
-
-               http.open('POST', url, true);
-               http.setRequestHeader('Content-type', 'text/plain');
-               http.onreadystatechange = function() {
-                  if (http.readyState == 4 && http.status == 200) {
-                     resposta = http.responseText;
-                     window.location.href =
-                        './asset/pages/home.html' + emailLog.val();
-                  }
-               };
-               http.send(dadosTry);
-            });
-         </script>
       </div>
 
       <section>
