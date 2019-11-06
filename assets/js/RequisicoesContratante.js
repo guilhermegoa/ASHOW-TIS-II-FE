@@ -36,41 +36,42 @@ const AddContrattante = () => {
 
 const UpdateContrattante = () => {};
 
-const GetContrattante = (email) => {
-   // const contratante = document.getElementById(id);
-   const dado;
+const GetContrattante = (email, id) => {
+   const contratante = document.getElementById(id);
+
    var http = new XMLHttpRequest();
    var url = 'http://localhost:8080/ashow/contratante/' + email;
-
+   var dado;
    http.open('GET', url, true);
    http.setRequestHeader('Content-type', 'application/json');
    http.onreadystatechange = function() {
-      if (http.readyState == 4 && http.status == 200) {
-         dado = JSON.parse(url.responseText);
+      if (http.onload == 4 && http.status == 200) {
+         dado = JSON.parse(this.responseText);
       }
    };
-
-   http.send(dado);
+   http.send();
+   return dado;
 };
 
-const GetAllContrattante = () => {
-   // const contratantes = document.getElementById(id);
-   const dados;
+const GetAllContrattante = id => {
+   const contratantes = document.getElementById(id);
+
    var http = new XMLHttpRequest();
    var url = 'http://localhost:8080/ashow/contratante/all';
 
-
    http.open('GET', url, true);
    http.setRequestHeader('Content-type', 'application/json');
    http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
-         dados = JSON.parse(url.responseText);
+         contratantes.innerHTML = this.responseText;
       }
    };
 
-   http.send(dados);
+   http.send();
 };
 
 const DeleteContrattante = () => {};
 
 AddContrattante();
+
+console.log(GetContrattante());

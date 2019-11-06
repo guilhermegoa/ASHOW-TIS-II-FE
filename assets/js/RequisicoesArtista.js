@@ -41,9 +41,9 @@ const AddArtista = () => {
 
 const UpdateArtista = () => {};
 
-const GetArtista = (email) => {
-   // const artistas = $(id);
-   const dado;
+const GetArtista = (id, email) => {
+   const artistas = $(id);
+
    var http = new XMLHttpRequest();
    var url = 'http://localhost:8080/ashow/artista/' + email;
 
@@ -51,16 +51,16 @@ const GetArtista = (email) => {
    http.setRequestHeader('Content-type', 'application/json');
    http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
-         dado = JSON.parse(url.responseText);
+         artistas.innerHTML = this.responseText;
       }
    };
 
-   http.send(dado);
+   http.send();
 };
 
-const GetAllArtista = () => {
-   // const artistas = $(id);
-   const dados;
+const GetAllArtista = id => {
+   const artistas = $(id);
+
    var http = new XMLHttpRequest();
    var url = 'http://localhost:8080/ashow/artista/all';
 
@@ -68,11 +68,11 @@ const GetAllArtista = () => {
    http.setRequestHeader('Content-type', 'application/json');
    http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
-         dados = JSON.parse(url.responseText);
+         artistas.innerHTML = this.responseText;
       }
    };
 
-   http.send(dados);
+   http.send();
 };
 
 const DeleteArtista = () => {};
