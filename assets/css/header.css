@@ -103,7 +103,7 @@ header .dropbtn {
   background-color: #300f46;
   border-radius: 20px 20px 0 0;
   color: white;
-  padding: 16px;
+  padding: 16px 7px 16px 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -188,4 +188,3 @@ header .circle {
 header #notification span p {
   margin: -5px 0 0 5px;
 }
-/*# sourceMappingURL=header.css.map */

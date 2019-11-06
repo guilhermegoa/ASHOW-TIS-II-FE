@@ -35,6 +35,27 @@ body {
 }
 
 /* CADASTRO GERAL */
+.back-inicial {
+  position: fixed;
+  z-index: 2;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  cursor: pointer;
+}
+
+.back-inicial img {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+
+.back-inicial img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .musico {
   height: 100vh;
   -webkit-box-pack: center;
@@ -137,11 +158,8 @@ form input {
   top: 70px;
   color: #e36627;
   font-size: 3.3rem;
-  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 3px 0 black, 0 4px 0 black, 0 5px 0 black;
   -webkit-filter: none;
           filter: none;
-  -webkit-animation: animate 4s linear infinite;
-          animation: animate 4s linear infinite;
 }
 
 .cadastrador {
@@ -164,30 +182,6 @@ form input {
 .cadastrador:hover {
   color: #300f46;
   background-color: white;
-}
-
-@-webkit-keyframes animate {
-  0% {
-    color: #e36627;
-  }
-  50% {
-    color: #fff;
-  }
-  100% {
-    color: #e36627;
-  }
-}
-
-@keyframes animate {
-  0% {
-    color: #e36627;
-  }
-  50% {
-    color: #fff;
-  }
-  100% {
-    color: #e36627;
-  }
 }
 
 @media screen and (max-width: 900px) {
@@ -217,7 +211,6 @@ form input {
 @media screen and (max-width: 1000px) {
   .form-user {
     position: relative;
-    bottom: 3px;
   }
 }
 
@@ -319,4 +312,3 @@ form input {
 .input-field input:focus ~ label {
   color: #e36627;
 }
-/*# sourceMappingURL=cadastro.css.map */

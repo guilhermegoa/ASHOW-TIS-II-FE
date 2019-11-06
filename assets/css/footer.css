@@ -21,7 +21,7 @@
 }
 
 footer {
-   height: 100px;
+  height: 100px;
   font-family: ' Big Noodle Titling', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,7 +66,7 @@ footer {
 }
 
 #social-media a :hover {
-  color: #300f46;
+  color: #6d2c96;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -80,4 +80,3 @@ footer {
     margin: 30px 0 0 0;
   }
 }
-/*# sourceMappingURL=footer.css.map */
