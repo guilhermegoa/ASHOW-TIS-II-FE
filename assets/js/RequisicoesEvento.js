@@ -1,50 +1,52 @@
-const InitCadastroEvento = () => {
-   const form = $("#formEvent");
-   const name = $("#name");
-   const eventType = $("#eventType");
-   const date = $("#date");
-   const CEP = $("#CEP");
-   const street = $("#street");
-   const number = $("#number");
-   const district = $("#district");
-   const city = $("#city");
-   const state = $("#state");
-   const complement = $("#complement");
-   const peopleQnt = $("#peopleQnt");
-   const artistValue = $("#artistValue");
-   const btnCadastrar = $("#cadastrarEventoBtn");
+const AddEvento = () => {
+   const form = $('#formEvent');
+   const name = $('#name');
+   const eventType = $('#eventType');
+   const date = $('#date');
+   const CEP = $('#CEP');
+   const street = $('#street');
+   const number = $('#number');
+   const district = $('#district');
+   const city = $('#city');
+   const state = $('#state');
+   const complement = $('#complement');
+   const peopleQnt = $('#peopleQnt');
+   const artistValue = $('#artistValue');
+   const btnCadastrar = $('#cadastrarEventoBtn');
 
    CEP.change(() => {
       if (CEP.val().length >= 8) {
-         $.getJSON("https://viacep.com.br/ws/" + CEP.val() + "/json/", function(dados) {
-            street.prop("disabled", false);
-            district.prop("disabled", false);
-            city.prop("disabled", false);
-            state.prop("disabled", false);
-            if (!("erro" in dados)) {
-               if (dados.logradouro != "") {
+         $.getJSON('https://viacep.com.br/ws/' + CEP.val() + '/json/', function(
+            dados,
+         ) {
+            street.prop('disabled', false);
+            district.prop('disabled', false);
+            city.prop('disabled', false);
+            state.prop('disabled', false);
+            if (!('erro' in dados)) {
+               if (dados.logradouro != '') {
                   street.val(dados.logradouro);
-                  street.prop("disabled", true);
+                  street.prop('disabled', true);
                }
-               if (dados.bairro != "") {
+               if (dados.bairro != '') {
                   district.val(dados.bairro);
-                  district.prop("disabled", true);
+                  district.prop('disabled', true);
                }
-               if (dados.localidade != "") {
+               if (dados.localidade != '') {
                   city.val(dados.localidade);
-                  city.prop("disabled", true);
+                  city.prop('disabled', true);
                }
-               if (dados.uf != "") {
+               if (dados.uf != '') {
                   state.val(dados.uf);
-                  state.prop("disabled", true);
+                  state.prop('disabled', true);
                }
             }
          });
       } else {
-         street.prop("disabled", false);
-         district.prop("disabled", false);
-         city.prop("disabled", false);
-         state.prop("disabled", false);
+         street.prop('disabled', false);
+         district.prop('disabled', false);
+         city.prop('disabled', false);
+         state.prop('disabled', false);
       }
    });
 
@@ -68,25 +70,25 @@ const InitCadastroEvento = () => {
          console.log(dadosCadastro);
 
          $.ajax({
-            url: "http://localhost/json/teste.php",
-            type: "POST",
+            url: 'http://localhost/json/teste.php',
+            type: 'POST',
             data: dadosCadastro,
-            dataType: "json",
+            dataType: 'json',
             beforeSend: function() {
-               alert("carregando...");
+               alert('carregando...');
             },
          })
             .done(function() {
-               alert("Enviado");
+               alert('Enviado');
             })
             .fail(function() {
-               alert("error");
+               alert('error');
             })
             .always(function() {
-               alert("complete");
+               alert('complete');
             });
       }
    });
 };
 
-InitCadastroEvento();
+AddEvento();
