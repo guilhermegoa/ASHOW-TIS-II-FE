@@ -97,6 +97,44 @@ form {
   width: 360px;
 }
 
+form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form div input {
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#300f46), to(#e36627));
+  background-image: linear-gradient(to right, #300f46, #e36627);
+  background-size: 160%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+}
+
+form div input:hover {
+  background-position: right;
+}
+
 .input-field {
   position: relative;
 }
@@ -129,30 +167,9 @@ form {
 .input-field input:focus ~ label,
 .input-field input:valid ~ label {
   top: -21px;
-  left: 0;
+  left: 10px;
   color: #e36627;
   font-size: 18px;
-}
-
-form input[type='submit'] {
-  width: 100%;
-  background: transparent;
-  color: #fff;
-  background-image: -webkit-gradient(linear, left top, right top, from(#300f46), to(#e36627));
-  background-image: linear-gradient(to right, #300f46, #e36627);
-  background-size: 160%;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-form input[type='submit']:hover {
-  background-position: right;
 }
 
 .cadastrar {
