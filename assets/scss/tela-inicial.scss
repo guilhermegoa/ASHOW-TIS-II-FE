@@ -58,6 +58,33 @@ span {
 
 form {
   width: 360px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    input {
+      width: 100%;
+      background: transparent;
+      color: #fff;
+      background-image: linear-gradient(to right, rgb(48, 15, 70), #e36627);
+      background-size: 160%;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: 0.5s;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      margin-left: 5px;
+
+      &:hover {
+        background-position: right;
+      }
+    }
+  }
 }
 
 .input-field {
@@ -91,28 +118,9 @@ form {
 .input-field input:focus ~ label,
 .input-field input:valid ~ label {
   top: -21px;
-  left: 0;
+  left: 10px;
   color: #e36627;
   font-size: 18px;
-}
-
-form input[type='submit'] {
-  width: 100%;
-  background: transparent;
-  color: #fff;
-  background-image: linear-gradient(to right, rgb(48, 15, 70), #e36627);
-  background-size: 160%;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  transition: 0.5s;
-  cursor: pointer;
-  border: none;
-  outline: none;
-}
-
-form input[type='submit']:hover {
-  background-position: right;
 }
 
 .cadastrar {
