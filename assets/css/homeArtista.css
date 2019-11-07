@@ -121,7 +121,7 @@ body {
   border: 1px solid #200631;
   -webkit-animation: none;
           animation: none;
-  background-color: #300f46;
+  background-color: rgba(48, 15, 70, 0.473);
 }
 
 .cardEventos .title {
