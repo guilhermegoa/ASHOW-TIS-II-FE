@@ -93,11 +93,37 @@ const AddEvento = () => {
    });
 };
 
-
-
-const getAll = () => {
+function getAllEventos() {
    var http = new XMLHttpRequest();
    var url = 'http://localhost:8080/ashow/evento/all';
+
+   http.open('GET', url, true);
+   http.setRequestHeader('Content-type', 'application/json');
+   http.onreadystatechange = function () {
+      if (http.readyState == 4 && http.status == 200) {
+         return (JSNO.parse(http.responseText));
+      }
+   };
+   http.send(JSON.stringify());
+}
+
+function getEvento(id) {
+   var http = new XMLHttpRequest();
+   var url = `http://localhost:8080/ashow/evento/${id}`;
+
+   http.open('GET', url, true);
+   http.setRequestHeader('Content-type', 'application/json');
+   http.onreadystatechange = function () {
+      if (http.readyState == 4 && http.status == 200) {
+         console.log(JSON.parse(http.responseText));
+      }
+   };
+   http.send(JSON.stringify());
+}
+
+function deleteEvento(id) {
+   var http = new XMLHttpRequest();
+   var url = `http://localhost:8080/ashow/evento/delete/${id}`;
 
    http.open('GET', url, true);
    http.setRequestHeader('Content-type', 'application/json');
