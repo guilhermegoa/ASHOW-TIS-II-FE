@@ -1,4 +1,4 @@
-@import 'important.scss';
+@import '_important.scss';
 
 $color-purple: #300f46;
 $color-purple-logo: #6d2c96;
@@ -35,13 +35,13 @@ footer {
   font-size: 15px;
 }
 
-#contact a:hover {
-  color: $color-purple;
-}
-
 #social-media a {
   margin: 0 10px 0 10px;
   color: $color-white;
+}
+
+#contact a:hover {
+  color: $color-purple;
 }
 
 #social-media a :hover {

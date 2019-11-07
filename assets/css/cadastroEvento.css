@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  margin-top: 100px;
+}
+
+@font-face {
+  font-family: sunday;
+  src: url("../fonts/SUNDAY  Personal use.ttf");
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url("../fonts/big_noodle_titling.ttf");
+}
+
+@font-face {
+  font-family: muscic;
+  src: url("/assets/fonts/AlphaMusicMan.ttf");
+}
+
+main {
+  margin-top: 100px;
+}

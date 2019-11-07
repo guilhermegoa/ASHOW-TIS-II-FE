@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+main {
+  margin-top: 100px;
+}
+
 @font-face {
   font-family: sunday;
   src: url("../fonts/SUNDAY  Personal use.ttf");
@@ -56,13 +60,13 @@ footer {
   font-size: 15px;
 }
 
-#contact a:hover {
-  color: #300f46;
-}
-
 #social-media a {
   margin: 0 10px 0 10px;
   color: #fff;
+}
+
+#contact a:hover {
+  color: #300f46;
 }
 
 #social-media a :hover {

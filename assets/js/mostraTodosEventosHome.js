@@ -4,15 +4,15 @@ function mostraTodosNaHome() {
 
    http.open('GET', url, true);
    http.setRequestHeader('Content-type', 'application/json');
-   http.onreadystatechange = function () {
+   http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
-         var dados = (http.responseText);
+         var dados = http.responseText;
 
          dados = JSON.parse(dados);
 
          var resp = ``;
-         for (var i = 0; i < dados.length; i++) {
-            resp += `<div class="cardArtista" id="card-${dados[i].id}">
+         for (var i = dados.length - 1; i >= 0; i--) {
+            resp += `<div class="cardEventos" id="card-${dados[i].id}">
       <h2 id="NomeArtistico-${dados[i].id}">${dados[i].nome}</h2>
       <h2 id="Nome-${dados[i].id}">${dados[i].nome}</h2>
       <h2 id="Estilo-${dados[i].id}">
@@ -23,9 +23,9 @@ function mostraTodosNaHome() {
          <span class="title">Valor Padrão:</span>
          <span class="value">${dados[i].valor}</span>
       </h3>
-    </div>`
+    </div>`;
          }
-         document.getElementById("card").innerHTML = (resp);
+         document.getElementById('card').innerHTML = resp;
          // $('#card').html(resp);
       }
    };
