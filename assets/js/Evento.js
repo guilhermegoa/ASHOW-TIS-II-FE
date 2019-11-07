@@ -8,8 +8,9 @@ function getEvento(id) {
       if (http.readyState == 4 && http.status == 200) {
          data = (JSON.parse(http.responseText));
 
-         if (data.opne == "true") {
-            let dados = ``;
+         console.log(data.open)
+         let dados = ``;
+         if (data.open == true) {
             dados += `
                <h2 class="titleArtista">${data.nome}</h2>
                <div class="card" id="card"></div>`;

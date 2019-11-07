@@ -83,6 +83,7 @@ const AddEvento = () => {
                console.log(http.responseText);
                if (http.responseText == 'true') {
                   alert("Evento cadastrado");
+                  window.location.href = ("./home.html");
                } else {
                   alert("Erro ao cadastrar o evento")
                }
