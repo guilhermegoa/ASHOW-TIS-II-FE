@@ -12,20 +12,33 @@ function mostraTodosNaHome() {
 
          var resp = ``;
          for (var i = dados.length - 1; i >= 0; i--) {
-            resp += `<div class="cardEventos" id="card-${dados[i].id}">
+            let data = dados[i].data;
+            var dia =
+               data[8] +
+               data[9] +
+               '/' +
+               data[5] +
+               data[6] +
+               '/' +
+               data[0] +
+               data[1] +
+               data[2] +
+               data[3];
+            resp += `<a class="cardEventos" href="#?id=${dados[i].id}"><div id="card-${dados[i].id}">
       <h2 id="NomeArtistico-${dados[i].id}">${dados[i].nome}</h2>
-      <h2 id="Nome-${dados[i].id}">${dados[i].nome}</h2>
+      <h2 id="Nome-${dados[i].id}">${dia}</h2>
       <h2 id="Estilo-${dados[i].id}">
          <span class="title">Estilo:</span>
          <span class="value">${dados[i].estilo}</span>
       </h2>
       <h3 id="Valor-${dados[i].id}">
-         <span class="title">Valor Padrão:</span>
-         <span class="value">${dados[i].valor}</span>
+         <span class="title">Endereço:</span>
+         <span class="value">${dados[i].endereco.bairro}, ${dados[i].endereco.cidade}</span>
       </h3>
-    </div>`;
+    </div></a>`;
          }
          document.getElementById('card').innerHTML = resp;
+         console.log(dados);
          // $('#card').html(resp);
       }
    };

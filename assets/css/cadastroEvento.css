@@ -24,6 +24,47 @@ main {
   src: url("/assets/fonts/AlphaMusicMan.ttf");
 }
 
+body {
+  font-family: 'sunday', sans-serif;
+}
+
 main {
   margin-top: 100px;
+}
+
+#formEvent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-top: 145px;
+}
+
+.input-field input {
+  font-family: 'sunday', sans-serif;
+  border: none;
+  border-bottom: #300f46 solid 3px;
+  padding: 5px 20px;
+  position: relative;
+}
+
+.input-field {
+  padding: 10px 20px;
+}
+
+#cadastrarEventoBtn {
+  border: #6d2c96 solid 3px;
+  border-radius: 15px;
+  width: 70%;
+}
+
+.input-field label {
+  font-size: 14px;
+  top: 20px;
+  color: #300f46;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 50px;
 }

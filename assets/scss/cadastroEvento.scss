@@ -1,5 +1,44 @@
 @import '_important.scss';
 
+body {
+  font-family: 'sunday', sans-serif;
+}
+
 main {
   margin-top: 100px;
+}
+
+#formEvent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 145px;
+}
+
+.input-field input {
+  font-family: 'sunday', sans-serif;
+  border: none;
+  border-bottom: rgb(48, 15, 70) solid 3px;
+  padding: 5px 20px;
+  position: relative;
+}
+
+.input-field {
+  padding: 10px 20px;
+}
+
+#cadastrarEventoBtn {
+  border: #6d2c96 solid 3px;
+  border-radius: 15px;
+  width: 70%;
+}
+
+.input-field label {
+  font-size: 14px;
+  top: 20px;
+  color: rgb(48, 15, 70);
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 50px;
 }

@@ -52,26 +52,28 @@ body {
 }
 
 .cardEventos {
-  border: 5px solid #e36627;
+  text-decoration: none;
+  border: 1px solid #e36627;
   animation: animateBorder 10s linear infinite;
   margin-bottom: 1.5rem;
   margin-top: 1rem;
-  margin-left: 75px;
+  margin-left: 2%;
   padding: 1rem;
   height: 80%;
   width: 40%;
   border-radius: 30px;
   color: aliceblue;
-  transition: 0.5s;
   cursor: pointer;
+  background-color: rgba(48, 15, 70, 0.281);
 }
 
 .cardEventos:hover {
-  border: 5px solid #fff;
+  border: 1px solid rgb(32, 6, 49);
   animation: none;
-  -webkit-box-shadow: 0 3px 5px 2px rgba(255, 255, 255, 0.603);
-  -moz-box-shadow: 0 3px 5px 2px rgba(255, 255, 255, 0.603);
-  box-shadow: 0 3px 5px 2px rgba(255, 255, 255, 0.603);
+  background-color: rgb(48, 15, 70);
+  //   -webkit-box-shadow: 0 3px 5px 2px rgba(255, 255, 255, 0.603);
+  //   -moz-box-shadow: 0 3px 5px 2px rgba(255, 255, 255, 0.603);
+  //   box-shadow: 0 3px 5px 2px rgba(255, 255, 255, 0.603);
 }
 
 .cardEventos .title {
@@ -118,15 +120,15 @@ body {
 
 @keyframes animateBorder {
   0% {
-    border: 5px solid #e36627;
+    border: 3px solid #e36627;
   }
 
   60% {
-    border: 5px solid #6d2c96;
+    border: 3px solid #6d2c96;
   }
 
   100% {
-    border: 5px solid #e36627;
+    border: 3px solid #e36627;
   }
 }
 
