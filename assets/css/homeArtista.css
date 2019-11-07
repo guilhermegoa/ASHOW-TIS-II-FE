@@ -101,7 +101,7 @@ body {
   cursor: pointer;
 }
 
-#card-A:hover {
+.cardArtista:hover {
   border: 5px solid #fff;
   -webkit-animation: none;
           animation: none;
@@ -109,13 +109,13 @@ body {
   box-shadow: 0 3px 5px 2px rgba(255, 255, 255, 0.603);
 }
 
-#card-A .title {
+.cardArtista .title {
   font-size: 20px;
   font-weight: bold;
   color: #fff;
 }
 
-#card-A .value {
+.cardArtista .value {
   font-size: 17px;
   color: #e2e2e2;
 }
