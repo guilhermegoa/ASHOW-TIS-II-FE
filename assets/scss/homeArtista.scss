@@ -1,4 +1,4 @@
-@import 'important.scss';
+@import '_important.scss';
 
 body {
   font-family: sunday;
@@ -98,6 +98,19 @@ body {
 #Nome {
   text-align: center;
   font-size: 1.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d2c96;
 }
 
 @keyframes animateBorder {
