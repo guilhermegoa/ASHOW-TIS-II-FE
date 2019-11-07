@@ -1,7 +1,7 @@
-@import 'important.scss';
+@import '_important.scss';
 
 body {
-  font-family: sunday;
+  //   font-family: sunday;
   overflow-x: hidden;
   background-image: url('../img/bg2.jpg');
   background-image: cover;
@@ -41,20 +41,18 @@ body {
 
 .titleArtista {
   margin-top: 1rem;
-  margin: auto;
+  //   margin: auto;
   text-align: center;
   color: #fff;
   font-size: 4em;
 }
 
-#card-A {
+.cardArtista {
   border: 5px solid #e36627;
   animation: animateBorder 10s linear infinite;
   margin-bottom: 1.5rem;
-  margin: auto;
   margin-top: 1rem;
   padding: 1rem;
-  width: auto;
   height: 80%;
   width: 80%;
   border-radius: 30px;
