@@ -141,6 +141,19 @@ body {
   font-size: 1.5em;
 }
 
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d2c96;
+}
+
 @-webkit-keyframes animateBorder {
   0% {
     border: 5px solid #e36627;
