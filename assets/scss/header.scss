@@ -76,7 +76,6 @@ header {
     border: 0;
     height: 38px;
     width: 46px;
-    //  margin-left: -9px;
     padding-top: 6px;
   }
 
@@ -91,55 +90,47 @@ header {
     font-size: 16px;
     border: none;
     cursor: pointer;
-  }
 
-  .dropbtn:hover {
-    .rotate {
-      display: inline-block;
-      transform: rotate(180deg);
+    &:hover {
+      background-color: $color-purple-logo;
+
+      .rotate {
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+    }
+
+    i {
+      color: $color-white;
+      margin-right: $margin/4;
+      margin-left: $margin/4;
+      font-size: 15px;
     }
   }
 
-  .dropbtn i {
-    color: $color-white;
-    margin-right: $margin/4;
-    margin-left: $margin/4;
-    font-size: 15px;
-  }
-
   .dropdown-content {
-    margin: 200px 0 20px 0;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 140px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
 
-  .dropdown-content a {
-    font-family: ' Big Noodle Titling', sans-serif;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+    a {
+      font-family: ' Big Noodle Titling', sans-serif;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
 
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-
-  #user-menu:hover .dropdown-content {
-    display: block;
-  }
-
-  #user-menu:hover .dropbtn {
-    background-color: $color-purple-logo;
-
-    .rotate {
-      display: inline-block;
-      transform: rotate(180deg);
+      &:hover {
+        background-color: #f1f1f1;
+      }
     }
+  }
+
+  .user-menu:hover .dropdown-content {
+    display: block;
   }
 
   #notification {
@@ -172,9 +163,3 @@ header {
     margin: -5px 0 0 5px;
   }
 }
-
-// @media only screen and (max-width: 1200px) {
-// }
-
-// @media only screen and (max-width: 768px) {
-// }
