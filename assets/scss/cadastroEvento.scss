@@ -6,12 +6,27 @@ body {
 
 main {
   margin-top: 100px;
+  width: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d2c96;
 }
 
 #formEvent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 145px;
+  margin-top: 130px;
+  margin-left: 100px;
 }
 
 .input-field input {
@@ -20,6 +35,7 @@ main {
   border-bottom: rgb(48, 15, 70) solid 3px;
   padding: 5px 20px;
   position: relative;
+  text-align: center;
 }
 
 .input-field {
@@ -27,14 +43,35 @@ main {
 }
 
 #cadastrarEventoBtn {
+  font-family: 'sunday', sans-serif;
+  background-color: #fff;
+  font-size: 18px;
+  margin: 0 100px;
+  cursor: pointer;
   border: #6d2c96 solid 3px;
   border-radius: 15px;
-  width: 70%;
+  width: 40%;
+}
+
+#cadastrarEventoBtn:hover {
+  background-color: #e36627;
+  color: #fff;
+  border-color: #fff;
 }
 
 .input-field label {
-  font-size: 14px;
+  font-size: 19px;
   top: 20px;
+  color: rgb(48, 15, 70);
+}
+
+.input-field input:focus {
+  color: #e36627;
+}
+
+.endereco-Title {
+  font-size: 19px;
+  margin-top: 10px;
   color: rgb(48, 15, 70);
   font-weight: bold;
 }
