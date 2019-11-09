@@ -18,7 +18,7 @@ const AddEvento = () => {
 
    CEP.change(() => {
       if (CEP.val().length >= 8) {
-         $.getJSON('https://viacep.com.br/ws/' + CEP.val() + '/json/', function (
+         $.getJSON('https://viacep.com.br/ws/' + CEP.val() + '/json/', function(
             dados,
          ) {
             street.prop('disabled', false);
@@ -52,13 +52,13 @@ const AddEvento = () => {
       }
    });
 
-   form.on("submit", (event) => {
+   form.on('submit', event => {
       event.preventDefault();
 
       if (form[0].checkValidity()) {
          var dadosCadastro = {
             capacidadeEsperada: peopleQnt.val(),
-            data: date.val() + "T" + hours.val(),
+            data: date.val() + 'T' + hours.val(),
             endereco: {
                bairro: district.val(),
                cep: CEP.val(),
@@ -66,21 +66,21 @@ const AddEvento = () => {
                complemento: complement.val(),
                numero: number.val(),
                rua: street.val(),
-               uf: state.val()
+               uf: state.val(),
             },
             estilo: eventType.val(),
             nome: name.val(),
             open: true,
             quantidadeArtistas: artistQnt.val(),
-            valor: artistValue.val()
-         }
+            valor: artistValue.val(),
+         };
 
          let resposta = AddEvento(dadosCadastro);
          if (resposta == 'true') {
-            alert("Evento cadastrado");
-            window.location.href = ("./home.html");
+            alert('Evento cadastrado');
+            window.location.href = './home.html';
          } else {
-            alert("Erro ao cadastrar o evento")
+            alert('Erro ao cadastrar o evento');
          }
       }
    });

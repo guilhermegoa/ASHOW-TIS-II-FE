@@ -20,12 +20,12 @@
       <!-- HEADER -->
       <header>
          <section id="logo">
-            <a href="#"
+            <a href="../pages/home.html"
                ><img src="../assets/img/ashowLogoTextWhite.png" alt="logo"
             /></a>
          </section>
          <section id="search">
-            <input type="text" placeholder="Buscar..." />
+            <input id="filtroInput" type="text" placeholder="Buscar..." />
             <button type="submit">
                <i class="fas fa-search fa-2x"></i>
             </button>
@@ -35,11 +35,11 @@
                <i class="fas fa-user fa-2x"></i> Usuario
                <i class="fa fa-chevron-up rotate"></i>
             </button>
-            <nav class="dropdown-content">
+            <div class="dropdown-content">
                <a href="#">Perfil</a>
                <a href="cadastrarEvento.html">Criar Evento</a>
                <a href="#">Algo</a>
-            </nav>
+            </div>
          </section>
          <section id="notification">
             <a href="#">
@@ -50,11 +50,14 @@
       <!-- FIM HEADER -->
 
       <!-- MAIN -->
-      <main class="containerArquivos">
+      <main class="containerArquivos" id="card-list">
          <div class="arquivos">
             <section class="evento">
-               <h2 class="titleArtista">Eventos</h2>
+               <h2 class="titleArtista" id="titleHome">Eventos</h2>
                <div class="card" id="card"></div>
+               <div id="void">
+                  <div id="NA" class="NA">Não há eventos</div>
+               </div>
             </section>
          </div>
       </main>
@@ -80,5 +83,6 @@
 
       <!-- SCRIPTS -->
       <script src="../assets/js/mostraTodosEventosHome.js"></script>
+      <script src="../assets/js/filter.js"></script>
    </body>
 </html>

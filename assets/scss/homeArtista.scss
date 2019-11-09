@@ -1,7 +1,7 @@
 @import '_important.scss';
 
 body {
-  //   font-family: sunday;
+  //   font-family: sunday, sans-serif;
   overflow-x: hidden;
   background-image: url('../img/bg4.jpg');
   background-size: cover;
@@ -41,6 +41,20 @@ body {
   text-align: center;
   color: #fff;
   font-size: 4em;
+}
+
+.NA {
+  margin-top: 30vh;
+  text-align: center;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  display: none;
+}
+
+#void {
+  height: 70vh;
+  display: none;
 }
 
 .card {
@@ -143,5 +157,19 @@ body {
 
   100% {
     color: #e36627;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .cardEventos {
+    width: 90%;
   }
 }

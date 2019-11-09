@@ -149,36 +149,6 @@ form {
 //   }
 // }
 
-@media screen and (max-width: 900px) {
-  .container {
-    grid-template-columns: 2fr;
-  }
-
-  .cadastrador {
-    top: 370px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .title {
-    font-size: 2.5em;
-  }
-
-  .musico {
-    filter: none;
-  }
-
-  .contratante {
-    filter: none;
-  }
-}
-
-@media screen and(max-width: 1000px) {
-  .form-user {
-    position: relative;
-  }
-}
-
 ::-webkit-input-placeholder {
   color: #fff;
 }
@@ -262,4 +232,34 @@ form {
 
 .input-field input:focus ~ label {
   color: #e36627;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: 2fr;
+  }
+
+  .cadastrador {
+    top: 370px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  .musico {
+    filter: none;
+  }
+
+  .contratante {
+    filter: none;
+  }
+}
+
+@media screen and(max-width: 1000px) {
+  .form-user {
+    position: relative;
+  }
 }

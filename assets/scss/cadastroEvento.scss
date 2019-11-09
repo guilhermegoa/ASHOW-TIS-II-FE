@@ -2,6 +2,7 @@
 
 body {
   font-family: 'sunday', sans-serif;
+  overflow-x: hidden;
 }
 
 main {
@@ -78,4 +79,32 @@ main {
 
 footer {
   margin-top: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  #formEvent {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .input-field label,
+  input {
+    width: 95%;
+    margin-top: 20px;
+  }
+
+  .endereco-Title {
+    display: none;
+  }
+
+  #cadastrarEventoBtn {
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    height: 4rem;
+  }
 }

@@ -26,6 +26,7 @@ main {
 
 body {
   font-family: 'sunday', sans-serif;
+  overflow-x: hidden;
 }
 
 main {
@@ -104,4 +105,38 @@ main {
 
 footer {
   margin-top: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  #formEvent {
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .input-field label,
+  input {
+    width: 95%;
+    margin-top: 20px;
+  }
+  .endereco-Title {
+    display: none;
+  }
+  #cadastrarEventoBtn {
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    height: 4rem;
+  }
 }
