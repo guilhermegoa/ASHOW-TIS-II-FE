@@ -1,61 +1,62 @@
-const AddEvento = () => {
-   const form = $('#formEvent');
-   const name = $('#name');
-   const eventType = $('#eventType');
-   const date = $('#date');
-   const hours = $('#hours');
-   const CEP = $('#CEP');
-   const street = $('#street');
-   const number = $('#number');
-   const district = $('#district');
-   const city = $('#city');
-   const state = $('#state');
-   const complement = $('#complement');
-   const peopleQnt = $('#peopleQnt');
-   const artistValue = $('#artistValue');
-   const artistQnt = $('#artistQnt');
-   const btnCadastrar = $('#cadastrarEventoBtn');
 
-   CEP.change(() => {
-      if (CEP.val().length >= 8) {
-         $.getJSON('https://viacep.com.br/ws/' + CEP.val() + '/json/', function (
-            dados,
-         ) {
-            street.prop('disabled', false);
-            district.prop('disabled', false);
-            city.prop('disabled', false);
-            state.prop('disabled', false);
-            if (!('erro' in dados)) {
-               if (dados.logradouro != '') {
-                  street.val(dados.logradouro);
-                  street.prop('disabled', true);
-               }
-               if (dados.bairro != '') {
-                  district.val(dados.bairro);
-                  district.prop('disabled', true);
-               }
-               if (dados.localidade != '') {
-                  city.val(dados.localidade);
-                  city.prop('disabled', true);
-               }
-               if (dados.uf != '') {
-                  state.val(dados.uf);
-                  state.prop('disabled', true);
-               }
-            }
-         });
-      } else {
+const form = $('#formEvent');
+const name = $('#name');
+const eventType = $('#eventType');
+const date = $('#date');
+const hours = $('#hours');
+const CEP = $('#CEP');
+const street = $('#street');
+const number = $('#number');
+const district = $('#district');
+const city = $('#city');
+const state = $('#state');
+const complement = $('#complement');
+const peopleQnt = $('#peopleQnt');
+const artistValue = $('#artistValue');
+const artistQnt = $('#artistQnt');
+const btnCadastrar = $('#cadastrarEventoBtn');
+
+CEP.change(() => {
+   if (CEP.val().length >= 8) {
+      $.getJSON('https://viacep.com.br/ws/' + CEP.val() + '/json/', function (
+         dados,
+      ) {
          street.prop('disabled', false);
          district.prop('disabled', false);
          city.prop('disabled', false);
          state.prop('disabled', false);
-      }
-   });
+         if (!('erro' in dados)) {
+            if (dados.logradouro != '') {
+               street.val(dados.logradouro);
+               street.prop('disabled', true);
+            }
+            if (dados.bairro != '') {
+               district.val(dados.bairro);
+               district.prop('disabled', true);
+            }
+            if (dados.localidade != '') {
+               city.val(dados.localidade);
+               city.prop('disabled', true);
+            }
+            if (dados.uf != '') {
+               state.val(dados.uf);
+               state.prop('disabled', true);
+            }
+         }
+      });
+   } else {
+      street.prop('disabled', false);
+      district.prop('disabled', false);
+      city.prop('disabled', false);
+      state.prop('disabled', false);
+   }
+});
 
-   form.on("submit", (event) => {
-      event.preventDefault();
+form.on("submit", (event) => {
+   event.preventDefault();
 
-      if (form[0].checkValidity()) {
+   if (form[0].checkValidity()) {
+      (async () => {
          var dadosCadastro = {
             capacidadeEsperada: peopleQnt.val(),
             data: date.val() + "T" + hours.val(),
@@ -75,15 +76,16 @@ const AddEvento = () => {
             valor: artistValue.val()
          }
 
-         let resposta = AddEvento(dadosCadastro);
+         const resposta = await addPostEvento(dadosCadastro);
          if (resposta == 'true') {
             alert("Evento cadastrado");
             window.location.href = ("./home.html");
          } else {
             alert("Erro ao cadastrar o evento")
          }
-      }
-   });
-};
+      })()
+   }
 
-AddEvento();
+})
+
+
