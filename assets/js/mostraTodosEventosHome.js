@@ -4,7 +4,7 @@ function mostraTodosNaHome() {
 
    http.open('GET', url, true);
    http.setRequestHeader('Content-type', 'application/json');
-   http.onreadystatechange = function() {
+   http.onreadystatechange = function () {
       if (http.readyState == 4 && http.status == 200) {
          var dados = http.responseText;
 
@@ -24,7 +24,7 @@ function mostraTodosNaHome() {
                data[1] +
                data[2] +
                data[3];
-            resp += `<a class="cardEventos" href="#?id=${dados[i].id}"><div id="card-${dados[i].id}">
+            resp += `<a class="cardEventos" href="./evento.html?id=${dados[i].id}"><div id="card-${dados[i].id}">
       <h2 id="NomeArtistico-${dados[i].id}">${dados[i].nome}</h2>
       <h2 id="Nome-${dados[i].id}">${dia}</h2>
       <h2 id="Estilo-${dados[i].id}">
