@@ -3,7 +3,7 @@ const id = urlParams.get('idEvt');
 const getEvento = async id => await (await fetch(`http://localhost:8080/ashow/evento/${id}`)).json();
 
 (async () => {
-   const dados = await getEvento(id);
+   let dados = await getEvento(id);
 
    let data = dados.data;
    data =
@@ -39,9 +39,15 @@ const getEvento = async id => await (await fetch(`http://localhost:8080/ashow/ev
             <h3><span>Quantidade de pessoas esperadas: </span>${dados.capacidadeEsperada}</h3>
          <h3><span>Quantidade de artistas:</span> ${dados.quantidadeArtistas}</h3>
          <h3><span>Valor base: </span>${dados.valor}</h3>`;
+         if(sessionStorage.getItem("email") == "artista") {
          if(dados.open) htmlTexto +=`<h3><button>Juntar-se</button></h3>`;
          else htmlTexto += `<h3><button disabled>Juntar-se</button></h3></div>`;
+         }
 
    document.getElementById('evento').innerHTML = htmlTexto;
+})();
+
+(async () => {
+   let artista
 })();
 

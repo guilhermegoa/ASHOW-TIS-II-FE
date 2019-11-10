@@ -4,7 +4,8 @@ const senhaLog = $('#senhaLog');
 const tryLogArtista = $('#tryLog-artista');
 const tryLogContratante = $('#tryLog-contratante');
 
-tryLogArtista.click(() => {
+tryLogArtista.on('click', event => {
+   event.preventDefault();
    if (formLog[0].checkValidity()) {
       var dadosTry = {
          type: 'loginUsuario',
@@ -14,7 +15,7 @@ tryLogArtista.click(() => {
 
       var http = new XMLHttpRequest();
       var url = 'http://localhost:8080/ashow/artista/log';
-      var resposta;
+      // var resposta;
 
       http.open('POST', url, true);
       http.setRequestHeader('Content-type', 'application/json');
@@ -22,7 +23,9 @@ tryLogArtista.click(() => {
          if (http.readyState == 4 && http.status == 200) {
             console.log(http.responseText);
             if (http.responseText == 'true') {
-               sessionStorage.setItem('emaillog', dadosTry.email);
+               sessionStorage.clear();
+               sessionStorage.setItem('type', "artista");
+               sessionStorage.setItem("email",emailLog.val());
                window.location.href = '../../pages/home.html?';
             } else {
                alert('Senha ou email errado');
@@ -33,7 +36,8 @@ tryLogArtista.click(() => {
    }
 });
 
-tryLogContratante.click(() => {
+tryLogContratante.on('click', event => {
+   event.preventDefault();
    if (formLog[0].checkValidity()) {
       var dadosTry = {
          type: 'loginUsuario',
@@ -43,7 +47,7 @@ tryLogContratante.click(() => {
 
       var http = new XMLHttpRequest();
       var url = 'http://localhost:8080/ashow/contratante/log';
-      var resposta;
+      // var resposta;
 
       http.open('POST', url, true);
       http.setRequestHeader('Content-type', 'application/json');
@@ -51,7 +55,9 @@ tryLogContratante.click(() => {
          if (http.readyState == 4 && http.status == 200) {
             console.log(http.responseText);
             if (http.responseText == 'true') {
-               sessionStorage.setItem('emailLog', dadosTry.email);
+               sessionStorage.clear();
+               sessionStorage.setItem('type', "contratante");
+               sessionStorage.setItem("email",emailLog.val());
                window.location.href = '../../pages/home.html';
             } else {
                alert('Senha ou email errado');

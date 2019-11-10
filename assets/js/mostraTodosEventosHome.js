@@ -1,4 +1,4 @@
-function mostraTodosNaHome() {
+const mostraTodosNaHome = () => {
    var http = new XMLHttpRequest();
    var url = 'http://localhost:8080/ashow/evento/all';
 
@@ -56,11 +56,10 @@ function mostraTodosNaHome() {
     </div></a>`;
          }
          document.getElementById('card').innerHTML = resp;
-         console.log(dados);
          // $('#card').html(resp);
       }
    };
-   http.send(JSON.stringify());
+   http.send();
 }
 
 mostraTodosNaHome();
