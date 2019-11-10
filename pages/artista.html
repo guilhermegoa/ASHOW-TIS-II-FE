@@ -7,13 +7,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="stylesheet" type="text/css" href="../assets/css/header.css" />
       <link rel="stylesheet" type="text/css" href="../assets/css/footer.css" />
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../assets/css/homeArtista.css"
-      />
+      <link rel="stylesheet" type="text/css" href="../assets/css/evento.css" />
       <link rel="shortcut icon" href="/assets/img/Logo.png" />
-      <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
    </head>
 
    <body>
@@ -24,22 +19,25 @@
                ><img src="../assets/img/ashowLogoTextWhite.png" alt="logo"
             /></a>
          </section>
-         <section id="search">
-            <input id="filtroInput" type="text" placeholder="Buscar..." />
-            <button type="submit">
-               <i class="fas fa-search fa-2x"></i>
-            </button>
-         </section>
+
+         <a href="../pages/home.html">
+            <section id="search">
+               <input type="text" placeholder="Buscar..." />
+               <button type="submit">
+                  <i class="fas fa-search fa-2x"></i>
+               </button>
+            </section>
+         </a>
          <section id="user-menu">
             <button class="dropbtn">
-               <i class="fas fa-user fa-2x"></i> Usuario
+               <i class="fas fa-user fa-2x"></i> <h id="usuario">Usuario</h>
                <i class="fa fa-chevron-up rotate"></i>
             </button>
-            <div class="dropdown-content">
+            <nav class="dropdown-content">
                <a href="#">Perfil</a>
                <a href="cadastrarEvento.html">Criar Evento</a>
-               <div id="logOut"><a href="../index.html" >Logout</a></div>
-            </div>
+               <div id="logOut"><a href="../index.html">Logout</a></div>
+            </nav>
          </section>
          <section id="notification">
             <a href="#">
@@ -51,14 +49,9 @@
 
       <!-- MAIN -->
       <a class="aChange" href="../pages/artistas.html"><button class="Change"><i class="fas fa-microphone"></i></button></a>
-      <main class="containerArquivos" id="card-list">
+      <main class="containerArquivos">
          <div class="arquivos">
-            <section class="evento">
-               <h2 class="titleArtista" id="titleHome">Eventos</h2>
-               <div class="card" id="card"></div>
-               <div id="void">
-                  <div id="NA" class="NA">Não há eventos</div>
-               </div>
+            <section class="evento" id="evento">
             </section>
          </div>
       </main>
@@ -84,8 +77,8 @@
 
       <!-- SCRIPTS -->
       <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
-      <script src="../assets/js/mostraTodosEventosHome.js"></script>
-      <script src="../assets/js/filter.js"></script>
+      <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
+      <script src="../assets/js/Artista.js"></script>
       <script src="../assets/js/logout.js"></script>
    </body>
 </html>
