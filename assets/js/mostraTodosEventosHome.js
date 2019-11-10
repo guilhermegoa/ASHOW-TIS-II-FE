@@ -42,7 +42,7 @@ function mostraTodosNaHome() {
                data[1] +
                data[2] +
                data[3];
-            resp += `<a id="cardEventos" class="cardEventos" href="./evento.html?id=${dados[i].id}"><div id="card-${dados[i].id}">
+            resp += `<a id="cardEventos" class="cardEventos" href="./evento.html?idEvt=${dados[i].id}"><div id="card-${dados[i].id}">
       <h2 id="NomeArtistico-${dados[i].id}" class = "nomeEvento">${dados[i].nome}</h2>
       <h2 id="Nome-${dados[i].id}">${dia}</h2>
       <h2 id="Estilo-${dados[i].id}">

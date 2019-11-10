@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('id');
+const id = urlParams.get('idEvt');
+const getEvento = async id => await (await fetch(`http://localhost:8080/ashow/evento/${id}`)).json();
 
 (async () => {
    const dados = await getEvento(id);
@@ -24,7 +25,7 @@ const id = urlParams.get('id');
       dados.data[15];
    let htmlTexto = ``;
    //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
-   if (dados.open == true) {
+
       htmlTexto += `
       <h2 class="titleArtista">${dados.nome}</h2>
       <div class="dadosEvento" id="dadosEvento">
@@ -35,9 +36,12 @@ const id = urlParams.get('id');
          <h3><span>Endereço:</span> </h3>
          <h3>${dados.endereco.rua}, ${dados.endereco.numero}, ${dados.endereco.complemento},
             ${dados.endereco.bairro}, ${dados.endereco.cidade}, ${dados.endereco.uf} </h3>
+            <h3><span>Quantidade de pessoas esperadas: </span>${dados.capacidadeEsperada}</h3>
          <h3><span>Quantidade de artistas:</span> ${dados.quantidadeArtistas}</h3>
-         <h3><span>Valor base: </span>${dados.valor}</h3>
-      </div>`;
-   }
+         <h3><span>Valor base: </span>${dados.valor}</h3>`;
+         if(dados.open) htmlTexto +=`<h3><button>Juntar-se</button></h3>`;
+         else htmlTexto += `<h3><button disabled>Juntar-se</button></h3></div>`;
+
    document.getElementById('evento').innerHTML = htmlTexto;
 })();
+
