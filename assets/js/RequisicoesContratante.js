@@ -5,7 +5,8 @@ const AddContrattante = () => {
    const emailContratante = $('#emailContratante');
    const cadastrarContratante = $('#cadastrarContratante');
 
-   cadastrarContratante.click(() => {
+   formContratante.on('submit', event => {
+      event.preventDefault();
       if (formContratante[0].checkValidity()) {
          var dadosCadastro = {
             type: 'contratante',
@@ -25,6 +26,7 @@ const AddContrattante = () => {
             if (http.readyState == 4 && http.status == 200) {
                console.log(http.responseText);
                if (http.responseText == 'true') {
+                  alert('Contratante Cadastrado');
                   window.location.href = '../../index.html';
                }
             }
@@ -34,44 +36,42 @@ const AddContrattante = () => {
    });
 };
 
-const UpdateContrattante = () => {};
+// const UpdateContrattante = () => {};
 
-const GetContrattante = (email, id) => {
-   const contratante = document.getElementById(id);
+// const GetContrattante = (email, id) => {
+//    const contratante = document.getElementById(id);
 
-   var http = new XMLHttpRequest();
-   var url = 'http://localhost:8080/ashow/contratante/' + email;
-   var dado;
-   http.open('GET', url, true);
-   http.setRequestHeader('Content-type', 'application/json');
-   http.onreadystatechange = function() {
-      if (http.onload == 4 && http.status == 200) {
-         dado = JSON.parse(this.responseText);
-      }
-   };
-   http.send();
-   return dado;
-};
+//    var http = new XMLHttpRequest();
+//    var url = 'http://localhost:8080/ashow/contratante/' + email;
+//    var dado;
+//    http.open('GET', url, true);
+//    http.setRequestHeader('Content-type', 'application/json');
+//    http.onreadystatechange = function() {
+//       if (http.onload == 4 && http.status == 200) {
+//          dado = JSON.parse(this.responseText);
+//       }
+//    };
+//    http.send();
+//    return dado;
+// };
 
-const GetAllContrattante = id => {
-   const contratantes = document.getElementById(id);
+// const GetAllContrattante = id => {
+//    const contratantes = document.getElementById(id);
 
-   var http = new XMLHttpRequest();
-   var url = 'http://localhost:8080/ashow/contratante/all';
+//    var http = new XMLHttpRequest();
+//    var url = 'http://localhost:8080/ashow/contratante/all';
 
-   http.open('GET', url, true);
-   http.setRequestHeader('Content-type', 'application/json');
-   http.onreadystatechange = function() {
-      if (http.readyState == 4 && http.status == 200) {
-         contratantes.innerHTML = this.responseText;
-      }
-   };
+//    http.open('GET', url, true);
+//    http.setRequestHeader('Content-type', 'application/json');
+//    http.onreadystatechange = function() {
+//       if (http.readyState == 4 && http.status == 200) {
+//          contratantes.innerHTML = this.responseText;
+//       }
+//    };
 
-   http.send();
-};
+//    http.send();
+// };
 
-const DeleteContrattante = () => {};
+// const DeleteContrattante = () => {};
 
 AddContrattante();
-
-console.log(GetContrattante());

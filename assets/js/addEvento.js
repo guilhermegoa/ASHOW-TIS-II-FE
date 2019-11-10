@@ -74,14 +74,25 @@ const AddEvento = () => {
             quantidadeArtistas: artistQnt.val(),
             valor: artistValue.val(),
          };
+         console.log(dadosCadastro.quantidadeArtistas);
 
-         let resposta = AddEvento(dadosCadastro);
-         if (resposta == 'true') {
-            alert('Evento cadastrado');
-            window.location.href = './home.html';
-         } else {
-            alert('Erro ao cadastrar o evento');
-         }
+         var http = new XMLHttpRequest();
+         var url = 'http://localhost:8080/ashow/evento/add';
+
+         http.open('POST', url, true);
+         http.setRequestHeader('Content-type', 'application/json');
+         http.onreadystatechange = function() {
+            if (http.readyState == 4 && http.status == 200) {
+               // console.log(http.responseText);
+               if (http.responseText == 'true') {
+                  alert('Evento cadastrado');
+                  window.location.href = './home.html';
+               } else {
+                  alert('Erro ao cadastrar o evento');
+               }
+            }
+         };
+         http.send(JSON.stringify(dadosCadastro));
       }
    });
 };

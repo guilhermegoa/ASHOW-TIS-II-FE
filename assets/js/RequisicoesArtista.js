@@ -7,7 +7,8 @@ const AddArtista = () => {
    const tipoMusico = $('#tipoMusico');
    const submitMusico = $('#submitMusico');
 
-   submitMusico.click(() => {
+   formMusico.on('submit', event => {
+      event.preventDefault();
       if (formMusico[0].checkValidity()) {
          var dadosCadastro = {
             type: 'artista',
@@ -30,6 +31,7 @@ const AddArtista = () => {
          http.onreadystatechange = () => {
             if (http.readyState == 4 && http.status == 200) {
                if (http.responseText == 'true') {
+                  alert('Artista Cadastrado');
                   window.location.href = '../../index.html';
                }
             }
@@ -39,42 +41,42 @@ const AddArtista = () => {
    });
 };
 
-const UpdateArtista = () => {};
+// const UpdateArtista = () => {};
 
-const GetArtista = (id, email) => {
-   const artistas = $(id);
+// const GetArtista = (id, email) => {
+//    const artistas = $(id);
 
-   var http = new XMLHttpRequest();
-   var url = 'http://localhost:8080/ashow/artista/' + email;
+//    var http = new XMLHttpRequest();
+//    var url = 'http://localhost:8080/ashow/artista/' + email;
 
-   http.open('GET', url, true);
-   http.setRequestHeader('Content-type', 'application/json');
-   http.onreadystatechange = function() {
-      if (http.readyState == 4 && http.status == 200) {
-         artistas.innerHTML = this.responseText;
-      }
-   };
+//    http.open('GET', url, true);
+//    http.setRequestHeader('Content-type', 'application/json');
+//    http.onreadystatechange = function() {
+//       if (http.readyState == 4 && http.status == 200) {
+//          artistas.innerHTML = this.responseText;
+//       }
+//    };
 
-   http.send();
-};
+//    http.send();
+// };
 
-const GetAllArtista = id => {
-   const artistas = $(id);
+// const GetAllArtista = id => {
+//    const artistas = $(id);
 
-   var http = new XMLHttpRequest();
-   var url = 'http://localhost:8080/ashow/artista/all';
+//    var http = new XMLHttpRequest();
+//    var url = 'http://localhost:8080/ashow/artista/all';
 
-   http.open('GET', url, true);
-   http.setRequestHeader('Content-type', 'application/json');
-   http.onreadystatechange = function() {
-      if (http.readyState == 4 && http.status == 200) {
-         artistas.innerHTML = this.responseText;
-      }
-   };
+//    http.open('GET', url, true);
+//    http.setRequestHeader('Content-type', 'application/json');
+//    http.onreadystatechange = function() {
+//       if (http.readyState == 4 && http.status == 200) {
+//          artistas.innerHTML = this.responseText;
+//       }
+//    };
 
-   http.send();
-};
+//    http.send();
+// };
 
-const DeleteArtista = () => {};
+// const DeleteArtista = () => {};
 
 AddArtista();

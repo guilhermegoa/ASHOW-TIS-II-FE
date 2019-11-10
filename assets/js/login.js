@@ -23,7 +23,7 @@ tryLogArtista.click(() => {
             console.log(http.responseText);
             if (http.responseText == 'true') {
                sessionStorage.setItem('emaillog', dadosTry.email);
-               window.location.href = '../../pages/home.html';
+               window.location.href = '../../pages/home.html?';
             } else {
                alert('Senha ou email errado');
             }
