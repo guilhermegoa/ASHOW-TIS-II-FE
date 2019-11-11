@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams2.get('idArt');
+const id = urlParams.get('idArt');
 const getArtista = async email => await (await fetch(`http://localhost:8080/ashow/artista/${email}`)).json();
 
 (async () => {
