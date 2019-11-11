@@ -1,9 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
-const email = urlParams2.get('idEvt');
+const id = urlParams.get('idEvt');
 const getEvento = async id => await (await fetch(`http://localhost:8080/ashow/evento/${id}`)).json();
 
 (async () => {
-   let dados = await getEvento(email);
+   let dados = await getEvento(id);
 
    let data = dados.data;
    data =
