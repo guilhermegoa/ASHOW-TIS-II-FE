@@ -28,14 +28,6 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
          </div>`;
    }
 
-   htmlTexto+=`
-   </section>
-   <section id="notification">
-      <a href="#">
-         <i class="fas fa-bell fa-2x"> <div class="circle"></div> </i>
-      </a>
-         `;
-
    document.getElementById('user-menu').innerHTML = htmlTexto;
 
 })();
