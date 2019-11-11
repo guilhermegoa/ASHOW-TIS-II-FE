@@ -1,5 +1,6 @@
 // Filter
 // Valor dentro do filtro
+
 let filtroInput = document.getElementById('filtroInput');
 
 //Evento keyup

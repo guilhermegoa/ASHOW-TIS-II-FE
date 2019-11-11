@@ -4,25 +4,12 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
 (async () => {
    let dados = await getUsuarioAtual()
 
-   console.log(dados)
    let htmlTexto = ``;
    //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
 
    htmlTexto += `
-      <section id="logo">
-      <a href="../pages/home.html"
-         ><img src="../assets/img/ashowLogoTextWhite.png" alt="logo"
-      /></a>
-   </section>
-   <section id="search">
-      <input id="filtroInput" type="text" placeholder="Buscar..." />
-      <button type="submit">
-         <i class="fas fa-search fa-2x"></i>
-      </button>
-   </section>
-   <section id="user-menu">
       <button class="dropbtn">
-         <i class="fas fa-user fa-2x"></i>${dados.nome}
+         <i class="fas fa-user fa-2x"></i> ${dados.nome}
          <i class="fa fa-chevron-up rotate"></i>
       </button>`;
    if(sessionStorage.getItem("type") == "artista"){
@@ -45,14 +32,11 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
    </section>
    <section id="notification">
       <a href="#">
-         <i class="fas fa-bell fa-2x"> <div class="circle"></div> </i
-      ></a>
-   </section>
+         <i class="fas fa-bell fa-2x"> <div class="circle"></div> </i>
+      </a>
          `;
 
-   if(sessionStorage.getItem("type") == "artista") {
+   document.getElementById('user-menu').innerHTML = htmlTexto;
 
-   }
-
-   document.getElementById('header').innerHTML = htmlTexto;
 })();
+
