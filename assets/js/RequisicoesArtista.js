@@ -41,42 +41,4 @@ const AddArtista = () => {
    });
 };
 
-// const UpdateArtista = () => {};
-
-// const GetArtista = (id, email) => {
-//    const artistas = $(id);
-
-//    var http = new XMLHttpRequest();
-//    var url = 'http://localhost:8080/ashow/artista/' + email;
-
-//    http.open('GET', url, true);
-//    http.setRequestHeader('Content-type', 'application/json');
-//    http.onreadystatechange = function() {
-//       if (http.readyState == 4 && http.status == 200) {
-//          artistas.innerHTML = this.responseText;
-//       }
-//    };
-
-//    http.send();
-// };
-
-// const GetAllArtista = id => {
-//    const artistas = $(id);
-
-//    var http = new XMLHttpRequest();
-//    var url = 'http://localhost:8080/ashow/artista/all';
-
-//    http.open('GET', url, true);
-//    http.setRequestHeader('Content-type', 'application/json');
-//    http.onreadystatechange = function() {
-//       if (http.readyState == 4 && http.status == 200) {
-//          artistas.innerHTML = this.responseText;
-//       }
-//    };
-
-//    http.send();
-// };
-
-// const DeleteArtista = () => {};
-
 AddArtista();
