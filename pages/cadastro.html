@@ -26,26 +26,26 @@
          <div class="musico" id="musico">
             <div id="div-musico">
                <h1 class="title">Sou Musico!</h1>
-               <button id="btn-musico" class="cadastrador">
+               <button id="btn-musico" href="#" class="cadastrador">
                   Cadastrar como Músico
                </button>
             </div>
             <!-- FIM BTN MUSICO -->
 
             <!-- FORM CONTRATANTE -->
-            <form action="" id="form-contratante" class="form-user">
+            <form id="form-contratante" class="form-user">
                <img src="/assets/img/ashowLogoTextWhite.png" alt="" />
                <div class="input-field">
                   <input type="Name" id="nomeContratante" required />
                   <label for="">Nome</label>
                </div>
                <div class="input-field">
-                  <input type="password" id="senhaContratante" required />
-                  <label for="" minlength="3">Senha</label>
-               </div>
-               <div class="input-field">
                   <input type="email" id="emailContratante" required />
                   <label for="">Email</label>
+               </div>
+               <div class="input-field">
+                  <input type="password" id="senhaContratante" required />
+                  <label for="" minlength="3">Senha</label>
                </div>
                <input
                   type="submit"
@@ -61,7 +61,7 @@
             <div id="div-contratante">
                <h1 class="title">Quero Contratar!</h1>
                <a href="#">
-                  <button id="btn-contratante" class="cadastrador">
+                  <button id="btn-contratante" href="#" class="cadastrador">
                      Cadastrar como Contratante
                   </button>
                </a>
@@ -76,6 +76,10 @@
                   <label for="">Nome</label>
                </div>
                <div class="input-field">
+                  <input type="email" id="emailMusico" required />
+                  <label for="">Email</label>
+               </div>
+               <div class="input-field">
                   <input
                      type="password"
                      minlength="3"
@@ -83,10 +87,6 @@
                      required
                   />
                   <label for="">Senha</label>
-               </div>
-               <div class="input-field">
-                  <input type="email" id="emailMusico" required />
-                  <label for="">Email</label>
                </div>
                <div class="input-field">
                   <input type="text" id="estiloMusico" required />

@@ -1,13 +1,13 @@
 const mostraTodosNaHome = () => {
    var http = new XMLHttpRequest();
-   var url = 'http://localhost:8080/ashow/evento/all';
+   var url = 'http://localhost:8080/ashow/artista/all';
+   console.log(url);
 
    http.open('GET', url, true);
    http.setRequestHeader('Content-type', 'application/json');
    http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
          var dados = http.responseText;
-
          dados = JSON.parse(dados);
 
          if (dados.length == 0) {
@@ -31,27 +31,16 @@ const mostraTodosNaHome = () => {
          var resp = ``;
          for (var i = dados.length - 1; i >= 0; i--) {
             let data = dados[i].data;
-            var dia =
-               data[8] +
-               data[9] +
-               '/' +
-               data[5] +
-               data[6] +
-               '/' +
-               data[0] +
-               data[1] +
-               data[2] +
-               data[3];
-            resp += `<a id="cardEventos" class="cardEventos" href="./evento.html?idEvt=${dados[i].id}"><div id="card-${dados[i].id}">
-      <h2 id="NomeArtistico-${dados[i].id}" class = "nomeEvento">${dados[i].nome}</h2>
-      <h2 id="Nome-${dados[i].id}">${dia}</h2>
-      <h2 id="Estilo-${dados[i].id}">
+            resp += `<a id="cardEventos" class="cardEventos" href="./artista.html?idArt=${dados[i].email}"><div id="card-${dados[i].ID}">
+      <h2 id="NomeArtistico-${dados[i].ID}" class = "nomeEvento">${dados[i].nomeArtistico}</h2>
+      <h2 id="Nome-${dados[i].ID}">${dados[i].nome}</h2>
+      <h2 id="Estilo-${dados[i].ID}">
          <span class="title">Estilo:</span>
          <span class="value">${dados[i].estilo}</span>
       </h2>
-      <h3 id="Valor-${dados[i].id}">
-         <span class="title">Endereço:</span>
-         <span class="value">${dados[i].endereco.bairro}, ${dados[i].endereco.cidade}</span>
+      <h3 id="Valor-${dados[i].ID}">
+         <span class="title">Média de Avaliação:</span>
+         <span class="value">${dados[i].mediaAvaliacao}</span>
       </h3>
     </div></a>`;
          }

@@ -11,22 +11,22 @@ main {
 
 @font-face {
   font-family: sunday;
-  src: url("../fonts/SUNDAY  Personal use.ttf");
+  src: url('../fonts/SUNDAY  Personal use.ttf');
 }
 
 @font-face {
   font-family: Big Noodle Titling;
-  src: url("../fonts/big_noodle_titling.ttf");
+  src: url('../fonts/big_noodle_titling.ttf');
 }
 
 @font-face {
   font-family: muscic;
-  src: url("/assets/fonts/AlphaMusicMan.ttf");
+  src: url('/assets/fonts/AlphaMusicMan.ttf');
 }
 
 body {
   overflow-x: hidden;
-  background-image: url("../img/bg4.jpg");
+  background-image: url('../img/bg4.jpg');
   background-size: cover;
 }
 
@@ -46,15 +46,12 @@ body {
   background-color: #070707a2;
   border-radius: 200px;
   border: solid #e36627 4px;
-  -webkit-animation: animateBorder 10s linear infinite;
-          animation: animateBorder 10s linear infinite;
-  -webkit-transition: 0.5s;
+  animation: animateBorder 10s linear infinite;
   transition: 0.5s;
 }
 
 .Change:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
   background-color: #e2e2e2;
 }
 
@@ -91,8 +88,16 @@ body {
   text-align: center;
   font-size: 3.2em;
   color: #fff;
+
   /* animation: animateTitle linear 10s infinite; */
 }
+
+// .dadosEvento {
+//   display: flex;
+//   flex-direction: column;
+//   align-content: center;
+//   justify-content: center;
+// }
 
 h3 {
   color: #fff;

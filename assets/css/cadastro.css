@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 main {
@@ -11,17 +11,17 @@ main {
 
 @font-face {
   font-family: sunday;
-  src: url("../fonts/SUNDAY  Personal use.ttf");
+  src: url('../fonts/SUNDAY  Personal use.ttf');
 }
 
 @font-face {
   font-family: Big Noodle Titling;
-  src: url("../fonts/big_noodle_titling.ttf");
+  src: url('../fonts/big_noodle_titling.ttf');
 }
 
 @font-face {
   font-family: muscic;
-  src: url("/assets/fonts/AlphaMusicMan.ttf");
+  src: url('/assets/fonts/AlphaMusicMan.ttf');
 }
 
 body {
@@ -33,8 +33,8 @@ body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr) [2];
+  grid-template-columns: repeat(2, 1fr);
   scroll-behavior: smooth;
 }
 
@@ -45,7 +45,7 @@ body {
   top: 5%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   cursor: pointer;
 }
 
@@ -57,25 +57,25 @@ body {
 
 .back-inicial img:hover {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .musico {
   height: 100vh;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background: url(/assets/img/bg-musico.jpeg);
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
   background-size: cover;
   -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
@@ -85,20 +85,20 @@ body {
 .contratante {
   height: 100vh;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background: url(/assets/img/bg-contratanteCadastro.jpg);
   background-size: cover;
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
   -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
   overflow: hidden;
@@ -106,7 +106,7 @@ body {
 
 form {
   -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  transform: translateY(100%);
   background-color: white;
   width: 100%;
   height: 100%;
@@ -115,10 +115,10 @@ form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   -webkit-transition: ease-in 200ms;
   transition: ease-in 200ms;
 }
@@ -129,17 +129,17 @@ form input {
 
 .form-active {
   -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 .musico-active {
   -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .contratante-active {
   -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .off {
@@ -148,12 +148,12 @@ form input {
 
 .musico:hover {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .contratante:hover {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .title {
@@ -163,7 +163,7 @@ form input {
   color: #e36627;
   font-size: 3.3rem;
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .cadastrador {
@@ -191,10 +191,16 @@ form input {
 @media screen and (max-width: 900px) {
   .container {
     -ms-grid-columns: 2fr;
-        grid-template-columns: 2fr;
+    grid-template-columns: 2fr;
   }
+
   .cadastrador {
     top: 370px;
+  }
+
+  .back-inicial {
+    top: 0;
+    left: 10%;
   }
 }
 
@@ -202,13 +208,15 @@ form input {
   .title {
     font-size: 2.5em;
   }
+
   .musico {
     -webkit-filter: none;
-            filter: none;
+    filter: none;
   }
+
   .contratante {
     -webkit-filter: none;
-            filter: none;
+    filter: none;
   }
 }
 
@@ -232,26 +240,33 @@ form input {
 
 .form-user {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
   height: 100%;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, right top, from(#300f46), to(#e36627));
+  background-image:
+    -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#300f46),
+      to(#e36627)
+    );
   background-image: linear-gradient(to right, #300f46, #e36627);
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .form-user img {
@@ -284,7 +299,7 @@ form input {
 
 .form-user input[type='submit']:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .input-field input {

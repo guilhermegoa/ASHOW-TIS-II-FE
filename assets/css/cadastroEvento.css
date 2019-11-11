@@ -26,10 +26,25 @@ main {
 
 body {
   font-family: 'sunday', sans-serif;
+  overflow-x: hidden;
 }
 
 main {
   margin-top: 100px;
+  width: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d2c96;
 }
 
 #formEvent {
@@ -37,7 +52,8 @@ main {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  margin-top: 145px;
+  margin-top: 130px;
+  margin-left: 100px;
 }
 
 .input-field input {
@@ -46,6 +62,7 @@ main {
   border-bottom: #300f46 solid 3px;
   padding: 5px 20px;
   position: relative;
+  text-align: center;
 }
 
 .input-field {
@@ -53,18 +70,73 @@ main {
 }
 
 #cadastrarEventoBtn {
+  font-family: 'sunday', sans-serif;
+  background-color: #fff;
+  font-size: 18px;
+  margin: 0 100px;
+  cursor: pointer;
   border: #6d2c96 solid 3px;
   border-radius: 15px;
-  width: 70%;
+  width: 40%;
+}
+
+#cadastrarEventoBtn:hover {
+  background-color: #e36627;
+  color: #fff;
+  border-color: #fff;
 }
 
 .input-field label {
-  font-size: 14px;
+  font-size: 19px;
   top: 20px;
+  color: #300f46;
+}
+
+.input-field input:focus {
+  color: #e36627;
+}
+
+.endereco-Title {
+  font-size: 19px;
+  margin-top: 10px;
   color: #300f46;
   font-weight: bold;
 }
 
 footer {
   margin-top: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  #formEvent {
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .input-field label,
+  input {
+    width: 95%;
+    margin-top: 20px;
+  }
+  .endereco-Title {
+    display: none;
+  }
+  #cadastrarEventoBtn {
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+    height: 4rem;
+  }
 }
