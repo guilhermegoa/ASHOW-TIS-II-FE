@@ -1,4 +1,4 @@
-function AddPostEvento(dadosCadastro) {
+function AddEvento(dadosCadastro) {
    var http = new XMLHttpRequest();
    var url = 'http://localhost:8080/ashow/evento/add';
 
@@ -27,14 +27,6 @@ function getAllEventos() {
 }
 
 const getEvento = async id => await (await fetch(`http://localhost:8080/ashow/evento/${id}`)).json();
-
-const addPostEvento = async dadosCadastro => await (await fetch(`http://localhost:8080/ashow/evento/add`), {
-   method: 'POST',
-   headers: {
-      'Content-Type': 'application/json'
-   },
-   body: dadosCadastro
-}).json();
 
 function deleteEvento(id) {
    var http = new XMLHttpRequest();
