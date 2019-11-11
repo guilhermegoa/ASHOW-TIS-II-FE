@@ -1,0 +1,17 @@
+function include(file)
+{
+
+  var script  = document.createElement('script');
+  script.src  = file;
+  script.type = 'text/javascript';
+  script.defer = true;
+
+  document.getElementsByTagName('head').item(0).appendChild(script);
+
+}
+
+include("../assets/js/jquery/jquery-3.4.1.js");
+include("https://kit.fontawesome.com/fe733bce8f.js");
+include("../assets/js/Artista.js");
+include("../assets/js/logout.js");
+include("../assets/js/logout.js");
