@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  margin-top: 100px;
+}
+
+@font-face {
+  font-family: sunday;
+  src: url("../fonts/SUNDAY  Personal use.ttf");
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url("../fonts/big_noodle_titling.ttf");
+}
+
+@font-face {
+  font-family: muscic;
+  src: url("/assets/fonts/AlphaMusicMan.ttf");
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url("../img/bg4.jpg");
+  background-size: cover;
+}
+
+.containerArquivos {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.arquivos {
+  width: 87%;
+  height: 100%;
+}
+
+.evento {
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.534);
+  height: 100%;
+  width: 100%;
+}
+
+.eventos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.774);
+}
+
+.titleArtista {
+  margin-top: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 4em;
+}
+
+.NA {
+  margin-top: 30vh;
+  text-align: center;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  display: none;
+}
+
+#void {
+  height: 70vh;
+  display: none;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardEventos {
+  text-decoration: none;
+  border: 1px solid #e36627;
+  -webkit-animation: animateBorder 10s linear infinite;
+          animation: animateBorder 10s linear infinite;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 2%;
+  padding: 1rem;
+  height: 80%;
+  width: 40%;
+  border-radius: 30px;
+  color: aliceblue;
+  cursor: pointer;
+  background-color: rgba(48, 15, 70, 0.281);
+}
+
+.cardEventos:hover {
+  border: 1px solid #200631;
+  -webkit-animation: none;
+          animation: none;
+  background-color: rgba(48, 15, 70, 0.473);
+}
+
+.cardEventos .title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.cardEventos .value {
+  font-size: 17px;
+  color: #e2e2e2;
+}
+
+#Estilo,
+#valor {
+  font-size: 15px;
+}
+
+#NomeArtistico {
+  text-align: center;
+  font-size: 2.8em;
+  color: #fff;
+  /* animation: animateTitle linear 10s infinite; */
+}
+
+.aChange {
+  position: fixed;
+  width: 130px;
+  height: 110px;
+  z-index: 3;
+  left: 20px;
+  bottom: 20px;
+}
+
+.Change {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: #070707a2;
+  border-radius: 200px;
+  border: solid #e36627 4px;
+  -webkit-animation: animateBorder 10s linear infinite;
+          animation: animateBorder 10s linear infinite;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.Change:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #e2e2e2;
+}
+
+.Change i {
+  font-size: 3.4rem;
+  color: #e36627;
+}
+
+#Nome {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d2c96;
+}
+
+@-webkit-keyframes animateBorder {
+  0% {
+    border: 3px solid #e36627;
+  }
+  60% {
+    border: 3px solid #6d2c96;
+  }
+  100% {
+    border: 3px solid #e36627;
+  }
+}
+
+@keyframes animateBorder {
+  0% {
+    border: 3px solid #e36627;
+  }
+  60% {
+    border: 3px solid #6d2c96;
+  }
+  100% {
+    border: 3px solid #e36627;
+  }
+}
+
+@-webkit-keyframes animateTitle {
+  0% {
+    color: #e36627;
+  }
+  60% {
+    color: #6d2c96;
+  }
+  100% {
+    color: #e36627;
+  }
+}
+
+@keyframes animateTitle {
+  0% {
+    color: #e36627;
+  }
+  60% {
+    color: #6d2c96;
+  }
+  100% {
+    color: #e36627;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cardEventos {
+    width: 90%;
+  }
+}

@@ -1,39 +1,39 @@
 {
-  "name": "ashow",
-  "author": "Ashow",
-  "contributors": [
-    "Arhur Rocha Amaral <arthur.amaral.1100245@sga.pucminas.br> (https://github.com/ArthurRAmaral)",
-    "Daniel Aquino Silva <daniel.aquino@sga.pucminas.br> (https://github.com/Picuricu)",
-    "Guilherme Oliveira Antônio <gantonio@sga.pucminas.br> (https://github.com/guilhermegoa)",
-    "Matheus Felipe Ferreira Martins <matheus.martins.1215641@sga.pucminass.br> (https://github.com/MatheusFFM)"
-  ],
-  "version": "1.0.0",
-  "private": true,
-  "description": "Trabalho_Interdisciplinar 2º periodo",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/guilhermegoa/ASHOW---TIS-II-.git"
-  },
-  "keywords": [
-    "ashow"
-  ],
-  "homepage": "https://github.com/guilhermegoa/ASHOW---TIS-II-#readme",
-  "devDependencies": {
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "prettier": "^1.18.2",
-    "stylelint-config-standard": "^19.0.0"
-  },
-  "bugs": {
-    "url": "https://github.com/guilhermegoa/ASHOW---TIS-II-/issues"
-  },
-  "dependencies": {
-    "stylelint": "^11.0.0"
-  },
-  "license": "ISC"
+   "name": "ashow",
+   "author": "Ashow",
+   "contributors": [
+      "Arhur Rocha Amaral <arthur.amaral.1100245@sga.pucminas.br> (https://github.com/ArthurRAmaral)",
+      "Daniel Aquino Silva <daniel.aquino@sga.pucminas.br> (https://github.com/Picuricu)",
+      "Guilherme Oliveira Antônio <gantonio@sga.pucminas.br> (https://github.com/guilhermegoa)",
+      "Matheus Felipe Ferreira Martins <matheus.martins.1215641@sga.pucminass.br> (https://github.com/MatheusFFM)"
+   ],
+   "version": "1.0.0",
+   "private": true,
+   "description": "Trabalho_Interdisciplinar 2º periodo",
+   "main": "index.html",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/guilhermegoa/ASHOW---TIS-II-.git"
+   },
+   "keywords": [
+      "ashow"
+   ],
+   "homepage": "https://github.com/guilhermegoa/ASHOW---TIS-II-#readme",
+   "devDependencies": {
+      "eslint": "^6.5.1",
+      "eslint-config-airbnb-base": "^14.0.0",
+      "eslint-plugin-import": "^2.18.2",
+      "prettier": "^1.18.2",
+      "stylelint-config-standard": "^19.0.0"
+   },
+   "bugs": {
+      "url": "https://github.com/guilhermegoa/ASHOW---TIS-II-/issues"
+   },
+   "dependencies": {
+      "stylelint": "^11.0.0"
+   },
+   "license": "ISC"
 }

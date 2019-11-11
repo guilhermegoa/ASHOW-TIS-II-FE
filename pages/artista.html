@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Ashow</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" type="text/css" href="../assets/css/header.css" />
+      <link rel="stylesheet" type="text/css" href="../assets/css/footer.css" />
+      <link rel="stylesheet" type="text/css" href="../assets/css/evento.css" />
+      <link rel="shortcut icon" href="/assets/img/Logo.png" />
+   </head>
+
+   <body>
+      <!-- HEADER -->
+      <header id="header">
+         <section id="logo">
+            <a href="../pages/home.html"
+               ><img src="../assets/img/ashowLogoTextWhite.png" alt="logo"
+            /></a>
+         </section>
+
+         <a href="../pages/home.html">
+            <section id="search">
+               <input type="text" placeholder="Buscar..." />
+               <button type="submit">
+                  <i class="fas fa-search fa-2x"></i>
+               </button>
+            </section>
+         </a>
+         <section id="user-menu">
+            <button class="dropbtn">
+               <i class="fas fa-user fa-2x"></i> <h id="usuario">Usuario</h>
+               <i class="fa fa-chevron-up rotate"></i>
+            </button>
+            <nav class="dropdown-content">
+               <a href="#">Perfil</a>
+               <a href="cadastrarEvento.html">Criar Evento</a>
+               <div id="logOut"><a href="../index.html">Logout</a></div>
+            </nav>
+         </section>
+         <section id="notification">
+            <a href="#">
+               <i class="fas fa-bell fa-2x"> <div class="circle"></div> </i>
+            </a>
+         </section>
+      </header>
+      <!-- FIM HEADER -->
+
+      <!-- MAIN -->
+      <a class="aChange" href="../pages/artistas.html"><button class="Change"><i class="fas fa-music"></i></button></a>
+      <main class="containerArquivos">
+         <div class="arquivos">
+            <section class="evento" id="evento">
+            </section>
+         </div>
+      </main>
+      <!-- FIM MAIN -->
+
+      <!-- FOOTER -->
+      <footer>
+         <section id="contact">
+            <p>Contato:</p>
+            <a href="#">Numero: (XX) XXXXX-XXXXX</a>
+            <a href="#">Emal: XXXXXXXX@XXXXX.com.br</a>
+         </section>
+         <section id="social-media">
+            <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+         </section>
+         <section id="copyRight">Copyright 2019 (c) ASHOW</section>
+      </footer>
+      <!-- FIM FOOTER -->
+
+      <!-- SCRIPTS -->
+      <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
+      <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
+      <script src="../assets/js/logout.js"></script>
+      <script src="../assets/js/Artista.js"></script>
+      <script src="../assets/js/menuHeader.js"></script>
+   </body>
+</html>

@@ -4,7 +4,7 @@
    "prettier.singleQuote": true,
    "editor.formatOnSave": true,
    "prettier.eslintIntegration": true,
-   "prettier.stylelintIntegration": true,
+   // "prettier.stylelintIntegration": false,
    "prettier.trailingComma": "all",
    //LIVE SASSS
    "liveSassCompile.settings.generateMap": false,
@@ -15,6 +15,11 @@
          "extensionName": ".css",
          "savePath": "/assets/css"
       }
+   ],
+   "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**",
+      "**/_*.scss"
    ],
    //EDITOR CONFIG
    "window.zoomLevel": 0,
