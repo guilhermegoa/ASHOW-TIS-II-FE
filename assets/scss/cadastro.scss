@@ -23,6 +23,11 @@ body {
   cursor: pointer;
 }
 
+.form-user img {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
 .back-inicial img {
   position: relative;
   height: 100px;
@@ -172,11 +177,6 @@ form {
   align-items: center;
   text-align: center;
   flex-direction: column;
-}
-
-.form-user img {
-  width: 200px;
-  margin-bottom: 30px;
 }
 
 .form-user input[type='submit'] {
