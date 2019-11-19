@@ -15,7 +15,7 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
    if(sessionStorage.getItem("type") == "artista"){
       htmlTexto+=`
       <div class="dropdown-content">
-         <a href="./perfilArtista.html">Perfil</a>
+         <a href="./artista.html?idArt=${dados.email}">Perfil</a>
          <a href="./artistas.html">Ver Artistas</a>
          <div id="logOut"><a href="../index.html" >Logout</a></div>
       </div>`;
