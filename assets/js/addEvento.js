@@ -18,7 +18,7 @@ const AddEvento = () => {
 
    CEP.change(() => {
       if (CEP.val().length >= 8) {
-         $.getJSON('https://viacep.com.br/ws/' + CEP.val() + '/json/', function(
+         $.getJSON('https://viacep.com.br/ws/' + CEP.val() + '/json/', function (
             dados,
          ) {
             street.prop('disabled', false);
@@ -52,10 +52,15 @@ const AddEvento = () => {
       }
    });
 
+
+   // const getContratante = async email => await (await fetch(`http://localhost:8080/ashow/contratante/${email}`)).json();
+
    form.on('submit', event => {
       event.preventDefault();
 
       if (form[0].checkValidity()) {
+         // (async () => {
+         // let dadosContratante = await getContratante(sessionStorage.getItem("email"));
          var dadosCadastro = {
             capacidadeEsperada: peopleQnt.val(),
             data: date.val() + 'T' + hours.val(),
@@ -72,16 +77,18 @@ const AddEvento = () => {
             nome: name.val(),
             open: true,
             quantidadeArtistas: artistQnt.val(),
-            valor: artistValue.val(),
+            // contratante: { type: "contratante", email: sessionStorage.getItem("email") },
+            emailContratante: sessionStorage.getItem("email"),
+            valor: artistValue.val()
          };
-         console.log(dadosCadastro.quantidadeArtistas);
+         console.log(dadosCadastro);
 
          var http = new XMLHttpRequest();
          var url = 'http://localhost:8080/ashow/evento/add';
 
          http.open('POST', url, true);
          http.setRequestHeader('Content-type', 'application/json');
-         http.onreadystatechange = function() {
+         http.onreadystatechange = function () {
             if (http.readyState == 4 && http.status == 200) {
                // console.log(http.responseText);
                if (http.responseText == 'true') {
@@ -93,8 +100,12 @@ const AddEvento = () => {
             }
          };
          http.send(JSON.stringify(dadosCadastro));
+
+         // })();
       }
+
    });
-};
+
+}
 
 AddEvento();

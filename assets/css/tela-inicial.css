@@ -185,6 +185,7 @@ form div input:hover {
   margin: 10px 0;
   padding: 10px 20px;
   border-radius: 5px;
+  text-transform: uppercase;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;

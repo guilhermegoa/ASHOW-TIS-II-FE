@@ -36,42 +36,4 @@ const AddContrattante = () => {
    });
 };
 
-// const UpdateContrattante = () => {};
-
-// const GetContrattante = (email, id) => {
-//    const contratante = document.getElementById(id);
-
-//    var http = new XMLHttpRequest();
-//    var url = 'http://localhost:8080/ashow/contratante/' + email;
-//    var dado;
-//    http.open('GET', url, true);
-//    http.setRequestHeader('Content-type', 'application/json');
-//    http.onreadystatechange = function() {
-//       if (http.onload == 4 && http.status == 200) {
-//          dado = JSON.parse(this.responseText);
-//       }
-//    };
-//    http.send();
-//    return dado;
-// };
-
-// const GetAllContrattante = id => {
-//    const contratantes = document.getElementById(id);
-
-//    var http = new XMLHttpRequest();
-//    var url = 'http://localhost:8080/ashow/contratante/all';
-
-//    http.open('GET', url, true);
-//    http.setRequestHeader('Content-type', 'application/json');
-//    http.onreadystatechange = function() {
-//       if (http.readyState == 4 && http.status == 200) {
-//          contratantes.innerHTML = this.responseText;
-//       }
-//    };
-
-//    http.send();
-// };
-
-// const DeleteContrattante = () => {};
-
 AddContrattante();

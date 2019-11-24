@@ -4,7 +4,7 @@
    "prettier.singleQuote": true,
    "editor.formatOnSave": true,
    "prettier.eslintIntegration": true,
-   // "prettier.stylelintIntegration": false,
+   "prettier.stylelintIntegration": true,
    "prettier.trailingComma": "all",
    //LIVE SASSS
    "liveSassCompile.settings.generateMap": false,
