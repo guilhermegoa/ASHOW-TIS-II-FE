@@ -18,14 +18,14 @@
 
   <body>
     <!-- HEADER -->
-    <header id="header">
+    <header>
       <section id="logo">
-        <a href="../pages/home.html"
-          ><img src="../assets/img/ashowLogoTextWhite.png" alt="logo"
+        <a href="#"
+          ><img src="/assets/img/ashowLogoTextWhite.png" alt="logo"
         /></a>
       </section>
       <section id="search">
-        <input id="filtroInput" type="text" placeholder="Buscar..." />
+        <input type="text" placeholder="Buscar..." />
         <button type="submit">
           <i class="fas fa-search fa-2x"></i>
         </button>
@@ -35,37 +35,33 @@
           <i class="fas fa-user fa-2x"></i> Usuario
           <i class="fa fa-chevron-up rotate"></i>
         </button>
-        <div class="dropdown-content">
-          <a href="#">Perfil</a>
-          <a href="cadastrarEvento.html">Criar Evento</a>
-          <a href="/pages/meusEventos.html">Meus eventos</a>
-          <div id="logOut"><a href="../index.html">Logout</a></div>
-        </div>
+        <nav class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </nav>
       </section>
       <section id="notification">
         <a href="#">
-          <i class="fas fa-bell fa-2x"> <div class="circle"></div> </i
+          <i class="fas fa-bell fa-2x"><div class="circle"></div></i
         ></a>
       </section>
     </header>
     <!-- FIM HEADER -->
 
-    <!-- MAIN -->
-    <a class="aChange" href="../pages/artistas.html"
-      ><button class="Change"><i class="fas fa-music"></i></button
-    ></a>
-    <main class="containerArquivos" id="card-list">
+    <!-- Codigo HTML da pagina aqui -->
+    <main>
       <div class="arquivos">
         <section class="evento">
-          <h2 class="titleArtista" id="titleHome">Eventos</h2>
+          <h2 class="titleArtista" id="titleHome">Meus Eventos</h2>
           <div class="card" id="card"></div>
           <div id="void">
-            <div id="NA" class="NA">Não há eventos</div>
+            <div id="NA" class="NA">Você não possui eventos</div>
           </div>
         </section>
       </div>
     </main>
-    <!-- FIM MAIN -->
+    <!-- ^^ -->
 
     <!-- FOOTER -->
     <footer>
@@ -87,9 +83,8 @@
 
     <!-- SCRIPTS -->
     <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
-    <script src="../assets/js/mostraTodosEventosHome.js"></script>
+    <!-- <script src="../assets/js/filter.js"></script> -->
+    <script src="../assets/js/eventosContratante.js"></script>
     <script src="../assets/js/menuHeader.js"></script>
-    <script src="../assets/js/logout.js"></script>
-    <script src="../assets/js/filter.js"></script>
   </body>
 </html>

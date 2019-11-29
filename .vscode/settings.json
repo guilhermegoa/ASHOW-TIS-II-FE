@@ -3,8 +3,6 @@
    "editor.defaultFormatter": "esbenp.prettier-vscode",
    "prettier.singleQuote": true,
    "editor.formatOnSave": true,
-   "prettier.eslintIntegration": true,
-   "prettier.stylelintIntegration": true,
    "prettier.trailingComma": "all",
    //LIVE SASSS
    "liveSassCompile.settings.generateMap": false,
@@ -22,7 +20,7 @@
       "**/_*.scss"
    ],
    //EDITOR CONFIG
-   "window.zoomLevel": 1,
+   "window.zoomLevel": 0,
    //STYLELINT
    "extends": "stylelint-config-standard",
    "rules": {
