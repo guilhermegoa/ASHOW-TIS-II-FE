@@ -22,7 +22,7 @@
       "**/_*.scss"
    ],
    //EDITOR CONFIG
-   "window.zoomLevel": 0,
+   "window.zoomLevel": 1,
    //STYLELINT
    "extends": "stylelint-config-standard",
    "rules": {
