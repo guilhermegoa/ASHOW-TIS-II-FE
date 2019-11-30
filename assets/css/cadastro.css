@@ -5,8 +5,9 @@
           box-sizing: border-box;
 }
 
-main {
-  margin-top: 100px;
+@font-face {
+  font-family: comicsans;
+  src: url("../fonts/Comic Sans MS.ttf");
 }
 
 @font-face {
@@ -17,11 +18,6 @@ main {
 @font-face {
   font-family: Big Noodle Titling;
   src: url("../fonts/big_noodle_titling.ttf");
-}
-
-@font-face {
-  font-family: muscic;
-  src: url("/assets/fonts/AlphaMusicMan.ttf");
 }
 
 body {
