@@ -48,12 +48,15 @@ const addArtistaAoEventoFet = async () =>
     dados.data[15];
   let htmlTexto = ``;
   //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
-  console.log(dados)
+  console.log(dados);
   htmlTexto += `
       <h2 class="titleArtista">${dados.nome}</h2>
-      <div class="dadosEvento" id="dadosEvento">
+      <div class="dadosEvento" id="dadosEvento">`;
 
-         <h3><span>Estilo:</span> ${dados.estilo}</h3>
+  if (dados.dataUriFoto != "")
+    htmlTexto += `<h3><img class="imgArtista" src="${dados.dataUriFoto}" alt=""></h3>`;
+
+  htmlTexto += `  <h3><span>Estilo:</span> ${dados.estilo}</h3>
          <h3><span>Data:</span> ${data}</h3>
          <h3><span>Hora:</span> ${hora}</h3>
          <h3><span>Endereço:</span> </h3>
@@ -63,8 +66,11 @@ const addArtistaAoEventoFet = async () =>
          <h3><span>Quantidade de artistas:</span> ${dados.quantidadeArtistas}</h3>
          <h3><span>Valor base: </span>${dados.valor}</h3>`;
   if (sessionStorage.getItem("type") == "artista") {
-    console.log(sessionStorage.getItem('email') == -1)
-    if (dados.open && (dados.emailArtistasPendente.indexOf(sessionStorage.getItem('email') == -1))) {
+    console.log(sessionStorage.getItem("email") == -1);
+    if (
+      dados.open &&
+      dados.emailArtistasPendente.indexOf(sessionStorage.getItem("email") == -1)
+    ) {
       htmlTexto += `<h3><button id="btnJuntar"  class="btnJuntar">Juntar-se</button></h3></div>`;
     } else
       htmlTexto += `<h3><button id="btnJuntar" class="btnJuntar" disabled>Juntar-se</button></h3></div>`;
@@ -78,12 +84,11 @@ const addArtistaAoEventoFet = async () =>
       await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(databody),
-      }).then((response) => {
+        body: JSON.stringify(databody)
+      }).then(response => {
         console.log(response);
-      })
+      });
   };
-
 })();
