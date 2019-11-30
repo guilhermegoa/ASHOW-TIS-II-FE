@@ -44,16 +44,32 @@
       </section>
       <section id="notification">
         <a href="#">
-          <i class="fas fa-bell fa-2x"> <div class="circle"></div> </i
+          <i class="fas fa-bell fa-2x"><div class="circle"></div> </i
         ></a>
       </section>
     </header>
+
+    <div id="notificacoes">
+      <!-- <p>Está tudo tranquilo</p> -->
+        <div id="not" onclick="vizualizar(1)" class="not">
+          <img src="../assets/img/bg4.jpg" alt="" class="imgNot" >
+          <p>Fulano pediu para participar do seu evento</p>
+          <input type="checkbox" name="chk" class="chkNot" id="chkid">
+          <label for="chkid">
+            <img src="../assets/img/olho.png" class="olhoNot" alt="">
+          </label>
+        </div>
+    </div>
+
+    <div onclick="tirarModal()" id="bk"></div></label>
+    <div id="notificacaoModal">
+      <p>Está tudo tranquilo</p>
+    </div>
     <!-- FIM HEADER -->
 
     <!-- MAIN -->
-    <a class="aChange" href="../pages/artistas.html"
-      ><button class="Change"><i class="fas fa-music"></i></button
-    ></a>
+    <a class="aChange" href="../pages/artistas.html"><button class="Change"><i class="fas fa-music"></i></button></a>
+
     <main class="containerArquivos" id="card-list">
       <div class="arquivos">
         <section class="evento">
@@ -89,6 +105,7 @@
     <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
     <script src="../assets/js/mostraTodosEventosHome.js"></script>
     <script src="../assets/js/menuHeader.js"></script>
+    <script src="../assets/js/btnNotificacao.js"></script>
     <script src="../assets/js/logout.js"></script>
     <script src="../assets/js/filter.js"></script>
   </body>

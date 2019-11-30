@@ -33,6 +33,7 @@
       "url": "https://github.com/guilhermegoa/ASHOW---TIS-II-/issues"
    },
    "dependencies": {
+      "jshint": "^2.10.3",
       "stylelint": "^11.0.0"
    },
    "license": "ISC"

@@ -21,6 +21,7 @@ const getUsuarioAtual = async () =>
       <div class="dropdown-content">
          <a href="./artista.html?idArt=${dados.email}">Perfil</a>
          <a href="./artistas.html">Ver Artistas</a>
+         <a href="/pages/meusEventos.html">Meus eventos</a>
          <div id="logOut"><a href="../index.html" >Logout</a></div>
       </div>`;
   } else {

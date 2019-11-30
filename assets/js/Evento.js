@@ -58,7 +58,7 @@ const addArtistaAoEventoFet = async () =>
          <h3><span>Quantidade de artistas:</span> ${dados.quantidadeArtistas}</h3>
          <h3><span>Valor base: </span>${dados.valor}</h3>`;
   if (sessionStorage.getItem("type") == "artista") {
-    // console.log(sessionStorage.getItem("email") == -1);
+    console.log(sessionStorage.getItem("email") == -1);
     if (
       dados.open &&
       dados.emailArtistasPendente.indexOf(sessionStorage.getItem("email") == -1)

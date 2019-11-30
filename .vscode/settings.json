@@ -1,8 +1,8 @@
 {
    //PRETTIER
    "editor.defaultFormatter": "esbenp.prettier-vscode",
-   "prettier.singleQuote": true,
-   "editor.formatOnSave": true,
+   "prettier.singleQuote": false,
+   "editor.formatOnSave": false,
    "prettier.trailingComma": "all",
    //LIVE SASSS
    "liveSassCompile.settings.generateMap": false,
@@ -25,7 +25,7 @@
    "extends": "stylelint-config-standard",
    "rules": {
       "at-rule-no-unknown": [
-         true,
+        false,
          {
             "ignoreAtRules": ["extends", "ignores"]
          }

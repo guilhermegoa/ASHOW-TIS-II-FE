@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -105,7 +106,7 @@ header #search button :hover {
 }
 
 header .dropbtn {
-  font-family: ' Big Noodle Titling', sans-serif;
+  font-family: " Big Noodle Titling", sans-serif;
   position: relative;
   display: inline-block;
   background-color: #300f46;
@@ -142,7 +143,7 @@ header .dropdown-content {
 }
 
 header .dropdown-content a {
-  font-family: ' Big Noodle Titling', sans-serif;
+  font-family: " Big Noodle Titling", sans-serif;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -195,4 +196,92 @@ header .circle {
 
 header #notification span p {
   margin: -5px 0 0 5px;
+}
+
+#notificacoes {
+  position: absolute;
+  top: 100px;
+  right: 75px;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  z-index: 3;
+  overflow-x: hidden;
+}
+
+#notificacoes #not {
+  font-weight: 700;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border: solid 2px greenyellow;
+}
+
+#notificacoes #not .imgNot {
+  height: 70px;
+  width: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+}
+
+#notificacoes #not .chkNot {
+  display: none;
+}
+
+#notificacoes #not p {
+  width: 225px;
+}
+
+#notificacoes #not .olhoNot {
+  height: 40px;
+}
+
+#notificacoes #not .olhoNot:hover {
+  background-color: #c487e9;
+}
+
+#notificacoes #not .chkNot:checked ~ label > .olhoNot {
+  background-color: #000;
+  display: none;
+}
+
+#notificacoes #not:hover {
+  background-color: #cfa3eb;
+}
+
+#notificacaoModal {
+  display: none;
+  position: fixed;
+  width: 45%;
+  height: 60%;
+  margin: calc((100vh - (60vh + 12.5%)) / 2) calc((100vw - 45vw) / 2);
+  background-color: #e36627;
+  z-index: 6;
+}
+
+#bk {
+  display: none;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.541);
 }
