@@ -73,7 +73,11 @@ const addArtistaAoEventoFet = async () =>
   document.getElementById("evento").innerHTML = htmlTexto;
 
   document.getElementById("btnJuntar").onclick = () => {
-    document.getElementById("evento").innerHTML = htmlTexto;
+    // document.getElementById("evento").innerHTML = htmlTexto;
+    // document.getElementById("btnJuntar").style.backgroundColor = "#30a014";
+    // document.getElementById("btnJuntar").style.color = "#fff";
+    // document.getElementById("btnJuntar").style.border = "none";
+    // document.getElementById("btnJuntar").textContent = "Juntou";
     document.getElementById("btnJuntar").onclick = async () =>
       await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
         method: "POST",
