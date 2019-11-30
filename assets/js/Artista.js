@@ -1,16 +1,22 @@
 const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('idArt');
-const getArtista = async email => await (await fetch(`http://localhost:8080/ashow/artista/${email}`)).json();
+const id = urlParams.get("idArt");
+const getArtista = async email =>
+  await (await fetch(`http://localhost:8080/ashow/artista/${email}`)).json();
 
 (async () => {
-   let dados = await getArtista(id);
+  let dados = await getArtista(id);
 
-   let htmlTexto = ``;
-   //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
+  let htmlTexto = ``;
+  //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
 
-      htmlTexto += `
+  htmlTexto += `
       <h2 class="titleArtista">${dados.nomeArtistico}</h2>
-      <div class="dadosEvento" id="dadosEvento">
+      <div class="dadosEvento" id="dadosEvento">`;
+
+  if (dados.dataUriFoto != "")
+    htmlTexto += `<h3><img class="imgArtista" src="${dados.dataUriFoto}" alt=""></h3>`;
+
+  htmlTexto += `
          <h3><span>nome:</span> ${dados.nome}</h3>
          <h3><span>Email:</span> ${dados.email}</h3>
          <h3><span>Estilo:</span> ${dados.estilo}</h3>
@@ -20,5 +26,5 @@ const getArtista = async email => await (await fetch(`http://localhost:8080/asho
          <h3><span>Quantidade de eventos:</span> ${dados.numeroEventos}</h3>
       </div>`;
 
-   document.getElementById('evento').innerHTML = htmlTexto;
+  document.getElementById("evento").innerHTML = htmlTexto;
 })();
