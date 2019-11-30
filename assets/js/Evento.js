@@ -11,13 +11,6 @@ var myInit = {
   mode: "cors",
   cache: "default"
 };
-const databody = {
-  type: "proposta",
-  emailArtista: "2@2",
-  emailContratante: "email",
-  idEvento: 1,
-  valor: 500.0
-};
 
 const addArtistaAoEventoFet = async () =>
   await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
@@ -48,7 +41,6 @@ const addArtistaAoEventoFet = async () =>
     dados.data[15];
   let htmlTexto = ``;
   //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
-  console.log(dados);
   htmlTexto += `
       <h2 class="titleArtista">${dados.nome}</h2>
       <div class="dadosEvento" id="dadosEvento">`;
@@ -66,7 +58,7 @@ const addArtistaAoEventoFet = async () =>
          <h3><span>Quantidade de artistas:</span> ${dados.quantidadeArtistas}</h3>
          <h3><span>Valor base: </span>${dados.valor}</h3>`;
   if (sessionStorage.getItem("type") == "artista") {
-    console.log(sessionStorage.getItem("email") == -1);
+    // console.log(sessionStorage.getItem("email") == -1);
     if (
       dados.open &&
       dados.emailArtistasPendente.indexOf(sessionStorage.getItem("email") == -1)
@@ -78,17 +70,32 @@ const addArtistaAoEventoFet = async () =>
 
   document.getElementById("evento").innerHTML = htmlTexto;
 
-  document.getElementById("btnJuntar").onclick = () => {
-    document.getElementById("evento").innerHTML = htmlTexto;
-    document.getElementById("btnJuntar").onclick = async () =>
-      await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(databody)
-      }).then(response => {
-        console.log(response);
-      });
+  let databody = {
+    type: "proposta",
+    emailArtista: sessionStorage.getItem("email"),
+    emailContratante: dados.emailContratante,
+    idEvento: dados.id,
+    valor: dados.valor
   };
+
+  $("#btnJuntar").on("click", async () => {
+    await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(databody)
+    }).then(response => {
+      response.text().then(e => {
+        console.log(e.valueOf());
+        if (e.valueOf() == "true") {
+          document.getElementById("btnJuntar").disabled = true;
+          alert("Pedido enviado");
+        } else {
+          document.getElementById("btnJuntar").disabled = true;
+          alert("Você já solicitou para participar desse evento");
+        }
+      });
+    });
+  });
 })();

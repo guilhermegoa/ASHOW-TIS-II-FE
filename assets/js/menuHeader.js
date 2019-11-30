@@ -1,7 +1,12 @@
-const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080/ashow/${sessionStorage.getItem("type")}/${sessionStorage.getItem("email")}`)).json();
+const getUsuarioAtual = async () =>
+  await (await fetch(
+    `http://localhost:8080/ashow/${sessionStorage.getItem(
+      "type"
+    )}/${sessionStorage.getItem("email")}`
+  )).json();
 
 (async () => {
-  let dados = await getUsuarioAtual()
+  let dados = await getUsuarioAtual();
 
   let htmlTexto = ``;
   //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
@@ -28,7 +33,5 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
          </div>`;
   }
 
-  document.getElementById('user-menu').innerHTML = htmlTexto;
-
+  document.getElementById("user-menu").innerHTML = htmlTexto;
 })();
-
