@@ -23,15 +23,11 @@
 
       <div class="search">
         <div>
-          <input
-            id="filtroInput"
-            data-modal="filtro"
-            type="text"
-            placeholder="Buscar..."
-          />
+          <input id="filtroInput" type="text" placeholder="Buscar..." />
           <i class="fas fa-search fa-2x"></i>
         </div>
       </div>
+      <button id="filtroBtn">Filtrar <i class="fas fa-filter"></i></button>
       <div id="lista-nav">
         <ul>
           <li><a href="#">Link 1</a></li>
@@ -53,7 +49,6 @@
       <!-- HEADER -->
       <header>
         <h1>Eventos</h1>
-        <button data-modal="filtro" id="filtroBtn">FILTRAR</button>
       </header>
       <!-- FIM HEADER -->
 
@@ -157,7 +152,6 @@
           </div>
           <div class="btns">
             <button id="filtrador" onclick="filtrar()">Filtrar</button>
-            <button id="recomendador">Recomendações</button>
           </div>
         </div>
       </div>

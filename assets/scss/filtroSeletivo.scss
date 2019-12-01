@@ -7,6 +7,25 @@ $color-black: #000;
 $color-orange1: #e36627;
 $color-orange2: #c54200;
 
+#filtroBtn {
+  width: 50%;
+  height: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: #000 solid 1px;
+  cursor: pointer;
+  outline: none;
+}
+
+#filtroBtn:hover {
+  color: $color-orange1;
+  border-color: $color-orange1;
+}
+
+#filtroBtn i {
+  font-size: 20px;
+}
+
 #filtro-modal .modal {
   width: 55%;
   height: 450px;

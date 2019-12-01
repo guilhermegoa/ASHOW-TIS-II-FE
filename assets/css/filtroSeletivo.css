@@ -20,6 +20,25 @@
   src: url("../fonts/big_noodle_titling.ttf");
 }
 
+#filtroBtn {
+  width: 50%;
+  height: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: #000 solid 1px;
+  cursor: pointer;
+  outline: none;
+}
+
+#filtroBtn:hover {
+  color: #e36627;
+  border-color: #e36627;
+}
+
+#filtroBtn i {
+  font-size: 20px;
+}
+
 #filtro-modal .modal {
   width: 55%;
   height: 450px;
