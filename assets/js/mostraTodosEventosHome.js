@@ -4,7 +4,7 @@ const mostraTodosNaHome = () => {
 
   http.open("GET", url, true);
   http.setRequestHeader("Content-type", "application/json");
-  http.onreadystatechange = function() {
+  http.onreadystatechange = function () {
     if (http.readyState == 4 && http.status == 200) {
       var dados = http.responseText;
 
@@ -74,7 +74,6 @@ function initModal() {
   if (botaoAbrir && botaoFechar && containerModal) {
     function toggleModal(event) {
       event.preventDefault();
-      console.log("cliquei");
       containerModal.classList.toggle("ativo");
     }
     function cliqueForaModal(event) {
@@ -84,7 +83,6 @@ function initModal() {
     }
 
     botaoAbrir.forEach(e => {
-      console.log("cliquei");
       e.addEventListener("click", toggleModal);
     });
 
