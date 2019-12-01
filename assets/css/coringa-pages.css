@@ -160,7 +160,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  background-color: #7517af;
+  background-color: #e36627;
   font-size: 3em;
   color: #fff;
 }
@@ -194,7 +194,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #7517af;
+  background-color: #e36627;
   color: #fff;
 }
 
