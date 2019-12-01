@@ -70,6 +70,10 @@ aside a img {
   width: 14rem;
 }
 
+aside p {
+  font-size: 30px;
+}
+
 aside .search {
   left: 0;
   top: 160px;
@@ -157,7 +161,6 @@ header {
           align-items: center;
   justify-items: center;
   background-color: #7517af;
-  font-family: sunday, sans-serif;
   font-size: 3em;
   color: #fff;
 }

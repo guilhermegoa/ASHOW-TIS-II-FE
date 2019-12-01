@@ -4,31 +4,34 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
   let dados = await getUsuarioAtual()
 
   let htmlTexto = ``;
-  //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
 
-  htmlTexto += `
-      <button class="dropbtn">
-         <i class="fas fa-user fa-2x"></i> ${dados.nome}
-         <i class="fa fa-chevron-up rotate"></i>
-      </button>`;
+  htmlTexto += `<p> ${dados.nome}</p>`;
+
+  document.getElementById('nome').innerHTML = htmlTexto;
+
+  htmlTexto = ``;
+
   if (sessionStorage.getItem("type") == "artista") {
     htmlTexto += `
-      <div class="dropdown-content">
-         <a href="./artista.html?idArt=${dados.email}">Perfil</a>
-         <a href="./artistas.html">Ver Artistas</a>
-         <div id="logOut"><a href="../index.html" >Logout</a></div>
-      </div>`;
+      <ul>
+      <li><a href="./artista.html?${dados.email}">Perfil</a></li>
+      <li><a href="./artitas.html">Ver artistas</a></li>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 1</a></li>
+      <li id="logOut"><a href="../index.html">Logout</a></li>
+      </ul>`;
   } else {
     htmlTexto += `
-         <div class="dropdown-content">
-            <a href="./perfilContratante.html">Perfil</a>
-            <a href="cadastrarEvento.html">Criar Evento</a>
-            <a href="/pages/meusEventos.html">Meus eventos</a>
-            <div id="logOut"><a href="../index.html" >Logout</a></div>
-         </div>`;
+       <ul ">
+        <li><a href="./perfilContratante.html">Perfil</a></li>
+        <li><a href="cadastrarEvento.html">Criar Evento</a></li>
+        <li><a href="/pages/meusEventos.html">Meus eventos</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li id="logOut"><a href="../index.html">Logout</a></li>
+        </ul>`;
   }
 
-  document.getElementById('user-menu').innerHTML = htmlTexto;
-
+  document.getElementById('lista-nav').innerHTML = htmlTexto;
 })();
 

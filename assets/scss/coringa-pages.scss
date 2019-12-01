@@ -43,6 +43,10 @@ aside {
     }
   }
 
+  p {
+    font-size: 30px;
+  }
+
   .search {
     left: 0;
     top: 160px;
@@ -114,7 +118,6 @@ header {
   align-items: center;
   justify-items: center;
   background-color: $color-purple;
-  font-family: sunday, sans-serif;
   font-size: 3em;
   color: $color-white;
   h1 {
