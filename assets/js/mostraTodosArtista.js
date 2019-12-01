@@ -89,6 +89,7 @@ function artistaNoModal(email) {
       htmlTexto += `
       <h2 class="titleArtista">${art.nomeArtistico}</h2>
       <div class="dadosEvento" id="dadosEvento">
+      <h3><img class="imgArtista" height="100" src="${art.dataUriFoto}" alt=""></h3>
          <h3><span>nome:</span> ${art.nome}</h3>
          <h3><span>Email:</span> ${art.email}</h3>
          <h3><span>Estilo:</span> ${art.estilo}</h3>
