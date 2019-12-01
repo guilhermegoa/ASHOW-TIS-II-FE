@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <title>Ashow</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="stylesheet" type="text/css" href="../assets/css/header.css" />
-      <link rel="stylesheet" type="text/css" href="../assets/css/footer.css" />
-      <link
-         rel="stylesheet"
-         type="text/css"
-         href="../assets/css/homeArtista.css"
-      />
-      <link rel="shortcut icon" href="/assets/img/Logo.png" />
-      <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
-   </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ashow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/coringa-pages.css" />
+    <link rel="stylesheet" href="../assets/css/card.css" />
+    <link rel="stylesheet" href="../assets/css/modal.css" />
+    <link rel="shortcut icon" href="/assets/img/Logo.png" />
+    <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
+  </head>
 
-   <body>
+  <body>
+    <!-- NAV SIDE -->
+    <aside class="side-nav">
+      <div class="img-usuario">
+        <img src="../assets/img/índice.jpeg" alt="" />
+      </div>
+      <p id="nome">Nome</p>
+
+      <div class="search">
+        <div>
+          <input type="text" placeholder="Buscar..." />
+          <i class="fas fa-search fa-2x"></i>
+        </div>
+      </div>
+
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+      </ul>
+      <div class="logo">
+        <a href="#"
+          ><img src="/assets/img/ashowLogoText -img.png" alt="logo"
+        /></a>
+      </div>
+    </aside>
+    <!-- FIM NAV SIDE -->
+    <div class="coluna">
       <!-- HEADER -->
-      <header id="header">
-         <section id="logo">
-            <a href="../pages/home.html"
-               ><img src="../assets/img/ashowLogoTextWhite.png" alt="logo"
-            /></a>
-         </section>
-         <section id="search">
-            <input id="filtroInput" type="text" placeholder="Buscar..." />
-            <button type="submit">
-               <i class="fas fa-search fa-2x"></i>
-            </button>
-         </section>
-         <section id="user-menu">
-            <button class="dropbtn">
-               <i class="fas fa-user fa-2x"></i> Usuario
-               <i class="fa fa-chevron-up rotate"></i>
-            </button>
-            <div class="dropdown-content">
-               <a href="#">Perfil</a>
-               <a href="cadastrarEvento.html">Criar Evento</a>
-               <div id="logOut"><a href="../index.html" >Logout</a></div>
-            </div>
-         </section>
-         <section id="notification">
-            <a href="#">
-               <i class="fas fa-bell fa-2x"> <div class="circle"></div> </i
-            ></a>
-         </section>
-      </header>
+      <header id="header"><h1>Artistas</h1></header>
       <!-- FIM HEADER -->
 
       <!-- MAIN -->
-      <a class="aChange" href="../pages/home.html"><button class="Change"><i class="fas fa-map-marked-alt"></i></button></a>
       <main class="containerArquivos" id="card-list">
-         <div class="arquivos">
-            <section class="evento">
-               <h2 class="titleArtista" id="titleHome">Artista</h2>
-               <div class="card" id="card"></div>
-               <div id="void">
-                  <div id="NA" class="NA">Não há artista</div>
-               </div>
-            </section>
-         </div>
+        <div class="arquivos">
+          <section class="evento">
+            <h2 class="titleArtista" id="titleHome"></h2>
+            <div class="card" id="card"></div>
+            <div id="void">
+              <div id="NA" class="NA">Não há artista</div>
+            </div>
+          </section>
+        </div>
       </main>
       <!-- FIM MAIN -->
 
       <!-- FOOTER -->
       <footer>
-         <section id="contact">
-            <p>Contato:</p>
-            <a href="#">Numero: (XX) XXXXX-XXXXX</a>
-            <a href="#">Emal: XXXXXXXX@XXXXX.com.br</a>
-         </section>
-         <section id="social-media">
-            <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
-            <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-         </section>
-         <section id="copyRight">Copyright 2019 (c) ASHOW</section>
+        <section id="contact">
+          <p>Contato:</p>
+          <a href="#">Numero: (XX) XXXXX-XXXXX</a>
+          <a href="#">Emal: XXXXXXXX@XXXXX.com.br</a>
+        </section>
+        <section id="social-media">
+          <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+          <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </section>
+        <section id="copyRight">Copyright 2019 (c) ASHOW</section>
       </footer>
       <!-- FIM FOOTER -->
+    </div>
 
-      <!-- SCRIPTS -->
-      <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
-      <script src="../assets/js/mostraTodosArtista.js"></script>
-      <script src="../assets/js/filter.js"></script>
-      <script src="../assets/js/logout.js"></script>
-      <script src="../assets/js/menuHeader.js"></script>
-   </body>
+    <!-- MODAL -->
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar">X</button>
+        <div id="info"></div>
+      </div>
+    </section>
+    <!-- FIM MODAL -->
+
+    <!-- SCRIPTS -->
+    <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
+    <script src="../assets/js/mostraTodosArtista.js"></script>
+    <script src="../assets/js/filter.js"></script>
+    <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/menuHeader.js"></script>
+  </body>
 </html>

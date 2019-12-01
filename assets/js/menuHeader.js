@@ -15,7 +15,7 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
     htmlTexto += `
       <ul>
       <li><a href="./artista.html?${dados.email}">Perfil</a></li>
-      <li><a href="./artitas.html">Ver artistas</a></li>
+      <li><a href="/pages/artistas.html"> ver Artistas</a></li>
       <li><a href="#">Link 1</a></li>
       <li><a href="#">Link 1</a></li>
       <li id="logOut"><a href="../index.html">Logout</a></li>
@@ -26,6 +26,7 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
         <li><a href="./perfilContratante.html">Perfil</a></li>
         <li><a href="cadastrarEvento.html">Criar Evento</a></li>
         <li><a href="/pages/meusEventos.html">Meus eventos</a></li>
+        <li><a href="/pages/artistas.html"> ver Artistas</a></li>
         <li><a href="#">Link 1</a></li>
         <li><a href="#">Link 1</a></li>
         <li id="logOut"><a href="../index.html">Logout</a></li>
@@ -34,4 +35,6 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
 
   document.getElementById('lista-nav').innerHTML = htmlTexto;
 })();
+
+
 
