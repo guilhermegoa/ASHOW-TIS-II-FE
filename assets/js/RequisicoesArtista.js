@@ -37,6 +37,8 @@ const AddArtista = () => {
           if (http.responseText == "true") {
             alert("Artista Cadastrado");
             window.location.href = "../../index.html";
+          } else {
+            alert("Email já cadastrado");
           }
         }
       };

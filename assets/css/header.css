@@ -261,7 +261,7 @@ header #notification span p {
 }
 
 #notificacoes {
-  position: absolute;
+  position: fixed;
   top: 100px;
   right: 75px;
   width: 400px;

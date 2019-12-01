@@ -34,12 +34,15 @@ function vizualizar(id) {
   let modal = document.getElementById("notificacaoModal");
   document.getElementById("bk").style.display = "block";
   modal.style.display = "flex";
-
   getNotificacoesId(id).then(e => {
+    getPropostaId(e.proposta.id).then( prop=> {
+
+  fetch(`http://localhost:8080/ashow/notificacao/visualizar/${id}`,{method:"PUT"});
+
     if(!e.proposta.contratanteAceitou) {
-      getArtistaNot(e.proposta.emailArtista).then(art => {
-        getEventoNot(e.proposta.idEvento).then(evt => {
-          modal.innerHTML = `
+      getArtistaNot(prop.emailArtista).then(art => {
+        getEventoNot(prop.idEvento).then(evt => {
+        dadosModal = `
           <div>
             <h1>Pedido para: ${evt.nome}</h1>
           </div>
@@ -55,14 +58,32 @@ function vizualizar(id) {
           </div>
           <div>
             <h2>Nota: ${art.mediaAvaliacao}</h2>
-          </div>
-          <button onclick="aceitar(${e.proposta.id})">Aceitar</button>
-          <button onclick="">Rejeitar</button>
+          </div>`;
+
+          console.log(prop.contratanteAceitou)
+          if(prop.contratanteAceitou) {
+          dadosModal+=`
+          <button onclick="aceitar(${e.proposta.id})" disabled>Aceitar</button>`;
+          } else {
+            dadosModal+=`
+            <button onclick="aceitar(${e.proposta.id})">Aceitar</button>`;
+          }
+          if(e.visualizou){
+            dadosModal+=`
+            <button onclick="" disabled>Cancelar</button>`;
+          }
+          else {
+          dadosModal+=`
+          <button onclick="" disabled>Rejeitar</button>`;
+        }
+        dadosModal+=`
           <a href="./artista.html?idArt=${e.proposta.emailArtista}"><button>Ver Perfil</button></a>`;
+          modal.innerHTML = dadosModal;
         });
       });
     }
   });
+});
 }
 
 function aceitar(idProposta) {
@@ -80,12 +101,13 @@ function aceitar(idProposta) {
     },
     body: JSON.stringify(prop)
   }).then(e => {
-    console.log(e)
-      if(e.body == "true") {
+    e.text().then(tx => {
+      if(tx == "true") {
         alert("Artista adicionado para tocar no evento");
+        location.reload();
       } else {
-        alert("Erro ao confirmar proposta");
-      }
+        alert("Artista já confirmado");
+      }});
     });
   });
 }

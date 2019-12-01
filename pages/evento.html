@@ -45,38 +45,71 @@
             ></a>
          </section>
       </header>
+
+      <div id="notificacoes">
+        <!-- <p>Está tudo tranquilo</p> -->
+          <div id="not" onclick="vizualizar(1)" class="not">
+            <img src="../assets/img/bg4.jpg" alt="" class="imgNot" >
+            <p>Fulano pediu para participar do seu evento</p>
+            <input type="checkbox" name="chk" class="chkNot" id="chkid">
+            <label for="chkid">
+              <img src="../assets/img/olho.png" class="olhoNot" alt="">
+            </label>
+          </div>
+      </div>
+
+      <div onclick="tirarModal()" id="bk"></div></label>
+      <div id="notificacaoModal">
+        <div>
+          <img src="../assets/img/ashowLogoText -img.png" height="100" alt="">
+          <h1>Fulano</h1>
+        </div>
+        <div>
+          <h2>Stilo: Sertanejo</h2>
+        </div>
+        <div>
+          <h2>Valor padrão: R$500.00</h2>
+        </div>
+        <div>
+          <h2>Nota: 4.5</h2>
+        </div>
+        <button onclick="">Aceitar</button>
+        <button>Rejeitar</button>
+        <a href="./artista.html?idArt=a@a"><button>Ver Perfil</button></a>
+      </div>
       <!-- FIM HEADER -->
 
       <!-- MAIN -->
       <a class="aChange" href="../pages/home.html"><button class="Change"><i class="fas fa-map-marked-alt"></i></button></a>
       <main class="containerArquivos">
-         <div class="arquivos">
-            <section class="evento" id="evento">
-            </section>
-         </div>
+        <div class="arquivos">
+          <section class="evento" id="evento">
+          </section>
+        </div>
       </main>
       <!-- FIM MAIN -->
 
       <!-- FOOTER -->
       <footer>
-         <section id="contact">
-            <p>Contato:</p>
-            <a href="#">Numero: (XX) XXXXX-XXXXX</a>
-            <a href="#">Emal: XXXXXXXX@XXXXX.com.br</a>
-         </section>
-         <section id="social-media">
-            <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
-            <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-         </section>
-         <section id="copyRight">Copyright 2019 (c) ASHOW</section>
+        <section id="contact">
+          <p>Contato:</p>
+          <a href="#">Numero: (XX) XXXXX-XXXXX</a>
+          <a href="#">Emal: XXXXXXXX@XXXXX.com.br</a>
+        </section>
+        <section id="social-media">
+          <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+          <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </section>
+        <section id="copyRight">Copyright 2019 (c) ASHOW</section>
       </footer>
       <!-- FIM FOOTER -->
 
       <!-- SCRIPTS -->
       <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
+      <script src="../assets/js/btnNotificacao.js"></script>
       <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
       <script src="../assets/js/getArtista.js"></script>
       <script src="../assets/js/Evento.js"></script>

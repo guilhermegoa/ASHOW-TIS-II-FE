@@ -47,6 +47,38 @@
         ></a>
       </section>
     </header>
+
+    <div id="notificacoes">
+      <!-- <p>Está tudo tranquilo</p> -->
+        <div id="not" onclick="vizualizar(1)" class="not">
+          <img src="../assets/img/bg4.jpg" alt="" class="imgNot" >
+          <p>Fulano pediu para participar do seu evento</p>
+          <input type="checkbox" name="chk" class="chkNot" id="chkid">
+          <label for="chkid">
+            <img src="../assets/img/olho.png" class="olhoNot" alt="">
+          </label>
+        </div>
+    </div>
+
+    <div onclick="tirarModal()" id="bk"></div></label>
+    <div id="notificacaoModal">
+      <div>
+        <img src="../assets/img/ashowLogoText -img.png" height="100" alt="">
+        <h1>Fulano</h1>
+      </div>
+      <div>
+        <h2>Stilo: Sertanejo</h2>
+      </div>
+      <div>
+        <h2>Valor padrão: R$500.00</h2>
+      </div>
+      <div>
+        <h2>Nota: 4.5</h2>
+      </div>
+      <button onclick="">Aceitar</button>
+      <button>Rejeitar</button>
+      <a href="./artista.html?idArt=a@a"><button>Ver Perfil</button></a>
+    </div>
     <!-- FIM HEADER -->
 
     <!-- Codigo HTML da pagina aqui -->
@@ -84,7 +116,8 @@
     <!-- SCRIPTS -->
     <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
     <!-- <script src="../assets/js/filter.js"></script> -->
+    <script src="../assets/js/btnNotificacao.js"></script>
     <script src="../assets/js/meusEventos.js"></script>
     <script src="../assets/js/menuHeader.js"></script>
   </body>
-</html>
+  </html>
