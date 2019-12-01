@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/coringa-pages.css" />
     <link rel="stylesheet" href="../assets/css/modal.css" />
     <link rel="stylesheet" href="../assets/css/card.css" />
+    <link rel="stylesheet" href="../assets/css/filtroSeletivo.css" />
     <link rel="shortcut icon" href="/assets/img/Logo.png" />
     <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
   </head>
@@ -93,7 +94,46 @@
     <section class="modal-container" data-modal="container">
       <div class="modal">
         <button data-modal="fechar" class="fechar">X</button>
+
         <div id="info"></div>
+      </div>
+    </section>
+    <!-- FIM MODAL -->
+
+    <!-- MODAL -->
+    <section class="modal-container" id="filtro-modal" data-modal="container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar" id="fechar-modal-filtro">
+          X
+        </button>
+        <div id="info">
+          <input class="string" type="text" />
+          <input class="string" type="text" />
+          <div class="price-slider">
+            <span
+              >De
+              <input
+                class="numero"
+                id="numero"
+                type="number"
+                value="5000"
+                min="0"
+                max="120000"/>
+              Até
+              <input
+                class="numero"
+                id="numero"
+                type="number"
+                value="50000"
+                min="0"
+                max="120000"
+            /></span>
+            <input value="25000" min="0" max="120000" step="500" type="range" />
+            <input value="50000" min="0" max="120000" step="500" type="range" />
+          </div>
+          <button id="filtrador">Filtrar</button>
+          <button id="recomendador">Recomendações</button>
+        </div>
       </div>
     </section>
     <!-- FIM MODAL -->

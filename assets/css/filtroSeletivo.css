@@ -19,3 +19,56 @@
   font-family: Big Noodle Titling;
   src: url("../fonts/big_noodle_titling.ttf");
 }
+
+#filtro-modal .modal {
+  width: 55%;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#filtro-modal #info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 30px;
+}
+
+.numero,
+.string {
+  margin-bottom: 10px;
+  border-bottom: solid 1px #38383f;
+}
+
+.numero:focus,
+.string:focus {
+  color: #c54200;
+}
+
+#numero {
+  width: 30%;
+  margin-right: 20px;
+}
+
+#filtrador,
+#recomendador {
+  width: 40%;
+  margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+  #filtro-modal .modal {
+    width: 80%;
+  }
+}

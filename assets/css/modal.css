@@ -25,7 +25,7 @@
   background: white;
   min-width: 300px;
   padding: 40px;
-  border: 10px solid #fb5;
+  border: 10px ridge #fb5;
   -webkit-box-shadow: 0 0 0 10px white;
           box-shadow: 0 0 0 10px white;
   position: relative;

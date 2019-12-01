@@ -1,0 +1,52 @@
+@import "_important.scss";
+$color-purple: #7517af;
+$color-purple-logo: #f7ebff;
+$color-white: #fff;
+$color-grey: #38383f;
+$color-black: #000;
+$color-orange1: #e36627;
+$color-orange2: #c54200;
+
+#filtro-modal .modal {
+  width: 55%;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#filtro-modal #info {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.numero,
+.string {
+  margin-bottom: 10px;
+  border-bottom: solid 1px $color-grey;
+}
+
+.numero:focus,
+.string:focus {
+  color: $color-orange2;
+}
+
+#numero {
+  width: 30%;
+  margin-right: 20px;
+}
+
+#filtrador,
+#recomendador {
+  width: 40%;
+  margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+  #filtro-modal .modal {
+    width: 80%;
+  }
+}
