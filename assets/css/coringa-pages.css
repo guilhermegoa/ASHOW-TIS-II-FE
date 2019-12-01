@@ -118,11 +118,16 @@ aside .img-usuario {
 }
 
 aside .img-usuario img {
-  padding-top: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+  margin-top: 10px;
   position: relative;
-  border-radius: 100%;
   height: 8rem;
-  padding-bottom: 20px;
+  width: 8rem;
+  margin-bottom: 20px;
 }
 
 aside ul {
@@ -178,6 +183,9 @@ main {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 80%;
   height: 100px;
   font-family: " Big Noodle Titling", sans-serif;
   display: -webkit-box;

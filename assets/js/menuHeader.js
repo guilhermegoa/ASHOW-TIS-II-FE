@@ -8,9 +8,11 @@ const getUsuarioAtual = async email =>
 (async () => {
   let dados = await getUsuarioAtual();
 
-  let htmlTexto = ``;
+  let htmlTexto = `<img src="${dados.dataUriFoto}" alt="" />`;
 
-  htmlTexto += `<p> ${dados.nome}</p>`;
+  document.getElementById("imgUser").innerHTML = htmlTexto;
+
+  htmlTexto = `<p> ${dados.nome}</p>`;
 
   document.getElementById("nome").innerHTML = htmlTexto;
 

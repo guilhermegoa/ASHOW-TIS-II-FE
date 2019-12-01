@@ -16,7 +16,7 @@
   <body>
     <!-- NAV SIDE -->
     <aside class="side-nav">
-      <div class="img-usuario">
+      <div class="img-usuario" id="imgUser">
         <img src="../assets/img/índice.jpeg" alt="" />
       </div>
       <div id="nome"><p>Nome</p></div>
@@ -27,15 +27,11 @@
           <i class="fas fa-search fa-2x"></i>
         </div>
       </div>
-      <button id="filtroBtn">Filtrar <i class="fas fa-filter"></i></button>
+      <button data-modal="abrir" id="filtroBtn" onclick="filtroNoModal()">
+        Filtrar <i class="fas fa-filter"></i>
+      </button>
       <div id="lista-nav">
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 1</a></li>
-        </ul>
+        <ul></ul>
       </div>
       <div class="logo">
         <a href="../pages/new-home.html"
@@ -96,64 +92,11 @@
     <!-- FIM MODAL -->
 
     <!-- FILTRO -->
-    <section class="modal-container" id="filtro-modal" data-modal="container">
+    <section class="modal-container" data-modal="container">
       <div class="modal">
-        <button data-modal="fechar" class="fechar" id="fechar-modal-filtro">
-          X
-        </button>
-        <div id="info">
-          <section>
-            Estilo:
-            <input id="estiloInput" class="string" type="text" />
-          </section>
-          <section>
-            Cidade:
-            <input id="cidadeInput" class="string" type="text" />
-          </section>
-          <div class="price-slider">
-            <span
-              >De
-              <input
-                class="numero"
-                id="numeroMin"
-                type="number"
-                value="0"
-                min="0"
-                max="1000"
-                placeholder="Cidade"/>
-              Até
-              <input
-                class="numero"
-                id="numeroMax"
-                type="number"
-                value="0"
-                min="0"
-                max="1000"
-                placeholder="Estilo"
-            /></span>
-            <input
-              id="rangeMin"
-              value="25000"
-              min="0"
-              max="1000"
-              step="20"
-              type="range"
-              placeholder="Preço mínimo"
-            />
-            <input
-              id="rangeMax"
-              value="50000"
-              min="0"
-              max="1000"
-              step="20"
-              type="range"
-              placeholder="Preço máximo"
-            />
-          </div>
-          <div class="btns">
-            <button id="filtrador" onclick="filtrar()">Filtrar</button>
-          </div>
-        </div>
+        <button data-modal="fechar" class="fechar">X</button>
+
+        <div id="info"></div>
       </div>
     </section>
     <!-- FIM FILTRO -->
@@ -165,6 +108,7 @@
     <script src="../assets/js/filter.js"></script>
     <script src="../assets/js/logout.js"></script>
     <script src="../assets/js/filtroSeletivo.js"></script>
+    <script src="../assets/js/inputFiltroNoModal.js"></script>
 
     <script>
       const botaoAbrir = document.querySelector('[data-modal="abrir"]');
