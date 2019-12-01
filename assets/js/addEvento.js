@@ -15,6 +15,8 @@ const AddEvento = () => {
   const artistValue = $("#artistValue");
   const artistQnt = $("#artistQnt");
   const btnCadastrar = $("#cadastrarEventoBtn");
+  var imgSubmit = document.getElementById("formImagem");
+  imgSubmit.addEventListener("change", loadimage, false);
 
   CEP.change(() => {
     if (CEP.val().length >= 8) {
@@ -78,9 +80,10 @@ const AddEvento = () => {
         quantidadeArtistas: artistQnt.val(),
         // contratante: { type: "contratante", email: sessionStorage.getItem("email") },
         emailContratante: sessionStorage.getItem("email"),
-        valor: artistValue.val()
+        valor: artistValue.val(),
+        dataUriFoto: localStorage.getItem("imgAtual")
       };
-      console.log(dadosCadastro);
+      localStorage.removeItem("imgAtual");
 
       var http = new XMLHttpRequest();
       var url = "http://localhost:8080/ashow/evento/add";
