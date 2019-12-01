@@ -1,52 +1,68 @@
+const urlParams = new URLSearchParams(window.location.search);
+const categoria = urlParams.get("idRed");
+const estilo = urlParams.get("estilo");
+const cidade = urlParams.get("local");
+const min = urlParams.get("min");
+const max = urlParams.get("max");
+
 const mostraTodosNaHome = () => {
-  var http = new XMLHttpRequest();
-  var url = "http://localhost:8080/ashow/evento/all";
+  if (categoria == 1) {
+    var http = new XMLHttpRequest();
+    var url =
+      "http://localhost:8080/ashow/evento/filter/" +
+      estilo +
+      "/" +
+      cidade +
+      "/" +
+      min +
+      "/" +
+      max;
 
-  http.open("GET", url, true);
-  http.setRequestHeader("Content-type", "application/json");
-  http.onreadystatechange = function() {
-    if (http.readyState == 4 && http.status == 200) {
-      var dados = http.responseText;
+    http.open("GET", url, true);
+    http.setRequestHeader("Content-type", "application/json");
+    http.onreadystatechange = function() {
+      if (http.readyState == 4 && http.status == 200) {
+        var dados = http.responseText;
 
-      dados = JSON.parse(dados);
+        dados = JSON.parse(dados);
 
-      if (dados.length == 0) {
-        let na = document.getElementById("void");
-        na.style.display = "block";
-        let acabou = document.getElementById("NA");
-        acabou.style.display = "block";
-        document.getElementById("titleHome").style.display = "none";
-      } else if (dados.length <= 4) {
-        let na = document.getElementById("void");
-        na.style.display = "block";
-        let acabou = document.getElementById("NA");
-        acabou.style.display = "none";
-        document.getElementById("titleHome").style.display = "block";
-      } else {
-        let na = document.getElementById("void");
-        na.style.display = "none";
-        document.getElementById("titleHome").style.display = "block";
-      }
-
-      var resp = ``;
-      var maior = dados[0].valor;
-      for (var i = dados.length - 1; i >= 0; i--) {
-        if (dados[i].valor > maior) {
-          maior = dados[i].valor;
+        if (dados.length == 0) {
+          let na = document.getElementById("void");
+          na.style.display = "block";
+          let acabou = document.getElementById("NA");
+          acabou.style.display = "block";
+          document.getElementById("titleHome").style.display = "none";
+        } else if (dados.length <= 4) {
+          let na = document.getElementById("void");
+          na.style.display = "block";
+          let acabou = document.getElementById("NA");
+          acabou.style.display = "none";
+          document.getElementById("titleHome").style.display = "block";
+        } else {
+          let na = document.getElementById("void");
+          na.style.display = "none";
+          document.getElementById("titleHome").style.display = "block";
         }
-        let data = dados[i].data;
-        var dia =
-          data[8] +
-          data[9] +
-          "/" +
-          data[5] +
-          data[6] +
-          "/" +
-          data[0] +
-          data[1] +
-          data[2] +
-          data[3];
-        resp += `<a id="cardEventos" class="cardEventos" data-modal="abrir" >
+
+        var resp = ``;
+        var maior = dados[0].valor;
+        for (var i = dados.length - 1; i >= 0; i--) {
+          if (dados[i].valor > maior) {
+            maior = dados[i].valor;
+          }
+          let data = dados[i].data;
+          var dia =
+            data[8] +
+            data[9] +
+            "/" +
+            data[5] +
+            data[6] +
+            "/" +
+            data[0] +
+            data[1] +
+            data[2] +
+            data[3];
+          resp += `<a id="cardEventos" class="cardEventos" data-modal="abrir" >
 
             <div id="card-${dados[i].id}">
       <h2 id="NomeArtistico-${dados[i].id}" class = "nomeEvento">${dados[i].nome}</h2>
@@ -60,21 +76,99 @@ const mostraTodosNaHome = () => {
          <span class="value">${dados[i].endereco.bairro}, ${dados[i].endereco.cidade}</span>
       </h3>
     </div></a>`;
-      }
-      document.getElementById("card").innerHTML = resp;
-      $("#rangeMax").attr({
-        max: maior + 1,
-        min: 0
-      });
-      $("#rangeMin").attr({
-        max: maior + 1,
-        min: 0
-      });
+        }
+        document.getElementById("card").innerHTML = resp;
+        $("#rangeMax").attr({
+          max: maior + 1,
+          min: 0
+        });
+        $("#rangeMin").attr({
+          max: maior + 1,
+          min: 0
+        });
 
-      initModal();
-    }
-  };
-  http.send();
+        initModal();
+      }
+    };
+    http.send();
+  } else {
+    var http = new XMLHttpRequest();
+    var url = "http://localhost:8080/ashow/evento/all";
+
+    http.open("GET", url, true);
+    http.setRequestHeader("Content-type", "application/json");
+    http.onreadystatechange = function() {
+      if (http.readyState == 4 && http.status == 200) {
+        var dados = http.responseText;
+
+        dados = JSON.parse(dados);
+
+        if (dados.length == 0) {
+          let na = document.getElementById("void");
+          na.style.display = "block";
+          let acabou = document.getElementById("NA");
+          acabou.style.display = "block";
+          document.getElementById("titleHome").style.display = "none";
+        } else if (dados.length <= 4) {
+          let na = document.getElementById("void");
+          na.style.display = "block";
+          let acabou = document.getElementById("NA");
+          acabou.style.display = "none";
+          document.getElementById("titleHome").style.display = "block";
+        } else {
+          let na = document.getElementById("void");
+          na.style.display = "none";
+          document.getElementById("titleHome").style.display = "block";
+        }
+
+        var resp = ``;
+        var maior = dados[0].valor;
+        for (var i = dados.length - 1; i >= 0; i--) {
+          if (dados[i].valor > maior) {
+            maior = dados[i].valor;
+          }
+          let data = dados[i].data;
+          var dia =
+            data[8] +
+            data[9] +
+            "/" +
+            data[5] +
+            data[6] +
+            "/" +
+            data[0] +
+            data[1] +
+            data[2] +
+            data[3];
+          resp += `<a id="cardEventos" class="cardEventos" data-modal="abrir" >
+
+            <div id="card-${dados[i].id}">
+      <h2 id="NomeArtistico-${dados[i].id}" class = "nomeEvento">${dados[i].nome}</h2>
+      <h2 id="Nome-${dados[i].id}">${dia}</h2>
+      <h2 id="Estilo-${dados[i].id}">
+         <span class="title">Estilo:</span>
+         <span class="value">${dados[i].estilo}</span>
+      </h2>
+      <h3 id="Valor-${dados[i].id}">
+         <span class="title">Endereço:</span>
+         <span class="value">${dados[i].endereco.bairro}, ${dados[i].endereco.cidade}</span>
+      </h3>
+    </div></a>`;
+        }
+        document.getElementById("card").innerHTML = resp;
+        $("#rangeMax").attr({
+          max: maior + 1,
+          min: 0
+        });
+        $("#rangeMin").attr({
+          max: maior + 1,
+          min: 0
+        });
+
+        initModal();
+      }
+    };
+    http.send();
+  }
 };
 mostraTodosNaHome();
 

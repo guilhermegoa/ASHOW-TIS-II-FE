@@ -63,4 +63,15 @@ function filtrar() {
   } else {
     reqCid = cidade.value;
   }
+
+  window.location.href =
+    "./new-home.html?idRed=1&estilo=" +
+    reqEs +
+    "&local=" +
+    reqCid +
+    "&min=" +
+    reqMin +
+    "&max=" +
+    reqMax;
+  // window.location.href = "./artista.html?idArt=${dados[i].email}";
 }
