@@ -4,7 +4,7 @@ const mostraTodosNaHome = () => {
 
   http.open("GET", url, true);
   http.setRequestHeader("Content-type", "application/json");
-  http.onreadystatechange = function() {
+  http.onreadystatechange = function () {
     if (http.readyState == 4 && http.status == 200) {
       var dados = http.responseText;
 
@@ -42,7 +42,7 @@ const mostraTodosNaHome = () => {
           data[1] +
           data[2] +
           data[3];
-        resp += `<a id="cardEventos" class="cardEventos" href="./evento.html?idEvt=${dados[i].id}">
+        resp += `<a id="cardEventos" class="cardEventos" data-modal="abrir" >
 
             <div id="card-${dados[i].id}">
       <h2 id="NomeArtistico-${dados[i].id}" class = "nomeEvento">${dados[i].nome}</h2>
@@ -58,10 +58,38 @@ const mostraTodosNaHome = () => {
     </div></a>`;
       }
       document.getElementById("card").innerHTML = resp;
-      // $('#card').html(resp);
     }
-  };
+  }
   http.send();
 };
-
 mostraTodosNaHome();
+
+
+async function initModal() {
+  const botaoAbrir = document.querySelectorAll('[data-modal="abrir"]');
+  const botaoFechar = document.querySelector('[data-modal="fechar"]');
+  const containerModal = document.querySelector('[data-modal="container"]');
+
+  if (botaoAbrir && botaoFechar && containerModal) {
+
+    function toggleModal(event) {
+      event.preventDefault();
+      console.log("cliquei")
+      containerModal.classList.toggle('ativo');
+    }
+    function cliqueForaModal(event) {
+      if (event.target === this) {
+        toggleModal(event);
+      }
+    }
+
+    botaoAbrir.forEach(e => {
+      console.log("cliquei")
+      e.addEventListener('click', toggleModal);
+    })
+
+    botaoFechar.addEventListener('click', toggleModal);
+    containerModal.addEventListener('click', cliqueForaModal);
+  }
+}
+initModal();

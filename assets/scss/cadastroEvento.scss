@@ -1,14 +1,4 @@
-@import '_important.scss';
-
-body {
-  font-family: 'sunday', sans-serif;
-  overflow-x: hidden;
-}
-
-main {
-  margin-top: 100px;
-  width: 100%;
-}
+@import "_important.scss";
 
 ::-webkit-scrollbar-track {
   background-color: #fff;
@@ -26,12 +16,10 @@ main {
 #formEvent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 130px;
-  margin-left: 100px;
 }
 
 .input-field input {
-  font-family: 'sunday', sans-serif;
+  font-family: "sunday", sans-serif;
   border: none;
   border-bottom: rgb(48, 15, 70) solid 3px;
   padding: 5px 20px;
@@ -44,7 +32,7 @@ main {
 }
 
 #cadastrarEventoBtn {
-  font-family: 'sunday', sans-serif;
+  font-family: "sunday", sans-serif;
   background-color: #fff;
   font-size: 18px;
   margin: 0 100px;

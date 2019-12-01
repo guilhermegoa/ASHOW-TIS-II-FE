@@ -6,6 +6,7 @@
     <title>Ashow</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/coringa-pages.css" />
+    <link rel="stylesheet" href="../assets/css/modal.css" />
     <link rel="stylesheet" href="../assets/css/card.css" />
     <link rel="shortcut icon" href="/assets/img/Logo.png" />
     <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
@@ -42,7 +43,7 @@
     </aside>
     <!-- FIM NAV SIDE -->
 
-    <div class="grid-coluna-1">
+    <div class="coluna">
       <!-- HEADER -->
       <header><h1>Eventos</h1></header>
       <!-- FIM HEADER -->
@@ -80,11 +81,30 @@
       <!-- FIM FOOTER -->
     </div>
 
+    <!-- MODAL -->
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar">X</button>
+        <form action="">
+          <label for="email">Email</label>
+          <input type="text" for="email" id="email" />
+          <label for="senha">Senha</label>
+          <input type="password" for="senha" id="senha" />
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </section>
+    <!-- FIM MODAL -->
+
     <!-- SCRIPTS -->
     <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
     <script src="../assets/js/mostraTodosEventosHome.js"></script>
     <script src="../assets/js/menuHeader.js"></script>
-    <script src="../assets/js/logout.js"></script>
     <script src="../assets/js/filter.js"></script>
+    <script src="../assets/js/logout.js"></script>
+
+    <script>
+      const botaoAbrir = document.querySelector('[data-modal="abrir"]');
+    </script>
   </body>
 </html>

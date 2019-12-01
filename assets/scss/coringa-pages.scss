@@ -1,7 +1,7 @@
 @import "_important.scss";
 
 $color-purple: #7517af;
-$color-purple-logo: #f7ebff;
+$color-purple-2: #926652;
 $color-white: #fff;
 $color-grey: #38383f;
 $color-black: #000;
@@ -9,20 +9,18 @@ $color-orange1: #e36627;
 $color-orange2: #c54200;
 
 body {
-  display: grid;
-  grid-template-columns: 220px 1fr;
   font-family: Big Noodle Titling, sans-serif;
   color: $color-grey;
 }
 
 //NAV SIDE
 aside {
-  grid-column: 0;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 20%;
   height: 100vh;
   background-color: $color-white;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
@@ -106,9 +104,18 @@ aside {
       a {
         text-decoration: none;
         color: $color-grey;
+
+        &:hover {
+          color: #e36627;
+        }
       }
     }
   }
+}
+//CONTAINER
+
+.coluna {
+  margin-left: 20%;
 }
 //HEARDER
 header {
@@ -127,13 +134,11 @@ header {
 
 // MAIN
 main {
-  grid-column: 2;
-  background-color: $color-purple-logo;
+  background-color: $color-white;
 }
 
 // FOOTER
 footer {
-  grid-column: 2;
   height: 100px;
   font-family: " Big Noodle Titling", sans-serif;
   display: flex;
@@ -163,7 +168,7 @@ footer {
 }
 
 #social-media a :hover {
-  color: $color-purple-logo;
+  color: $color-purple;
 }
 
 @media only screen and (max-width: 1200px) {

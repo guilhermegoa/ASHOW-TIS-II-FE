@@ -21,16 +21,12 @@
 }
 
 body {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 220px 1fr;
-      grid-template-columns: 220px 1fr;
   font-family: Big Noodle Titling, sans-serif;
   color: #38383f;
 }
 
 aside {
-  grid-column: 0;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,7 +39,7 @@ aside {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  width: 20%;
   height: 100vh;
   background-color: #fff;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
@@ -146,6 +142,14 @@ aside ul li a {
   color: #38383f;
 }
 
+aside ul li a:hover {
+  color: #e36627;
+}
+
+.coluna {
+  margin-left: 20%;
+}
+
 header {
   -ms-grid-column: 2;
   grid-column: 2;
@@ -170,14 +174,10 @@ header h1 {
 }
 
 main {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  background-color: #f7ebff;
+  background-color: #fff;
 }
 
 footer {
-  -ms-grid-column: 2;
-  grid-column: 2;
   height: 100px;
   font-family: " Big Noodle Titling", sans-serif;
   display: -webkit-box;
@@ -221,7 +221,7 @@ footer {
 }
 
 #social-media a :hover {
-  color: #f7ebff;
+  color: #7517af;
 }
 
 @media only screen and (max-width: 1200px) {
