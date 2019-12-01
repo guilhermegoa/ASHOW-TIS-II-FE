@@ -4,7 +4,7 @@ const mostraTodosNaHome = () => {
 
   http.open("GET", url, true);
   http.setRequestHeader("Content-type", "application/json");
-  http.onreadystatechange = function () {
+  http.onreadystatechange = function() {
     if (http.readyState == 4 && http.status == 200) {
       var dados = http.responseText;
 
@@ -30,7 +30,7 @@ const mostraTodosNaHome = () => {
 
       var resp = ``;
       for (var i = dados.length - 1; i >= 0; i--) {
-        let data = dados[i].data;
+        let data = dados[i].dataEvento;
         var dia =
           data[8] +
           data[9] +
@@ -58,24 +58,24 @@ const mostraTodosNaHome = () => {
     </div></a>`;
       }
       document.getElementById("card").innerHTML = resp;
+
+      initModal();
     }
-  }
+  };
   http.send();
 };
 mostraTodosNaHome();
 
-
-async function initModal() {
+function initModal() {
   const botaoAbrir = document.querySelectorAll('[data-modal="abrir"]');
   const botaoFechar = document.querySelector('[data-modal="fechar"]');
   const containerModal = document.querySelector('[data-modal="container"]');
 
   if (botaoAbrir && botaoFechar && containerModal) {
-
     function toggleModal(event) {
       event.preventDefault();
-      console.log("cliquei")
-      containerModal.classList.toggle('ativo');
+      console.log("cliquei");
+      containerModal.classList.toggle("ativo");
     }
     function cliqueForaModal(event) {
       if (event.target === this) {
@@ -84,12 +84,11 @@ async function initModal() {
     }
 
     botaoAbrir.forEach(e => {
-      console.log("cliquei")
-      e.addEventListener('click', toggleModal);
-    })
+      console.log("cliquei");
+      e.addEventListener("click", toggleModal);
+    });
 
-    botaoFechar.addEventListener('click', toggleModal);
-    containerModal.addEventListener('click', cliqueForaModal);
+    botaoFechar.addEventListener("click", toggleModal);
+    containerModal.addEventListener("click", cliqueForaModal);
   }
 }
-initModal();
