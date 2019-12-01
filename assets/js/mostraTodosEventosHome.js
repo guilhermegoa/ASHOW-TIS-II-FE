@@ -29,7 +29,11 @@ const mostraTodosNaHome = () => {
       }
 
       var resp = ``;
+      var maior = dados[0].valor;
       for (var i = dados.length - 1; i >= 0; i--) {
+        if (dados[i].valor > maior) {
+          maior = dados[i].valor;
+        }
         let data = dados[i].data;
         var dia =
           data[8] +
@@ -58,6 +62,14 @@ const mostraTodosNaHome = () => {
     </div></a>`;
       }
       document.getElementById("card").innerHTML = resp;
+      $("#rangeMax").attr({
+        max: maior + 1,
+        min: 0
+      });
+      $("#rangeMin").attr({
+        max: maior + 1,
+        min: 0
+      });
 
       initModal();
     }

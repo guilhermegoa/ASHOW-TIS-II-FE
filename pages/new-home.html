@@ -100,21 +100,27 @@
     </section>
     <!-- FIM MODAL -->
 
-    <!-- MODAL -->
+    <!-- FILTRO -->
     <section class="modal-container" id="filtro-modal" data-modal="container">
       <div class="modal">
         <button data-modal="fechar" class="fechar" id="fechar-modal-filtro">
           X
         </button>
         <div id="info">
-          <section>Estilo: <input class="string" type="text" /></section>
-          <section>Cidade: <input class="string" type="text" /></section>
+          <section>
+            Estilo:
+            <input id="estiloInput" class="string" type="text" />
+          </section>
+          <section>
+            Cidade:
+            <input id="cidadeInput" class="string" type="text" />
+          </section>
           <div class="price-slider">
             <span
               >De
               <input
                 class="numero"
-                id="numero"
+                id="numeroMin"
                 type="number"
                 value="0"
                 min="0"
@@ -123,7 +129,7 @@
               Até
               <input
                 class="numero"
-                id="numero"
+                id="numeroMax"
                 type="number"
                 value="0"
                 min="0"
@@ -131,7 +137,7 @@
                 placeholder="Estilo"
             /></span>
             <input
-              id="range"
+              id="rangeMin"
               value="25000"
               min="0"
               max="1000"
@@ -140,7 +146,7 @@
               placeholder="Preço mínimo"
             />
             <input
-              id="range"
+              id="rangeMax"
               value="50000"
               min="0"
               max="1000"
@@ -150,13 +156,13 @@
             />
           </div>
           <div class="btns">
-            <button id="filtrador">Filtrar</button>
+            <button id="filtrador" onclick="filtrar()">Filtrar</button>
             <button id="recomendador">Recomendações</button>
           </div>
         </div>
       </div>
     </section>
-    <!-- FIM MODAL -->
+    <!-- FIM FILTRO -->
 
     <!-- SCRIPTS -->
     <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
