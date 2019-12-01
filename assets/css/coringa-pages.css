@@ -180,6 +180,7 @@ header h1 {
 
 main {
   background-color: #fff;
+  min-height: calc(100% -100px -167px);
 }
 
 footer {

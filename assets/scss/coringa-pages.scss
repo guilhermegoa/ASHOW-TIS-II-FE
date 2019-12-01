@@ -138,6 +138,7 @@ header {
 // MAIN
 main {
   background-color: $color-white;
+  min-height: calc(100% -100px -167px);
 }
 
 // FOOTER
