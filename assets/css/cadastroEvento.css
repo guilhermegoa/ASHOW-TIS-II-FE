@@ -87,10 +87,6 @@
   font-weight: bold;
 }
 
-footer {
-  margin-top: 50px;
-}
-
 @media screen and (max-width: 900px) {
   #formEvent {
     margin-left: 0;
