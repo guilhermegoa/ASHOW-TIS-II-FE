@@ -1,0 +1,64 @@
+@import "_important.scss";
+$color-purple: #7517af;
+$color-purple-logo: #f7ebff;
+$color-white: #fff;
+$color-grey: #38383f;
+$color-black: #000;
+$color-orange1: #e36627;
+$color-orange2: #c54200;
+
+#bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  z-index: 2;
+  display: none;
+}
+
+#bg:target {
+  display: block;
+}
+
+#bg:target ~ .box-filtro {
+  top: 150px;
+  transition: all 0.3s;
+  transition-delay: 0.2s;
+  display: block;
+}
+
+.box-filtro {
+  width: 720px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  z-index: 5;
+  background-color: #f7ebff;
+  border: ridge $color-orange1 10px;
+  display: none;
+}
+
+#close {
+  color: $color-orange2;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  background-color: $color-orange1;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  right: 0;
+  color: #fff;
+}
+
+#close:hover {
+  opacity: 0.6;
+  z-index: 3;
+  cursor: pointer;
+}

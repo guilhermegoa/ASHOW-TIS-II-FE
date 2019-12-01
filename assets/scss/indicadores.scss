@@ -1,0 +1,55 @@
+@import "_important.scss";
+$color-purple: #7517af;
+$color-purple-logo: #f7ebff;
+$color-white: #fff;
+$color-grey: #38383f;
+$color-black: #000;
+$color-orange1: #e36627;
+$color-orange2: #c54200;
+
+.ore {
+  background-color: $color-orange1;
+}
+
+.purp {
+  background-color: $color-purple;
+}
+
+.whi {
+  background-color: $color-white;
+}
+
+#pagepiling .section {
+  padding: 25px;
+}
+
+#pagepiling .section h1 {
+  font-size: 6em;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.sec1,
+.sec2 {
+  color: #fff;
+}
+
+.sec1 article {
+  width: 70%;
+  font-size: 1.3em;
+}
+
+.sec2 section {
+  text-align: center;
+  width: 80%;
+  font-size: 3em;
+}
+
+.sec2 span {
+  font-size: 2em;
+}
+
+.sec1 span {
+  font-size: 1.5em;
+  color: $color-orange1;
+  font-weight: bold;
+}
