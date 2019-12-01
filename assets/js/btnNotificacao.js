@@ -66,7 +66,7 @@ function vizualizar(id) {
           <button onclick="aceitar(${e.proposta.id})" disabled>Aceitar</button>`;
           } else {
             dadosModal+=`
-            <button onclick="aceitar(${e.proposta.id})">Aceitar</button>`;
+            <button onclick="aceitar(${e.proposta.id},${id})">Aceitar</button>`;
           }
           if(e.visualizou){
             dadosModal+=`
@@ -86,7 +86,7 @@ function vizualizar(id) {
 });
 }
 
-function aceitar(idProposta) {
+function aceitar(idProposta,idNot) {
   getPropostaId(idProposta).then( prop=> {
   let databody = {
     emailArtista: prop.emailArtista,
@@ -104,10 +104,12 @@ function aceitar(idProposta) {
     e.text().then(tx => {
       if(tx == "true") {
         alert("Artista adicionado para tocar no evento");
-        location.reload();
       } else {
         alert("Artista já confirmado");
-      }});
+      }
+
+      vizualizar(idNot);
+    });
     });
   });
 }

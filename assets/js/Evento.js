@@ -21,7 +21,7 @@ const getEvento = async id =>
 (async () => {
   let dados = await getEvento(id);
 
-  let data = dados.data;
+  let data = dados.dataEvento;
   data =
     data[8] +
     data[9] +
@@ -34,11 +34,11 @@ const getEvento = async id =>
     data[2] +
     data[3];
   let hora =
-    dados.data[11] +
-    dados.data[12] +
-    dados.data[13] +
-    dados.data[14] +
-    dados.data[15];
+    data[11] +
+    data[12] +
+    data[13] +
+    data[14] +
+    data[15];
   let htmlTexto = ``;
   //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
   htmlTexto += `

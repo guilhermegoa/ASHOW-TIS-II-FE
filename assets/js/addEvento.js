@@ -64,7 +64,7 @@ const AddEvento = () => {
       // let dadosContratante = await getContratante(sessionStorage.getItem("email"));
       var dadosCadastro = {
         capacidadeEsperada: peopleQnt.val(),
-        data: date.val() + "T" + hours.val(),
+        dataEvento: date.val() + "T" + hours.val(),
         endereco: {
           bairro: district.val(),
           cep: CEP.val(),
