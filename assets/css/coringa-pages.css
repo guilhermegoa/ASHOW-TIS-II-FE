@@ -180,13 +180,9 @@ header h1 {
 
 main {
   background-color: #fff;
-  margin-bottom: 110px;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 80%;
   height: 100px;
   font-family: " Big Noodle Titling", sans-serif;
   display: -webkit-box;
