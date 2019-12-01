@@ -20,6 +20,36 @@
   src: url("../fonts/big_noodle_titling.ttf");
 }
 
+#home {
+  position: fixed;
+  z-index: 6;
+  left: 10px;
+  top: 10px;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.homebtn {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 100px;
+  font-size: 40px;
+  color: #e36627;
+  cursor: pointer;
+  color: #e36627;
+  border: solid #7517af 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.homebtn:hover {
+  background-color: #e36627;
+  color: #fff;
+}
+
 .ore {
   background-color: #e36627;
 }
