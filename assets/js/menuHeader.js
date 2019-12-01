@@ -1,13 +1,24 @@
-const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080/ashow/${sessionStorage.getItem("type")}/${sessionStorage.getItem("email")}`)).json();
+const getUsuarioAtual = async () =>
+  await (await fetch(
+    `http://localhost:8080/ashow/${sessionStorage.getItem(
+      "type"
+    )}/${sessionStorage.getItem("email")}`
+  )).json();
 
 (async () => {
-  let dados = await getUsuarioAtual()
+  let dados = await getUsuarioAtual();
 
   let htmlTexto = ``;
 
+  htmlTexto += `<img src="${dados.dataUriFoto}" alt="" />`;
+
+  document.getElementById("imgUser").innerHTML = htmlTexto;
+
+  htmlTexto = ``;
+
   htmlTexto += `<p> ${dados.nome}</p>`;
 
-  document.getElementById('nome').innerHTML = htmlTexto;
+  document.getElementById("nome").innerHTML = htmlTexto;
 
   htmlTexto = ``;
 
@@ -33,8 +44,5 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
         </ul>`;
   }
 
-  document.getElementById('lista-nav').innerHTML = htmlTexto;
+  document.getElementById("lista-nav").innerHTML = htmlTexto;
 })();
-
-
-

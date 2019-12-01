@@ -4,7 +4,7 @@ const mostraTodosNaHome = () => {
 
   http.open("GET", url, true);
   http.setRequestHeader("Content-type", "application/json");
-  http.onreadystatechange = function () {
+  http.onreadystatechange = function() {
     if (http.readyState == 4 && http.status == 200) {
       var dados = http.responseText;
 
@@ -30,7 +30,7 @@ const mostraTodosNaHome = () => {
 
       var resp = ``;
       for (var i = dados.length - 1; i >= 0; i--) {
-        let data = dados[i].data;
+        let data = dados[i].dataEvento;
         var dia =
           data[8] +
           data[9] +
