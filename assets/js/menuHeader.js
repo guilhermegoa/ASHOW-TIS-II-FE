@@ -14,7 +14,7 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
   if (sessionStorage.getItem("type") == "artista") {
     htmlTexto += `
       <ul>
-      <li><a href="./artista.html?${dados.email}">Perfil</a></li>
+      <li><a href="./new-home.html">Eventos</a></li>
       <li><a href="/pages/artistas.html"> ver Artistas</a></li>
       <li><a href="#">Link 1</a></li>
       <li><a href="#">Link 1</a></li>
@@ -23,7 +23,7 @@ const getUsuarioAtual = async email => await (await fetch(`http://localhost:8080
   } else {
     htmlTexto += `
        <ul ">
-        <li><a href="./perfilContratante.html">Perfil</a></li>
+        <li><a href="./new-home.html">Eventos</a></li>
         <li><a href="cadastrarEvento.html">Criar Evento</a></li>
         <li><a href="/pages/meusEventos.html">Meus eventos</a></li>
         <li><a href="/pages/artistas.html"> ver Artistas</a></li>
