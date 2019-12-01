@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: comicsans;
+  src: url("../fonts/Comic Sans MS.ttf");
+}
+
+@font-face {
+  font-family: sunday;
+  src: url("../fonts/SUNDAY  Personal use.ttf");
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url("../fonts/big_noodle_titling.ttf");
+}

@@ -22,7 +22,12 @@
 
       <div class="search">
         <div>
-          <input id="filtroInput" type="text" placeholder="Buscar..." />
+          <input
+            id="filtroInput"
+            data-modal="filtro"
+            type="text"
+            placeholder="Buscar..."
+          />
           <i class="fas fa-search fa-2x"></i>
         </div>
       </div>
@@ -45,7 +50,10 @@
 
     <div class="coluna">
       <!-- HEADER -->
-      <header><h1>Eventos</h1></header>
+      <header>
+        <h1>Eventos</h1>
+        <button data-modal="filtro" id="filtroBtn">FILTRAR</button>
+      </header>
       <!-- FIM HEADER -->
 
       <!-- Codigo HTML da pagina aqui -->
@@ -96,6 +104,7 @@
     <script src="../assets/js/menuHeader.js"></script>
     <script src="../assets/js/filter.js"></script>
     <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/filtroSeletivo.js"></script>
 
     <script>
       const botaoAbrir = document.querySelector('[data-modal="abrir"]');

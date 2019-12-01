@@ -1,31 +1,32 @@
 const mostraTodosNaHome = () => {
   var http = new XMLHttpRequest();
-  var url = `http://localhost:8080/ashow/contratante/${sessionStorage.getItem('email')}/eventos`;
+  var url = `http://localhost:8080/ashow/contratante/${sessionStorage.getItem(
+    "email"
+  )}/eventos`;
 
-  http.open('GET', url, true);
-  http.setRequestHeader('Content-type', 'application/json');
-  http.onreadystatechange = function () {
+  http.open("GET", url, true);
+  http.setRequestHeader("Content-type", "application/json");
+  http.onreadystatechange = function() {
     if (http.readyState == 4 && http.status == 200) {
       var dados = http.responseText;
-
       dados = JSON.parse(dados);
 
       if (dados.length == 0) {
-        let na = document.getElementById('void');
-        na.style.display = 'block';
-        let acabou = document.getElementById('NA');
-        acabou.style.display = 'block';
-        document.getElementById('titleHome').style.display = 'none';
+        let na = document.getElementById("void");
+        na.style.display = "block";
+        let acabou = document.getElementById("NA");
+        acabou.style.display = "block";
+        document.getElementById("titleHome").style.display = "none";
       } else if (dados.length <= 6) {
-        let na = document.getElementById('void');
-        na.style.display = 'block';
-        let acabou = document.getElementById('NA');
-        acabou.style.display = 'none';
-        document.getElementById('titleHome').style.display = 'block';
+        let na = document.getElementById("void");
+        na.style.display = "block";
+        let acabou = document.getElementById("NA");
+        acabou.style.display = "none";
+        document.getElementById("titleHome").style.display = "block";
       } else {
-        let na = document.getElementById('void');
-        na.style.display = 'none';
-        document.getElementById('titleHome').style.display = 'block';
+        let na = document.getElementById("void");
+        na.style.display = "none";
+        document.getElementById("titleHome").style.display = "block";
       }
 
       var resp = ``;
@@ -34,10 +35,10 @@ const mostraTodosNaHome = () => {
         var dia =
           data[8] +
           data[9] +
-          '/' +
+          "/" +
           data[5] +
           data[6] +
-          '/' +
+          "/" +
           data[0] +
           data[1] +
           data[2] +
@@ -55,11 +56,11 @@ const mostraTodosNaHome = () => {
      </h3>
    </div></a>`;
       }
-      document.getElementById('card').innerHTML = resp;
+      document.getElementById("card").innerHTML = resp;
       // $('#card').html(resp);
     }
   };
   http.send();
-}
+};
 
 mostraTodosNaHome();
