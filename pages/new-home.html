@@ -107,8 +107,8 @@
           X
         </button>
         <div id="info">
-          <input class="string" type="text" />
-          <input class="string" type="text" />
+          <section>Estilo: <input class="string" type="text" /></section>
+          <section>Cidade: <input class="string" type="text" /></section>
           <div class="price-slider">
             <span
               >De
@@ -118,7 +118,8 @@
                 type="number"
                 value="0"
                 min="0"
-                max="1000"/>
+                max="1000"
+                placeholder="Cidade"/>
               Até
               <input
                 class="numero"
@@ -127,12 +128,31 @@
                 value="0"
                 min="0"
                 max="1000"
+                placeholder="Estilo"
             /></span>
-            <input value="25000" min="0" max="1000" step="20" type="range" />
-            <input value="50000" min="0" max="1000" step="20" type="range" />
+            <input
+              id="range"
+              value="25000"
+              min="0"
+              max="1000"
+              step="20"
+              type="range"
+              placeholder="Preço mínimo"
+            />
+            <input
+              id="range"
+              value="50000"
+              min="0"
+              max="1000"
+              step="20"
+              type="range"
+              placeholder="Preço máximo"
+            />
           </div>
-          <button id="filtrador">Filtrar</button>
-          <button id="recomendador">Recomendações</button>
+          <div class="btns">
+            <button id="filtrador">Filtrar</button>
+            <button id="recomendador">Recomendações</button>
+          </div>
         </div>
       </div>
     </section>
