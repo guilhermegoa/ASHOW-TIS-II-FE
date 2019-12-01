@@ -29,6 +29,68 @@ body {
   margin: 0%;
 }
 
+#notificacaoModal {
+  display: none;
+  position: fixed;
+  width: 45%;
+  height: 60%;
+  margin: calc((100vh - (60vh + 12.5%)) / 2) calc((100vw - 45vw) / 2);
+  background-color: #e36627;
+  z-index: 5;
+  padding: 20px;
+  border-radius: 2%;
+  border: solid 2px white;
+  font-weight: 700;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#notificacaoModal div {
+  width: 100%;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#notificacaoModal img {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+}
+
+#notificacaoModal h1 {
+  display: inline-block;
+}
+
+#notificacaoModal button {
+  padding: 7px;
+}
+
 header {
   position: fixed;
   z-index: 2;
@@ -205,7 +267,7 @@ header #notification span p {
   width: 400px;
   height: 400px;
   background-color: white;
-  z-index: 3;
+  z-index: 0;
   overflow-x: hidden;
 }
 
@@ -265,16 +327,6 @@ header #notification span p {
   background-color: #cfa3eb;
 }
 
-#notificacaoModal {
-  display: none;
-  position: fixed;
-  width: 45%;
-  height: 60%;
-  margin: calc((100vh - (60vh + 12.5%)) / 2) calc((100vw - 45vw) / 2);
-  background-color: #e36627;
-  z-index: 6;
-}
-
 #bk {
   display: none;
   top: 0;
@@ -282,6 +334,6 @@ header #notification span p {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 5;
+  z-index: 4;
   background-color: rgba(0, 0, 0, 0.541);
 }

@@ -3,20 +3,20 @@ const id = urlParams.get("idEvt");
 const getEvento = async id =>
   await (await fetch(`http://localhost:8080/ashow/evento/${id}`)).json();
 
-var myHeaders = new Headers();
+// var myHeaders = new Headers();
 
-var myInit = {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default"
-};
+// var myInit = {
+//   method: "GET",
+//   headers: myHeaders,
+//   mode: "cors",
+//   cache: "default"
+// };
 
-const addArtistaAoEventoFet = async () =>
-  await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
-    method: "POST",
-    body: myInit
-  });
+// const addArtistaAoEventoFet = async () =>
+//   await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
+//     method: "POST",
+//     body: myInit
+//   });
 
 (async () => {
   let dados = await getEvento(id);
