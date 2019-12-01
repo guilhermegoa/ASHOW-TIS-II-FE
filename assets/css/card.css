@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: comicsans;
+  src: url("../fonts/Comic Sans MS.ttf");
+}
+
+@font-face {
+  font-family: sunday;
+  src: url("../fonts/SUNDAY  Personal use.ttf");
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url("../fonts/big_noodle_titling.ttf");
+}
+
+.evento {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.cardEventos {
+  text-decoration: none;
+  -webkit-animation: animateBorder 10s linear infinite;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 2%;
+  padding: 1rem;
+  height: 80%;
+  width: 40%;
+  border-radius: 6px;
+  color: #38383f;
+  cursor: pointer;
+  background-color: #f7ebff;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.4), 0 3px 1px -2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.4), 0 3px 1px -2px rgba(0, 0, 0, 0.5);
+  border-top: 20px solid;
+  border-top-color: #e36627;
+  border-top-style: solid;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.cardEventos:hover {
+  border-bottom: 20px solid;
+  border-top-color: #f7ebff;
+  border-top-width: 0px;
+  border-bottom-color: #7517af;
+  border-bottom-style: ridge;
+}
+
+.NA {
+  margin-top: 10%;
+  text-align: center;
+  color: #38383f;
+  font-size: 6em;
+  font-weight: bold;
+  display: none;
+}
+
+#void {
+  height: 45vh;
+  display: none;
+}
