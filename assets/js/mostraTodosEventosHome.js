@@ -30,7 +30,7 @@ const mostraTodosNaHome = () => {
 
       var resp = ``;
       for (var i = dados.length - 1; i >= 0; i--) {
-        let data = dados[i].data;
+        let data = dados[i].dataEvento;
         var dia =
           data[8] +
           data[9] +

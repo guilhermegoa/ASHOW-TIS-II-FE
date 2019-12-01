@@ -53,7 +53,9 @@
       <!-- HEADER -->
       <header>
         <h1>Eventos</h1>
-        <button data-modal="filtro" id="filtroBtn">FILTRAR</button>
+        <button data-modal="abrir" id="filtroBtn" onclick="filtroNoModal()">
+          FILTRAR
+        </button>
       </header>
       <!-- FIM HEADER -->
 
@@ -106,34 +108,7 @@
         <button data-modal="fechar" class="fechar" id="fechar-modal-filtro">
           X
         </button>
-        <div id="info">
-          <input class="string" type="text" />
-          <input class="string" type="text" />
-          <div class="price-slider">
-            <span
-              >De
-              <input
-                class="numero"
-                id="numero"
-                type="number"
-                value="0"
-                min="0"
-                max="1000"/>
-              Até
-              <input
-                class="numero"
-                id="numero"
-                type="number"
-                value="0"
-                min="0"
-                max="1000"
-            /></span>
-            <input value="25000" min="0" max="1000" step="20" type="range" />
-            <input value="50000" min="0" max="1000" step="20" type="range" />
-          </div>
-          <button id="filtrador">Filtrar</button>
-          <button id="recomendador">Recomendações</button>
-        </div>
+        <div id="info"></div>
       </div>
     </section>
     <!-- FIM MODAL -->
@@ -144,7 +119,8 @@
     <script src="../assets/js/menuHeader.js"></script>
     <script src="../assets/js/filter.js"></script>
     <script src="../assets/js/logout.js"></script>
-    <script src="../assets/js/filtroSeletivo.js"></script>
+    <!-- <script src="../assets/js/filtroSeletivo.js"></script> -->
+    <script src="../assets/js/inputFiltroModal.js"></script>
 
     <script>
       const botaoAbrir = document.querySelector('[data-modal="abrir"]');
