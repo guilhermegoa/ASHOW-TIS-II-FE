@@ -180,3 +180,8 @@ function artistaNoModal(email) {
     })
   );
 }
+
+$("#notificacoes").hide();
+$("#notification").on("click", () => {
+  $("#notificacoes").toggle();
+});
