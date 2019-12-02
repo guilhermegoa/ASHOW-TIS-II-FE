@@ -17,7 +17,7 @@
     <!-- NAV SIDE -->
     <aside class="side-nav">
       <div id="notification">
-        <a href="#">
+        <a href="#"">
           <i class="fas fa-bell fa-2x">
             <div class="circle"></div>
           </i>
@@ -25,6 +25,12 @@
       </div>
       <div class="img-usuario" id="imgUser">
         <img src="../assets/img/índice.jpeg" alt="" />
+      </div>
+
+      <div id="editPerfil">
+        <a href="#" data-modal="abrir" onclick="perfil()">
+          <i class="fas fa-pen fa-2x"></i>
+        </a>
       </div>
       <div id="nome"><p>Nome</p></div>
 
@@ -49,8 +55,7 @@
     <!-- FIM NAV SIDE -->
 
     <div class="coluna">
-      <div id="notificacoes">
-      </div>
+      <div id="notificacoes"></div>
       <!-- HEADER -->
       <header>
         <h1>Eventos</h1>
@@ -117,6 +122,8 @@
     <script src="../assets/js/inputFiltroNoModal.js"></script>
     <script src="../assets/js/filter.js"></script>
     <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/update.js"></script>
+    <script src="../assets/js/loadImg.js"></script>
 
     <!-- <script>
       const botaoAbrir = document.querySelectorAll('[data-modal="abrir"]');

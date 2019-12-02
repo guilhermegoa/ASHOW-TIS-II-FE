@@ -45,6 +45,32 @@ aside {
     position: absolute;
     right: 10px;
     top: 10px;
+
+    a {
+      text-decoration: none;
+      color: $color-grey;
+    }
+
+    a:hover {
+      color: $color-orange1;
+    }
+  }
+
+  #editPerfil {
+    // position: absolute;
+    // left: 10px;
+    // top: 10px;
+    margin-bottom: 15px;
+    font-size: 0.85em;
+
+    a {
+      text-decoration: none;
+      color: $color-grey;
+    }
+
+    a:hover {
+      color: $color-orange1;
+    }
   }
 
   p {
@@ -192,7 +218,7 @@ footer {
 }
 
 #notificacoes {
-  position: absolute;
+  position: fixed;
   width: 400px;
   height: 400px;
   background-color: white;

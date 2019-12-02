@@ -72,6 +72,29 @@ aside #notification {
   top: 10px;
 }
 
+aside #notification a {
+  text-decoration: none;
+  color: #38383f;
+}
+
+aside #notification a:hover {
+  color: #e36627;
+}
+
+aside #editPerfil {
+  margin-bottom: 15px;
+  font-size: 0.85em;
+}
+
+aside #editPerfil a {
+  text-decoration: none;
+  color: #38383f;
+}
+
+aside #editPerfil a:hover {
+  color: #e36627;
+}
+
 aside p {
   font-size: 30px;
 }
@@ -249,7 +272,7 @@ footer {
 }
 
 #notificacoes {
-  position: absolute;
+  position: fixed;
   width: 400px;
   height: 400px;
   background-color: white;
