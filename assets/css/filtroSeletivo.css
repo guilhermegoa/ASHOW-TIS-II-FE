@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: comicsans;
+  src: url("../fonts/Comic Sans MS.ttf");
+}
+
+@font-face {
+  font-family: sunday;
+  src: url("../fonts/SUNDAY  Personal use.ttf");
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url("../fonts/big_noodle_titling.ttf");
+}
+
+#filtroBtn {
+  width: 50%;
+  height: 30px;
+  background: transparent;
+  border: none;
+  border-bottom: #000 solid 1px;
+  cursor: pointer;
+  outline: none;
+}
+
+#filtroBtn:hover {
+  color: #e36627;
+  border-color: #e36627;
+}
+
+#filtroBtn i {
+  font-size: 20px;
+}
+
+#filtro-modal .modal {
+  width: 55%;
+  height: 450px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#filtro-modal #info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 30px;
+}
+
+#filtro-modal #info #estuloInput,
+#filtro-modal #info #cidadeInput {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.4), 0 3px 1px -2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.4), 0 3px 1px -2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  border-bottom: solid 1px #38383f;
+  font-size: 20px;
+  color: #38383f;
+  font-family: Big Noodle Titling, sans-serif;
+}
+
+#filtro-modal #info #estiloInput:focus,
+#filtro-modal #info #cidadeInput:focus {
+  color: #c54200;
+}
+
+#numeroMin,
+#numeroMax {
+  width: 30%;
+  margin-right: 20px;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#filtrador,
+#recomendador {
+  width: 40%;
+  margin: auto;
+  height: 50px;
+  margin-bottom: 10px;
+  border: #fb5 solid 5px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.4), 0 3px 1px -2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.4), 0 3px 1px -2px rgba(0, 0, 0, 0.5);
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #38383f;
+  font-family: Big Noodle Titling, sans-serif;
+  outline: none;
+}
+
+#filtrador:hover,
+#recomendador:hover {
+  background: #7517af;
+  font-size: 33px;
+  color: #fff;
+  border-color: #7517af;
+}
+
+#rangeMax,
+#rangeMin {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+#rangeMax:focus,
+#rangeMin:focus {
+  outline: none;
+}
+
+#rangeMin::-webkit-slider-runnable-track,
+#rangeMax::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #fb5;
+  border-radius: 1px;
+}
+
+#rangeMin::-webkit-slider-thumb,
+#rangeMax::-webkit-slider-thumb {
+  z-index: 2;
+  position: relative;
+  -webkit-box-shadow: 0px 3px 3px #38383f;
+          box-shadow: 0px 3px 3px #38383f;
+  border: 3px solid #e36627;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+@media screen and (max-width: 900px) {
+  #filtro-modal .modal {
+    width: 80%;
+  }
+  #filtrador,
+  #recomendador {
+    width: 48%;
+    font-size: 23px;
+  }
+  #filtrador:hover,
+  #recomendador:hover {
+    font-size: 26px;
+  }
+}

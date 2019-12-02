@@ -1,0 +1,274 @@
+@import "_important.scss";
+
+$color-purple: #7517af;
+$color-purple-2: #926652;
+$color-white: #fff;
+$color-grey: #38383f;
+$color-black: #000;
+$color-orange1: #e36627;
+$color-orange2: #c54200;
+
+body {
+  font-family: Big Noodle Titling, sans-serif;
+  color: $color-grey;
+}
+
+//NAV SIDE
+aside {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 20%;
+  height: 100vh;
+  background-color: $color-white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+  a {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+
+    img {
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      width: 14rem;
+    }
+  }
+
+  #notification {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    a {
+      text-decoration: none;
+      color: $color-grey;
+    }
+
+    a:hover {
+      color: $color-orange1;
+    }
+  }
+
+  #editPerfil {
+    // position: absolute;
+    // left: 10px;
+    // top: 10px;
+    margin-bottom: 15px;
+    font-size: 0.85em;
+
+    a {
+      text-decoration: none;
+      color: $color-grey;
+    }
+
+    a:hover {
+      color: $color-orange1;
+    }
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  .search {
+    left: 0;
+    top: 160px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 1px 0 0 0;
+    div {
+      position: relative;
+      margin-left: 5px;
+      margin-right: 5px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.4),
+        0 3px 1px -2px rgba(0, 0, 0, 0.5);
+
+      input {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        width: 100%;
+        height: 45px;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 45px 0 15px;
+        border: 0;
+      }
+      i {
+        font-size: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .img-usuario {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      margin-top: 10px;
+      position: relative;
+      height: 8rem;
+      width: 8rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  ul {
+    padding-top: 20px;
+
+    li {
+      list-style: none;
+      padding: 10px 0 10px 0;
+      align-items: flex-start;
+      a {
+        text-decoration: none;
+        color: $color-grey;
+
+        &:hover {
+          color: #e36627;
+        }
+      }
+    }
+  }
+}
+//CONTAINER
+
+.coluna {
+  margin-left: 20%;
+}
+//HEARDER
+header {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: $color-orange1;
+  font-size: 3em;
+  color: $color-white;
+  h1 {
+    padding: 30px;
+  }
+}
+
+// MAIN
+main {
+  background-color: $color-white;
+  min-height: calc((100vh - 100px) - 167px);
+}
+
+// FOOTER
+footer {
+  height: 100px;
+  font-family: " Big Noodle Titling", sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $color-orange1;
+  color: $color-white;
+}
+
+#contact a {
+  display: flex;
+  flex-direction: column;
+  color: $color-white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+#social-media a {
+  margin: 0 10px 0 10px;
+  color: $color-white;
+}
+
+#contact a:hover {
+  color: $color-purple;
+}
+
+#social-media a :hover {
+  color: $color-purple;
+}
+
+@media only screen and (max-width: 1200px) {
+  footer {
+    flex-direction: column;
+
+    section {
+      margin: 30px 0 0 0;
+    }
+  }
+}
+
+#notificacoes {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  z-index: 0;
+  overflow-x: hidden;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+  .not {
+    font-weight: 700;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    border: solid 2px gray;
+
+    .imgNot {
+      height: 70px;
+      width: 70px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+
+    .chkNot {
+      display: none;
+    }
+
+    p {
+      width: 225px;
+    }
+
+    .olhoNot {
+      height: 40px;
+    }
+
+    .olhoNot:hover {
+      background-color: #c487e9;
+    }
+
+    .chkNot:checked ~ label > .olhoNot {
+      background-color: #000;
+      display: none;
+    }
+  }
+
+  #not:hover {
+    background-color: #cfa3eb;
+  }
+}

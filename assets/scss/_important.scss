@@ -5,24 +5,20 @@
   box-sizing: border-box;
 }
 
-main {
-  margin-top: 100px;
+//QUEN SABE
+@font-face {
+  font-family: comicsans;
+  src: url("../fonts/Comic\ Sans\ MS.ttf");
 }
 
 //USADA PARA TITULOS E DAR EVIDENCIA
 @font-face {
   font-family: sunday;
-  src: url('../fonts/SUNDAY\ \ Personal\ use.ttf');
+  src: url("../fonts/SUNDAY\ \ Personal\ use.ttf");
 }
 
 //USADA PRA TEXTOS DE NO SITE
 @font-face {
   font-family: Big Noodle Titling;
-  src: url('../fonts/big_noodle_titling.ttf');
-}
-
-//USADA PARA TITULOS
-@font-face {
-  font-family: muscic;
-  src: url('/assets/fonts/AlphaMusicMan.ttf');
+  src: url("../fonts/big_noodle_titling.ttf");
 }

@@ -1,0 +1,76 @@
+@import "_important.scss";
+$color-purple: #7517af;
+$color-purple-logo: #f7ebff;
+$color-white: #fff;
+$color-grey: #38383f;
+$color-black: #000;
+$color-orange1: #e36627;
+$color-orange2: #c54200;
+
+.evento {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: $color-white;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.cardEventos {
+  text-decoration: none;
+  -webkit-animation: animateBorder 10s linear infinite;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 2%;
+  padding: 1rem;
+  height: 80%;
+  width: 40%;
+  border-radius: 6px;
+  color: $color-grey;
+  cursor: pointer;
+  background-color: $color-purple-logo;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.4),
+    0 3px 1px -2px rgba(0, 0, 0, 0.5);
+  border-top: 20px solid;
+  border-top-color: $color-orange1;
+  border-top-style: solid;
+  transition: 1s;
+  // border-top: solid 20px linear-gradient(90deg, transparent, $color-purple);
+}
+
+.cardEventos:hover {
+  border-bottom: 20px solid;
+  border-top-color: $color-purple-logo;
+  border-top-width: 0px;
+  border-bottom-color: $color-purple;
+  border-bottom-style: ridge;
+}
+
+.NA {
+  margin-top: 10%;
+  text-align: center;
+  color: $color-grey;
+  font-size: 6em;
+  font-weight: bold;
+  display: none;
+}
+
+#void {
+  height: 45vh;
+  display: none;
+}

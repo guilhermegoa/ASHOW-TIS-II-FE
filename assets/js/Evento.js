@@ -1,11 +1,16 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("idEvt");
 const getEvento = async id =>
+<<<<<<< HEAD
    await (await fetch(`http://localhost:8080/ashow/evento/${id}`)).json();
+=======
+  await (await fetch(`http://localhost:8080/ashow/evento/${id}`)).json();
+>>>>>>> attmatfiltro
 
 var myHeaders = new Headers();
 
 var myInit = {
+<<<<<<< HEAD
    method: "GET",
    headers: myHeaders,
    mode: "cors",
@@ -50,6 +55,52 @@ const addArtistaAoEventoFet = async () =>
    //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
 
    htmlTexto += `
+=======
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default"
+};
+const databody = {
+  type: "proposta",
+  emailArtista: "2@2",
+  emailContratante: "email",
+  idEvento: 1,
+  valor: 500.0
+};
+
+const addArtistaAoEventoFet = async () =>
+  await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
+    method: "POST",
+    body: myInit
+  });
+
+(async () => {
+  let dados = await getEvento(id);
+
+  let data = dados.data;
+  data =
+    data[8] +
+    data[9] +
+    "/" +
+    data[5] +
+    data[6] +
+    "/" +
+    data[0] +
+    data[1] +
+    data[2] +
+    data[3];
+  let hora =
+    dados.data[11] +
+    dados.data[12] +
+    dados.data[13] +
+    dados.data[14] +
+    dados.data[15];
+  let htmlTexto = ``;
+  //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
+  console.log(dados)
+  htmlTexto += `
+>>>>>>> attmatfiltro
       <h2 class="titleArtista">${dados.nome}</h2>
       <div class="dadosEvento" id="dadosEvento">
 
@@ -62,6 +113,7 @@ const addArtistaAoEventoFet = async () =>
             <h3><span>Quantidade de pessoas esperadas: </span>${dados.capacidadeEsperada}</h3>
          <h3><span>Quantidade de artistas:</span> ${dados.quantidadeArtistas}</h3>
          <h3><span>Valor base: </span>${dados.valor}</h3>`;
+<<<<<<< HEAD
    if (sessionStorage.getItem("type") == "artista") {
       if (dados.open) {
          htmlTexto += `<h3><button id="btnJuntar"  class="btnJuntar">Juntar-se</button></h3></div>`;
@@ -73,4 +125,29 @@ const addArtistaAoEventoFet = async () =>
    document.getElementById("btnJuntar").onclick = () => {
       console.log(addArtistaAoEventoFet());
    };
+=======
+  if (sessionStorage.getItem("type") == "artista") {
+    console.log(sessionStorage.getItem('email') == -1)
+    if (dados.open && (dados.emailArtistasPendente.indexOf(sessionStorage.getItem('email') == -1))) {
+      htmlTexto += `<h3><button id="btnJuntar"  class="btnJuntar">Juntar-se</button></h3></div>`;
+    } else
+      htmlTexto += `<h3><button id="btnJuntar" class="btnJuntar" disabled>Juntar-se</button></h3></div>`;
+  }
+
+  document.getElementById("evento").innerHTML = htmlTexto;
+
+  document.getElementById("btnJuntar").onclick = () => {
+    document.getElementById("btnJuntar").onclick = async () =>
+      await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(databody),
+      }).then((response) => {
+        console.log(response);
+      })
+  };
+
+>>>>>>> attmatfiltro
 })();

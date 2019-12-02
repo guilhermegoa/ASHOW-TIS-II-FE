@@ -64,15 +64,14 @@ body {
 }
 
 .arquivos {
-  width: 87%;
+  width: 100%;
   height: 100%;
 }
 
 .evento {
-  overflow-x: hidden;
   background-color: rgba(15, 7, 12, 0.61);
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .titleArtista {

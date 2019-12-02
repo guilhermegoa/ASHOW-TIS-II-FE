@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Ashow - Artistas</title>
+    <title>Ashow - Meus Eventos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/coringa-pages.css" />
     <link rel="stylesheet" href="../assets/css/card.css" />
     <link rel="stylesheet" href="../assets/css/modal.css" />
-    <link rel="stylesheet" href="../assets/css/filtroSeletivo.css" />
     <link rel="shortcut icon" href="/assets/img/Logo.png" />
     <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
   </head>
@@ -40,9 +39,6 @@
           <i class="fas fa-search fa-2x"></i>
         </div>
       </div>
-      <button data-modal="abrir" id="filtroBtn" onclick="filtroNoModal()">
-        Filtrar <i class="fas fa-filter"></i>
-      </button>
       <div id="lista-nav">
         <ul></ul>
       </div>
@@ -57,22 +53,22 @@
     <div class="coluna">
       <div id="notificacoes"></div>
       <!-- HEADER -->
-      <header id="header"><h1>Artistas</h1></header>
+      <header><h1>Meus Eventos</h1></header>
       <!-- FIM HEADER -->
 
-      <!-- MAIN -->
-      <main class="containerArquivos" id="card-list">
+      <!-- Codigo HTML da pagina aqui -->
+      <main>
         <div class="arquivos">
           <section class="evento">
             <h2 class="titleArtista" id="titleHome"></h2>
             <div class="card" id="card"></div>
             <div id="void">
-              <div id="NA" class="NA">Não há artista</div>
+              <div id="NA" class="NA">Você não possui eventos</div>
             </div>
           </section>
         </div>
       </main>
-      <!-- FIM MAIN -->
+      <!-- ^^ -->
 
       <!-- FOOTER -->
       <footer>
@@ -97,6 +93,7 @@
     <section class="modal-container" data-modal="container">
       <div class="modal">
         <button data-modal="fechar" class="fechar">X</button>
+
         <div id="info"></div>
       </div>
     </section>
@@ -104,16 +101,10 @@
 
     <!-- SCRIPTS -->
     <script src="../assets/js/jquery/jquery-3.4.1.js"></script>
-    <script src="../assets/js/mostraTodosArtista.js"></script>
+    <!-- <script src="../assets/js/filter.js"></script> -->
+    <script src="../assets/js/eventosContratante.js"></script>
     <script src="../assets/js/menuHeader.js"></script>
-    <script src="../assets/js/inputFiltroNoModalArtista.js"></script>
-    <script src="../assets/js/filter.js"></script>
-    <script src="../assets/js/logout.js"></script>
     <script src="../assets/js/update.js"></script>
     <script src="../assets/js/loadImg.js"></script>
-
-    <script>
-      const botaoAbrir = document.querySelectorAll('[data-modal="abrir"]');
-    </script>
   </body>
 </html>
