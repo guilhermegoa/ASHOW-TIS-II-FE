@@ -163,8 +163,6 @@ const mostraTodosNaHome = () => {
           max: maior + 1,
           min: 0
         });
-
-        initModal();
       }
     };
     http.send();
