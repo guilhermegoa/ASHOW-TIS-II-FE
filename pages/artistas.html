@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/coringa-pages.css" />
     <link rel="stylesheet" href="../assets/css/card.css" />
     <link rel="stylesheet" href="../assets/css/modal.css" />
+    <link rel="stylesheet" href="../assets/css/filtroSeletivo.css" />
     <link rel="shortcut icon" href="/assets/img/Logo.png" />
     <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
   </head>
@@ -26,6 +27,9 @@
           <i class="fas fa-search fa-2x"></i>
         </div>
       </div>
+      <button data-modal="abrir" id="filtroBtn" onclick="filtroNoModal()">
+        Filtrar <i class="fas fa-filter"></i>
+      </button>
       <div id="lista-nav">
         <ul></ul>
       </div>
@@ -90,5 +94,10 @@
     <script src="../assets/js/filter.js"></script>
     <script src="../assets/js/logout.js"></script>
     <script src="../assets/js/menuHeader.js"></script>
+    <script src="../assets/js/inputFiltroNoModalArtista.js"></script>
+
+    <script>
+      const botaoAbrir = document.querySelector('[data-modal="abrir"]');
+    </script>
   </body>
 </html>

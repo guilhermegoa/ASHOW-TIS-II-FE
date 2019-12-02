@@ -20,7 +20,7 @@ const mostraTodosNaHome = () => {
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function () {
+    http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
         var dados = http.responseText;
 
@@ -97,7 +97,7 @@ const mostraTodosNaHome = () => {
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function () {
+    http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
         var dados = http.responseText;
 
