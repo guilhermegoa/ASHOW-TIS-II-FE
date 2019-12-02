@@ -1,10 +1,3 @@
-const urlParams = new URLSearchParams(window.location.search);
-const categoria = urlParams.get("idRed");
-const estilo = urlParams.get("estilo");
-const cidade = urlParams.get("local");
-const min = urlParams.get("min");
-const max = urlParams.get("max");
-
 const mostraTodosNaHome = () => {
   var http = new XMLHttpRequest();
   var url = `http://localhost:8080/ashow/contratante/${sessionStorage.getItem(
@@ -98,18 +91,16 @@ function initModal() {
 }
 
 const getEvento = async id =>
-  await (await fetch(`http://localhost:8080/ashow/contratante/${sessionStorage.getItem(
-    "email"
-  )}/eventos`)).json();
+  await (await fetch(`http://localhost:8080/ashow/evento/${id}`)).json();
 
 async function abreEvt(id) {
   let data;
   let dados = await getEvento(id);
-  dados.forEach(e => {
-    if (e.id == id)
-      console.log(e)
-    data = e;
-  })
+  // dados.forEach(e => {
+  //   if (e.id == id)
+  //     console.log(e);
+  //   data = e;
+  // })
 
   data = dados.dataEvento;
   data =
@@ -151,6 +142,8 @@ async function abreEvt(id) {
       htmlTexto += `<h3><button id="btnJuntar"  class="btnJuntar">Juntar-se</button></h3></div>`;
     } else
       htmlTexto += `<h3><button id="btnJuntar" class="btnJuntar" disabled>Juntar-se</button></h3></div>`;
+  } else {
+    htmlTexto += `</div>`
   }
 
   document.getElementById("info").innerHTML = htmlTexto;
