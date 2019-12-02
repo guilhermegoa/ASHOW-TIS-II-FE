@@ -98,6 +98,8 @@ function filtroNoModal() {
       };
     });
   })();
+  mostraTodosNaHome();
+  initModal();
 }
 function filtrar() {
   const estilo = document.getElementById("estiloInput");
