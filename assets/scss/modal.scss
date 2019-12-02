@@ -39,6 +39,7 @@ $color-orange2: #c54200;
     opacity: 0;
     transform: translate3d(0, -30px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -106,9 +107,14 @@ $color-orange2: #c54200;
 
 .imgArtista {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-  margin: 0 40px;
-  width: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-top: 10px;
+  position: relative;
   height: 200px;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 #info span {
