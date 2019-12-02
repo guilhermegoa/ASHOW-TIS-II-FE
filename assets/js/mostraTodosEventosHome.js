@@ -20,7 +20,7 @@ const mostraTodosNaHome = () => {
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function() {
+    http.onreadystatechange = function () {
       if (http.readyState == 4 && http.status == 200) {
         var dados = http.responseText;
 
@@ -62,9 +62,9 @@ const mostraTodosNaHome = () => {
             data[1] +
             data[2] +
             data[3];
-          resp += `<a id="cardEventos" class="cardEventos" data-modal="abrir" >
+          resp += `<div id="cardEventos${dados[i].id}" class="cardEventos" data-modal="abrir" >
 
-            <div id="card-${dados[i].id}">
+            <div id="card-${dados[i].id}" onClick="abreEvt(${dados[i].id})">
       <h2 id="NomeArtistico-${dados[i].id}" class = "nomeEvento">${dados[i].nome}</h2>
       <h2 id="Nome-${dados[i].id}">${dia}</h2>
       <h2 id="Estilo-${dados[i].id}">
@@ -75,7 +75,7 @@ const mostraTodosNaHome = () => {
          <span class="title">Endereço:</span>
          <span class="value">${dados[i].endereco.bairro}, ${dados[i].endereco.cidade}</span>
       </h3>
-    </div></a>`;
+    </div></div>`;
         }
         document.getElementById("card").innerHTML = resp;
         $("#rangeMax").attr({
@@ -97,7 +97,7 @@ const mostraTodosNaHome = () => {
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function() {
+    http.onreadystatechange = function () {
       if (http.readyState == 4 && http.status == 200) {
         var dados = http.responseText;
 
@@ -139,7 +139,7 @@ const mostraTodosNaHome = () => {
             data[1] +
             data[2] +
             data[3];
-          resp += `<a id="cardEventos" class="cardEventos" data-modal="abrir" >
+          resp += `<div id="cardEventos${dados[i].id}" class="cardEventos" data-modal="abrir" >
 
             <div id="card-${dados[i].id}" onClick="abreEvt(${dados[i].id})">
       <h2 id="NomeArtistico-${dados[i].id}" class = "nomeEvento">${dados[i].nome}</h2>
@@ -152,7 +152,7 @@ const mostraTodosNaHome = () => {
          <span class="title">Endereço:</span>
          <span class="value">${dados[i].endereco.bairro}, ${dados[i].endereco.cidade}</span>
       </h3>
-    </div></a>`;
+    </div></div>`;
         }
         document.getElementById("card").innerHTML = resp;
         $("#rangeMax").attr({

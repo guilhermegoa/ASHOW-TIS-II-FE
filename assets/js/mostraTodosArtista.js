@@ -5,7 +5,7 @@ const mostraTodosNaHome = () => {
 
   http.open("GET", url, true);
   http.setRequestHeader("Content-type", "application/json");
-  http.onreadystatechange = function() {
+  http.onreadystatechange = function () {
     if (http.readyState == 4 && http.status == 200) {
       var dados = http.responseText;
       dados = JSON.parse(dados);
@@ -31,7 +31,7 @@ const mostraTodosNaHome = () => {
       var resp = ``;
       for (var i = dados.length - 1; i >= 0; i--) {
         let data = dados[i].data;
-        resp += `<divv id="cardEventos" class="cardEventos" data-modal="abrir" onClick="artistaNoModal('${dados[i].email}')">
+        resp += `<div id="cardEventos" class="cardEventos" data-modal="abrir" onClick="artistaNoModal('${dados[i].email}')">
         <div id="card-${dados[i].ID}">
       <h2 id="NomeArtistico-${dados[i].ID}" class = "nomeEvento">${dados[i].nomeArtistico}</h2>
       <h2 id="Nome-${dados[i].ID}">${dados[i].nome}</h2>
