@@ -22,7 +22,7 @@
 
 #home {
   position: fixed;
-  z-index: 6;
+  z-index: 10;
   left: 10px;
   top: 10px;
   width: 90px;
@@ -52,13 +52,16 @@
 
 .ore {
   background-color: #e36627;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .purp {
   background-color: #7517af;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .whi {
+  font-family: "IBM Plex Mono", monospace;
   background-color: #fff;
 }
 
@@ -95,4 +98,36 @@
   font-size: 1.5em;
   color: #e36627;
   font-weight: bold;
+}
+
+.sec3 span {
+  font-size: 2.3em;
+  color: #e36627;
+  font-weight: bold;
+}
+
+#quemSomos {
+  font-size: 4em;
+  color: #000;
+}
+
+.sec4 {
+  color: #fff;
+}
+
+.sec4 span {
+  color: #e36627;
+}
+
+.sec5 {
+  color: #fff;
+}
+
+.sec6 {
+  font-size: 6em;
+  color: #e36627;
+}
+
+.sec6 span {
+  color: #7517af;
 }
