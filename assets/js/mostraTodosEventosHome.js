@@ -45,7 +45,7 @@ const mostraTodosNaHome = () => {
         }
 
         var resp = ``;
-        var maior = dados[0].valor;
+        if (dados.length > 0) var maior = dados[0].valor;
         for (var i = dados.length - 1; i >= 0; i--) {
           if (dados[i].valor > maior) {
             maior = dados[i].valor;
@@ -120,7 +120,7 @@ const mostraTodosNaHome = () => {
         }
 
         var resp = ``;
-        var maior = dados[0].valor;
+        if (dados.length > 0) var maior = dados[0].valor;
         for (var i = dados.length - 1; i >= 0; i--) {
           if (dados[i].valor > maior) {
             maior = dados[i].valor;

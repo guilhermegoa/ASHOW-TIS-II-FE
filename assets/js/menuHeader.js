@@ -8,7 +8,10 @@ const getUsuarioAtual = async email =>
 (async () => {
   let dados = await getUsuarioAtual();
 
-  let htmlTexto = `<img src="${dados.dataUriFoto}" alt="" />`;
+  let htmlTexto;
+  if (dados.dataUriFoto)
+    htmlTexto = `<img src="${dados.dataUriFoto}" alt="" />`;
+  else htmlTexto = `<img src="../assets/img/índice.jpeg" alt="" />`;
 
   document.getElementById("imgUser").innerHTML = htmlTexto;
 

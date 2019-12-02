@@ -26,6 +26,12 @@
       <div class="img-usuario" id="imgUser">
         <img src="../assets/img/índice.jpeg" alt="" />
       </div>
+
+      <div id="editPerfil">
+        <a href="#" data-modal="abrir" onclick="perfil()">
+          <i class="fas fa-pen fa-2x"></i>
+        </a>
+      </div>
       <div id="nome"><p>Nome</p></div>
 
       <div class="search">
@@ -49,8 +55,7 @@
     <!-- FIM NAV SIDE -->
 
     <div class="coluna">
-      <div id="notificacoes">
-      </div>
+      <div id="notificacoes"></div>
       <!-- HEADER -->
       <header id="header"><h1>Artistas</h1></header>
       <!-- FIM HEADER -->
@@ -104,6 +109,8 @@
     <script src="../assets/js/inputFiltroNoModalArtista.js"></script>
     <script src="../assets/js/filter.js"></script>
     <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/update.js"></script>
+    <script src="../assets/js/loadImg.js"></script>
 
     <script>
       const botaoAbrir = document.querySelectorAll('[data-modal="abrir"]');

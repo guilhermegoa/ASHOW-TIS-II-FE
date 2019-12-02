@@ -14,7 +14,6 @@ const mostraTodosNaHome = () => {
       min +
       "/" +
       max;
-    console.log(url);
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
@@ -66,7 +65,6 @@ const mostraTodosNaHome = () => {
   } else {
     var http = new XMLHttpRequest();
     var url = "http://localhost:8080/ashow/artista/all";
-    console.log(url);
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
@@ -163,7 +161,8 @@ function artistaNoModal(email) {
       let htmlTexto = ``;
       //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
 
-      htmlTexto += `
+      if (sessionStorage.getItem("type") == "artista") {
+        htmlTexto += `
       <h2 class="titleArtista">${art.nomeArtistico}</h2>
       <div class="dadosEvento" id="dadosEvento">
       <h3><img class="imgArtista" height="100" src="${art.dataUriFoto}" alt=""></h3>
@@ -175,7 +174,21 @@ function artistaNoModal(email) {
          <h3><span>Média de avaliação:</span> ${art.mediaAvaliacao}</h3>
          <h3><span>Quantidade de eventos:</span> ${art.numeroEventos}</h3>
       </div>`;
-
+      } else {
+        htmlTexto += `
+      <h2 class="titleArtista">${art.nomeArtistico}</h2>
+      <div class="dadosEvento" id="dadosEvento">
+      <h3><img class="imgArtista" height="100" src="${art.dataUriFoto}" alt=""></h3>
+         <h3><span>nome:</span> ${art.nome}</h3>
+         <h3><span>Email:</span> ${art.email}</h3>
+         <h3><span>Estilo:</span> ${art.estilo}</h3>
+         <h3><span>Tipo de artista:</span> ${art.tipoArtista}</h3>
+         <h3><span>Valor base: </span>${art.valorPadrao}</h3>
+         <h3><span>Média de avaliação:</span> ${art.mediaAvaliacao}</h3>
+         <h3><span>Quantidade de eventos:</span> ${art.numeroEventos}</h3>
+         <button disabled>Convidar para um evento</button>
+      </div>`;
+      }
       document.getElementById("info").innerHTML = htmlTexto;
     })
   );
