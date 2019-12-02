@@ -38,9 +38,8 @@ const getUsuarioAtual = async email =>
         <li id="logOut"><a href="../index.html">Logout</a></li>
         </ul>`;
   }
-
-  document.getElementById("lista-nav").innerHTML = htmlTexto;
-  initModal();
+  if (htmlTexto != "")
+    document.getElementById("lista-nav").innerHTML = htmlTexto;
 })();
 
 let getNotificacoes = async () =>
@@ -73,8 +72,6 @@ let getPropostaId = async id =>
     </div>`;
   }
   document.getElementById("notificacoes").innerHTML = htmlTexto;
-  mostraTodosNaHome();
-  initModal();
 })();
 
 function vizualizar(id) {

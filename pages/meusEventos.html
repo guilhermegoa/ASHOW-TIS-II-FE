@@ -12,9 +12,16 @@
     <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
   </head>
 
-  <body>
+  <body onclick="initModal()">
     <!-- NAV SIDE -->
     <aside class="side-nav">
+      <div id="notification">
+        <a href="#">
+          <i class="fas fa-bell fa-2x">
+            <div class="circle"></div>
+          </i>
+        </a>
+      </div>
       <div class="img-usuario" id="imgUser">
         <img src="../assets/img/índice.jpeg" alt="" />
       </div>
@@ -38,6 +45,7 @@
     <!-- FIM NAV SIDE -->
 
     <div class="coluna">
+      <div id="notificacoes"></div>
       <!-- HEADER -->
       <header><h1>Meus Eventos</h1></header>
       <!-- FIM HEADER -->

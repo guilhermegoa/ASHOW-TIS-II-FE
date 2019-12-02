@@ -5,19 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Ashow</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../assets/css/coringa-pages.css">
     <link
-      rel="stylesheet"
-      type="text/css"
-      href="../assets/css/cadastroEvento.css"
+    rel="stylesheet"
+    type="text/css"
+    href="../assets/css/cadastroEvento.css"
     />
+    <link rel="stylesheet" href="../assets/css/modal.css" />
+    <link rel="stylesheet" href="../assets/css/coringa-pages.css">
     <link rel="shortcut icon" href="/assets/img/Logo.png" />
     <script src="https://kit.fontawesome.com/fe733bce8f.js"></script>
   </head>
 
-  <body>
+  <body onclick="initModal()">
     <!-- NAV SIDE -->
     <aside class="side-nav">
+        <div id="notification">
+          <a href="#">
+            <i class="fas fa-bell fa-2x">
+              <div class="circle"></div>
+            </i>
+          </a>
+        </div>
       <div class="img-usuario" id="imgUser">
         <img src="../assets/img/índice.jpeg" alt="" />
       </div>
@@ -42,6 +50,8 @@
     <!-- FIM NAV SIDE -->
 
     <div class="coluna">
+        <div id="notificacoes">
+        </div>
       <!-- HEADER -->
       <header id="header"><h1>Cadastrar Evento</h1></header>
       <!-- FIM HEADER -->
@@ -135,6 +145,14 @@
         </footer>
         <!-- FIM FOOTER -->
     </div>
+
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar">X</button>
+
+        <div id="info"></div>
+      </div>
+    </section>
 
       <!-- SCRIPTS -->
       <script src="../assets/js/jquery/jquery-3.4.1.js"></script>

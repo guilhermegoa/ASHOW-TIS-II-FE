@@ -90,9 +90,8 @@ function filtroNoModal() {
       };
     });
   })();
-  mostraTodosNaHome();
-  initModal();
 }
+
 function filtrar() {
   const estilo = document.getElementById("estiloInput");
   const min = document.getElementById("numeroMin");

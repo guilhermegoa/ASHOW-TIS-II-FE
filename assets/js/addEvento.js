@@ -108,4 +108,30 @@ const AddEvento = () => {
   });
 };
 
+function initModal() {
+  document.querySelector("body").setAttribute("onclick", "");
+  const botaoAbrir = document.querySelectorAll('[data-modal="abrir"]');
+  const botaoFechar = document.querySelector('[data-modal="fechar"]');
+  const containerModal = document.querySelector('[data-modal="container"]');
+
+  if (botaoAbrir && botaoFechar && containerModal) {
+    function toggleModal(event) {
+      event.preventDefault();
+      containerModal.classList.toggle("ativo");
+    }
+    function cliqueForaModal(event) {
+      if (event.target === this) {
+        toggleModal(event);
+      }
+    }
+
+    botaoAbrir.forEach(e => {
+      e.addEventListener("click", toggleModal);
+    });
+
+    botaoFechar.addEventListener("click", toggleModal);
+    containerModal.addEventListener("click", cliqueForaModal);
+  }
+}
+
 AddEvento();

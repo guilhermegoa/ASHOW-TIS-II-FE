@@ -99,7 +99,6 @@ function filtroNoModal() {
     });
   })();
   mostraTodosNaHome();
-  initModal();
 }
 
 function filtrar() {

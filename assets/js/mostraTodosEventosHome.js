@@ -86,7 +86,6 @@ const mostraTodosNaHome = () => {
           max: maior + 1,
           min: 0
         });
-        initModal();
       }
     };
     http.send();
@@ -162,7 +161,6 @@ const mostraTodosNaHome = () => {
           max: maior + 1,
           min: 0
         });
-        initModal();
       }
     };
     http.send();
@@ -171,6 +169,7 @@ const mostraTodosNaHome = () => {
 mostraTodosNaHome();
 
 function initModal() {
+  document.querySelector("body").setAttribute("onclick", "");
   const botaoAbrir = document.querySelectorAll('[data-modal="abrir"]');
   const botaoFechar = document.querySelector('[data-modal="fechar"]');
   const containerModal = document.querySelector('[data-modal="container"]');
@@ -292,6 +291,5 @@ async function abreEvt(id) {
 
 document.onreadystatechange = function() {
   if (document.readyState == "interactive") {
-    initModal();
   }
 };
