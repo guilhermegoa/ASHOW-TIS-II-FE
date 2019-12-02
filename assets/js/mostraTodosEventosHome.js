@@ -20,7 +20,7 @@ const mostraTodosNaHome = () => {
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function() {
+    http.onreadystatechange = function () {
       if (http.readyState == 4 && http.status == 200) {
         var dados = http.responseText;
 
@@ -95,7 +95,7 @@ const mostraTodosNaHome = () => {
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function() {
+    http.onreadystatechange = function () {
       if (http.readyState == 4 && http.status == 200) {
         var dados = http.responseText;
 
@@ -197,21 +197,6 @@ function initModal() {
 const getEvento = async id =>
   await (await fetch(`http://localhost:8080/ashow/evento/${id}`)).json();
 
-// var myHeaders = new Headers();
-
-// var myInit = {
-//   method: "GET",
-//   headers: myHeaders,
-//   mode: "cors",
-//   cache: "default"
-// };
-
-// const addArtistaAoEventoFet = async () =>
-//   await fetch(`http://localhost:8080/ashow/proposta/artista/add`, {
-//     method: "POST",
-//     body: myInit
-//   });
-
 async function abreEvt(id) {
   let dados = await getEvento(id);
 
@@ -289,7 +274,7 @@ async function abreEvt(id) {
   });
 }
 
-document.onreadystatechange = function() {
+document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
   }
 };

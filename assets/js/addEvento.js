@@ -20,7 +20,7 @@ const AddEvento = () => {
 
   CEP.change(() => {
     if (CEP.val().length >= 8) {
-      $.getJSON("https://viacep.com.br/ws/" + CEP.val() + "/json", function(
+      $.getJSON("https://viacep.com.br/ws/" + CEP.val() + "/json", function (
         dados
       ) {
         street.prop("disabled", false);
@@ -54,14 +54,11 @@ const AddEvento = () => {
     }
   });
 
-  // const getContratante = async email => await (await fetch(`http://localhost:8080/ashow/contratante/${email}`)).json();
 
   form.on("submit", event => {
     event.preventDefault();
 
     if (form[0].checkValidity()) {
-      // (async () => {
-      // let dadosContratante = await getContratante(sessionStorage.getItem("email"));
       var dadosCadastro = {
         capacidadeEsperada: peopleQnt.val(),
         dataEvento: date.val() + "T" + hours.val(),
@@ -90,7 +87,7 @@ const AddEvento = () => {
 
       http.open("POST", url, true);
       http.setRequestHeader("Content-type", "application/json");
-      http.onreadystatechange = function() {
+      http.onreadystatechange = function () {
         if (http.readyState == 4 && http.status == 200) {
           // console.log(http.responseText);
           if (http.responseText == "true") {
@@ -103,7 +100,7 @@ const AddEvento = () => {
       };
       http.send(JSON.stringify(dadosCadastro));
 
-      // })();
+
     }
   });
 };

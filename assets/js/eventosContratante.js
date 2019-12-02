@@ -6,7 +6,7 @@ const mostraTodosNaHome = () => {
 
   http.open("GET", url, true);
   http.setRequestHeader("Content-type", "application/json");
-  http.onreadystatechange = function() {
+  http.onreadystatechange = function () {
     if (http.readyState == 4 && http.status == 200) {
       var dados = http.responseText;
       dados = JSON.parse(dados);
@@ -110,7 +110,6 @@ async function abreEvt(id) {
     data[3];
   let hora = data[11] + data[12] + data[13] + data[14] + data[15];
   let htmlTexto = ``;
-  //         <div class="imagem" id="imagem"> <div> <img src="../assets/img/default.jpg" alt="" /> </div> </div>
   htmlTexto += `
         <h2 class="titleArtista">${dados.nome}</h2>
         <div class="dadosEvento" id="dadosEvento">`;

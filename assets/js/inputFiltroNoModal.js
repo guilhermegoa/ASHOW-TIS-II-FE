@@ -53,23 +53,23 @@ function filtroNoModal() {
   </div>`;
   document.getElementById("info").innerHTML = filtroHTML;
 
-  $("#filtroBtn").click(function() {
+  $("#filtroBtn").click(function () {
     $("#filtro-modal").toggle();
   });
 
-  $("#fechar-modal-filtro").click(function() {
+  $("#fechar-modal-filtro").click(function () {
     $("#filtro-modal").toggle();
   });
 
-  (function() {
+  (function () {
     var parent = document.querySelector(".price-slider");
     if (!parent) return;
 
     var rangeS = parent.querySelectorAll("input[type=range]"),
       numberS = parent.querySelectorAll("input[type=number]");
 
-    rangeS.forEach(function(el) {
-      el.oninput = function() {
+    rangeS.forEach(function (el) {
+      el.oninput = function () {
         var slide1 = parseFloat(rangeS[0].value),
           slide2 = parseFloat(rangeS[1].value);
 
@@ -82,8 +82,8 @@ function filtroNoModal() {
       };
     });
 
-    numberS.forEach(function(el) {
-      el.oninput = function() {
+    numberS.forEach(function (el) {
+      el.oninput = function () {
         var number1 = parseFloat(numberS[0].value),
           number2 = parseFloat(numberS[1].value);
 
@@ -130,5 +130,4 @@ function filtrar() {
     reqMin +
     "&max=" +
     reqMax;
-  // window.location.href = "./artista.html?idArt=${dados[i].email}";
 }
