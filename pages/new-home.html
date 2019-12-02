@@ -16,6 +16,13 @@
   <body>
     <!-- NAV SIDE -->
     <aside class="side-nav">
+      <div id="notification">
+        <a href="#">
+          <i class="fas fa-bell fa-2x">
+            <div class="circle"></div>
+          </i>
+        </a>
+      </div>
       <div class="img-usuario" id="imgUser">
         <img src="../assets/img/índice.jpeg" alt="" />
       </div>
@@ -42,6 +49,13 @@
     <!-- FIM NAV SIDE -->
 
     <div class="coluna">
+      <div id="notificacoes">
+        <!-- <p>Está tudo tranquilo</p> -->
+        <div data-modal="abrir" id="not" onclick="vizualizar(1)" class="not">
+          <img src="../assets/img/bg4.jpg" width="100" alt="" class="imgNot" />
+          <p>Fulano pediu para participar do seu evento</p>
+        </div>
+      </div>
       <!-- HEADER -->
       <header>
         <h1>Eventos</h1>
@@ -110,8 +124,8 @@
     <script src="../assets/js/filtroSeletivo.js"></script>
     <script src="../assets/js/inputFiltroNoModal.js"></script>
 
-    <script>
-      const botaoAbrir = document.querySelector('[data-modal="abrir"]');
-    </script>
+    <!-- <script>
+      const botaoAbrir = document.querySelectorAll('[data-modal="abrir"]');
+    </script> -->
   </body>
 </html>

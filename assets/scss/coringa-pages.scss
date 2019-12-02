@@ -41,6 +41,12 @@ aside {
     }
   }
 
+  #notification {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
   p {
     font-size: 30px;
   }
@@ -182,5 +188,61 @@ footer {
     section {
       margin: 30px 0 0 0;
     }
+  }
+}
+
+#notificacoes {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  z-index: 0;
+  overflow-x: hidden;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+  .not {
+    font-weight: 700;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    border: solid 2px gray;
+
+    .imgNot {
+      height: 70px;
+      width: 70px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+
+    .chkNot {
+      display: none;
+    }
+
+    p {
+      width: 225px;
+    }
+
+    .olhoNot {
+      height: 40px;
+    }
+
+    .olhoNot:hover {
+      background-color: #c487e9;
+    }
+
+    .chkNot:checked ~ label > .olhoNot {
+      background-color: #000;
+      display: none;
+    }
+  }
+
+  #not:hover {
+    background-color: #cfa3eb;
   }
 }
