@@ -77,10 +77,10 @@ function atualiza() {
   const tipoMusico = $("#tipoMusico").value;
 
   if (sessionStorage.getItem('type') == 'contratante') {
-    const aux = fetch(`http://localhost:8080/ashow/contratante/${sessionStorage.getItem('email')}`).json().then();
-    // if (aux.dataUriFoto === imgContratante) imgContratante = aux.dataUriFoto;
-    // if (aux.nome === nomeContratante) imgContratante = aux.dataUriFoto;
-    // if (aux.email === emailContratante) imgContratante = aux.dataUriFoto;
+    const aux = fetch(`http://localhost:8080/ashow/contratante/${sessionStorage.getItem('email')}`).then(e => e.json());
+    if (aux.dataUriFoto === imgContratante) imgContratante = aux.dataUriFoto;
+    if (aux.nome === nomeContratante) imgContratante = aux.dataUriFoto;
+    if (aux.email === emailContratante) imgContratante = aux.dataUriFoto;
 
     let dados = {
       type: aux.type,
