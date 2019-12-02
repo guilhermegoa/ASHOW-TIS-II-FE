@@ -1,12 +1,12 @@
 const mostraTodosNaHome = () => {
   var http = new XMLHttpRequest();
-  var url = `http://localhost:8080/ashow/contratante/${sessionStorage.getItem(
-    "email"
-  )}/eventos`;
+  var url = `http://localhost:8080/ashow/${sessionStorage.getItem(
+    "type"
+  )}/${sessionStorage.getItem("email")}/eventos`;
 
   http.open("GET", url, true);
   http.setRequestHeader("Content-type", "application/json");
-  http.onreadystatechange = function () {
+  http.onreadystatechange = function() {
     if (http.readyState == 4 && http.status == 200) {
       var dados = http.responseText;
       dados = JSON.parse(dados);
@@ -58,7 +58,7 @@ const mostraTodosNaHome = () => {
    </div></div>`;
       }
       document.getElementById("card").innerHTML = resp;
-      initModal()
+      initModal();
     }
   };
   http.send();
@@ -143,7 +143,7 @@ async function abreEvt(id) {
     } else
       htmlTexto += `<h3><button id="btnJuntar" class="btnJuntar" disabled>Juntar-se</button></h3></div>`;
   } else {
-    htmlTexto += `</div>`
+    htmlTexto += `</div>`;
   }
 
   document.getElementById("info").innerHTML = htmlTexto;

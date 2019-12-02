@@ -101,6 +101,7 @@ function filtroNoModal() {
   mostraTodosNaHome();
   initModal();
 }
+
 function filtrar() {
   const estilo = document.getElementById("estiloInput");
   const cidade = document.getElementById("cidadeInput");

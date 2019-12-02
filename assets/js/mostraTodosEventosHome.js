@@ -20,7 +20,7 @@ const mostraTodosNaHome = () => {
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function () {
+    http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
         var dados = http.responseText;
 
@@ -62,9 +62,9 @@ const mostraTodosNaHome = () => {
             data[1] +
             data[2] +
             data[3];
-          resp += `<div id="cardEventos${dados[i].id}" class="cardEventos" data-modal="abrir" >
+          resp += `<div id="cardEventos${dados[i].id}" class="cardEventos" data-modal="abrir" onClick="abreEvt(${dados[i].id})">
 
-            <div id="card-${dados[i].id}" onClick="abreEvt(${dados[i].id})">
+            <div id="card-${dados[i].id}">
       <h2 id="NomeArtistico-${dados[i].id}" class = "nomeEvento">${dados[i].nome}</h2>
       <h2 id="Nome-${dados[i].id}">${dia}</h2>
       <h2 id="Estilo-${dados[i].id}">
@@ -86,7 +86,6 @@ const mostraTodosNaHome = () => {
           max: maior + 1,
           min: 0
         });
-
         initModal();
       }
     };
@@ -97,7 +96,7 @@ const mostraTodosNaHome = () => {
 
     http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
-    http.onreadystatechange = function () {
+    http.onreadystatechange = function() {
       if (http.readyState == 4 && http.status == 200) {
         var dados = http.responseText;
 
@@ -139,9 +138,9 @@ const mostraTodosNaHome = () => {
             data[1] +
             data[2] +
             data[3];
-          resp += `<div id="cardEventos${dados[i].id}" class="cardEventos" data-modal="abrir" >
+          resp += `<div id="cardEventos${dados[i].id}" class="cardEventos" data-modal="abrir" onClick="abreEvt(${dados[i].id})">
 
-            <div id="card-${dados[i].id}" onClick="abreEvt(${dados[i].id})">
+            <div id="card-${dados[i].id}" >
       <h2 id="NomeArtistico-${dados[i].id}" class = "nomeEvento">${dados[i].nome}</h2>
       <h2 id="Nome-${dados[i].id}">${dia}</h2>
       <h2 id="Estilo-${dados[i].id}">
@@ -163,6 +162,7 @@ const mostraTodosNaHome = () => {
           max: maior + 1,
           min: 0
         });
+        initModal();
       }
     };
     http.send();
@@ -289,3 +289,9 @@ async function abreEvt(id) {
     });
   });
 }
+
+document.onreadystatechange = function() {
+  if (document.readyState == "interactive") {
+    initModal();
+  }
+};

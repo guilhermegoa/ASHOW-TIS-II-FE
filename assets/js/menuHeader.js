@@ -22,9 +22,9 @@ const getUsuarioAtual = async email =>
     htmlTexto += `
       <ul>
       <li><a href="./new-home.html">Eventos</a></li>
+      <li><a href="/pages/meusEventos.html">Meus eventos</a></li>
       <li><a href="/pages/artistas.html">Artistas</a></li>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="../pages/sobrenos.html">Sobre Nos</a></li>
+      <li><a href="../pages/sobrenos.html">Sobre Nós</a></li>
       <li id="logOut"><a href="../index.html">Logout</a></li>
       </ul>`;
   } else {
@@ -34,13 +34,13 @@ const getUsuarioAtual = async email =>
         <li><a href="cadastrarEvento.html">Criar Evento</a></li>
         <li><a href="/pages/meusEventos.html">Meus eventos</a></li>
         <li><a href="/pages/artistas.html">Artistas</a></li>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="../pages/sobrenos.html">Sobre Nos</a></li>
+        <li><a href="../pages/sobrenos.html">Sobre Nós</a></li>
         <li id="logOut"><a href="../index.html">Logout</a></li>
         </ul>`;
   }
 
   document.getElementById("lista-nav").innerHTML = htmlTexto;
+  initModal();
 })();
 
 let getNotificacoes = async () =>
@@ -73,6 +73,7 @@ let getPropostaId = async id =>
     </div>`;
   }
   document.getElementById("notificacoes").innerHTML = htmlTexto;
+  mostraTodosNaHome();
   initModal();
 })();
 
@@ -85,7 +86,8 @@ function vizualizar(id) {
         method: "PUT"
       });
 
-      if (!e.proposta.contratanteAceitou) {
+      // if (!prop.contratanteAceitou) {
+      if (true) {
         getArtistaNot(prop.emailArtista).then(art => {
           getEventoNot(prop.idEvento).then(evt => {
             dadosModal = `
