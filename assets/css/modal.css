@@ -1,3 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: comicsans;
+  src: url("../fonts/Comic Sans MS.ttf");
+}
+
+@font-face {
+  font-family: sunday;
+  src: url("../fonts/SUNDAY  Personal use.ttf");
+}
+
+@font-face {
+  font-family: Big Noodle Titling;
+  src: url("../fonts/big_noodle_titling.ttf");
+}
+
 .modal-container {
   height: 100vh;
   width: 100%;
@@ -104,4 +126,52 @@
   font-family: "IBM Plex Mono", monospace;
   margin-top: 1rem;
   font-weight: bold;
+}
+
+#info .titleArtista {
+  text-shadow: 2px 2px black;
+  text-align: center;
+  font-size: 40px;
+  color: #e36627;
+}
+
+#info .boxImage {
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.imgArtista {
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+  margin: 0 40px;
+  width: 200px;
+  height: 200px;
+}
+
+#info span {
+  color: #e36627;
+  font-size: 20px;
+}
+
+#btnJuntar {
+  background-color: #e36627;
+  color: #fff;
+  height: 40px;
+  width: 100px;
+  margin: 10px 90px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  -webkit-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.562);
+          box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.562);
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#btnJuntar:hover {
+  background-color: #c54200;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }

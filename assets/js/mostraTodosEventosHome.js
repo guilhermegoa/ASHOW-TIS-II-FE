@@ -235,7 +235,7 @@ async function abreEvt(id) {
       <div class="dadosEvento" id="dadosEvento">`;
 
   if (dados.dataUriFoto != "")
-    htmlTexto += `<h3><img class="imgArtista" height="100" src="${dados.dataUriFoto}" alt=""></h3>`;
+    htmlTexto += `<h3 class="boxImage"><img class="imgArtista" src="${dados.dataUriFoto}" alt=""></h3>`;
 
   htmlTexto += `  <h3><span>Estilo:</span> ${dados.estilo}</h3>
          <h3><span>Data:</span> ${data}</h3>

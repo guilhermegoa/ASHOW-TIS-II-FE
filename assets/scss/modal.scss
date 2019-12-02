@@ -1,3 +1,12 @@
+@import "_important.scss";
+$color-purple: #7517af;
+$color-purple-logo: #f7ebff;
+$color-white: #fff;
+$color-grey: #38383f;
+$color-black: #000;
+$color-orange1: #e36627;
+$color-orange2: #c54200;
+
 .modal-container {
   height: 100vh;
   width: 100%;
@@ -80,4 +89,48 @@
   font-family: "IBM Plex Mono", monospace;
   margin-top: 1rem;
   font-weight: bold;
+}
+
+#info .titleArtista {
+  text-shadow: 2px 2px black;
+  text-align: center;
+  font-size: 40px;
+  color: #e36627;
+}
+
+#info .boxImage {
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.imgArtista {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+  margin: 0 40px;
+  width: 200px;
+  height: 200px;
+}
+
+#info span {
+  color: $color-orange1;
+  font-size: 20px;
+}
+
+#btnJuntar {
+  background-color: $color-orange1;
+  color: #fff;
+  height: 40px;
+  width: 100px;
+  margin: 10px 90px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.562);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnJuntar:hover {
+  background-color: $color-orange2;
+  transform: scale(1.1);
 }
