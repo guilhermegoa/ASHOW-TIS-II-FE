@@ -1,37 +1,37 @@
 {
-   //PRETTIER
-   "editor.defaultFormatter": "esbenp.prettier-vscode",
-   "prettier.singleQuote": true,
-   "editor.formatOnSave": true,
-   "prettier.trailingComma": "all",
-   //LIVE SASSS
-   "liveSassCompile.settings.generateMap": false,
-   "liveSassCompile.settings.formats": [
-      // This is Default.
+  //PRETTIER
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "editor.formatOnSave": true,
+  "prettier.trailingComma": "all",
+  //LIVE SASSS
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    // This is Default.
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/assets/css"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**",
+    "**/_*.scss"
+  ],
+  //EDITOR CONFIG
+  "window.zoomLevel": 0,
+  //STYLELINT
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
       {
-         "format": "expanded",
-         "extensionName": ".css",
-         "savePath": "/assets/css"
+        "ignoreAtRules": ["extends", "ignores"]
       }
-   ],
-   "liveSassCompile.settings.excludeList": [
-      "**/node_modules/**",
-      ".vscode/**",
-      "**/_*.scss"
-   ],
-   //EDITOR CONFIG
-   "window.zoomLevel": 1,
-   //STYLELINT
-   "extends": "stylelint-config-standard",
-   "rules": {
-      "at-rule-no-unknown": [
-         true,
-         {
-            "ignoreAtRules": ["extends", "ignores"]
-         }
-      ]
-   },
-   "indentation": "tab",
-   "number-leading-zero": null,
-   "unit-whitelist": ["em", "rem", "s"]
+    ]
+  },
+  "indentation": "tab",
+  "number-leading-zero": null,
+  "unit-whitelist": ["em", "rem", "s"]
 }
